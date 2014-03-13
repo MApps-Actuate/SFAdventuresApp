@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">/ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <oda-data-source extensionID="com.actuate.data.oda.static" name="Data Source" id="1389"/>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="TeamLeaderboard" id="1390">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Sales Rep</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Sales Rep</text-property>
+                    <text-property name="heading">Sales Rep</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Forecast</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Forecast</text-property>
+                    <text-property name="heading">Forecast</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Pct of Quota</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Pct of Quota</text-property>
+                    <text-property name="heading">Pct of Quota</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Sales Rep</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Forecast</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Pct of Quota</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Sales Rep</property>
+                    <property name="nativeName">Sales Rep</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Forecast</property>
+                    <property name="nativeName">Forecast</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">3</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Pct of Quota</property>
+                    <property name="nativeName">Pct of Quota</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">3</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{"Columns":["Sales Rep","Forecast","Pct of Quota"],"Types":[1,3,3]}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Sales Rep</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Sales Rep</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Sales Rep</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Forecast</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Forecast</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Forecast</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Pct of Quota</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>3</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Pct of Quota</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Pct of Quota</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>DATA</name>
+                    <value>[["Kendra Haran","98887.00","98"],["Gianna Ables","76526","89"],["Paul Stalter","53765","97"]]</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="1391">
+            <property name="width">3.75in</property>
+            <property name="dataSet">TeamLeaderboard</property>
+            <property name="theme">ThemesReportItems3.Modern Table</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Sales Rep</property>
+                    <text-property name="displayName">Sales Rep</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Sales Rep"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Forecast</property>
+                    <text-property name="displayName">Forecast</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Forecast"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">Pct of Quota</property>
+                    <text-property name="displayName">Pct of Quota</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Pct of Quota"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+            <expression name="bookmark" type="javascript">"Team Leaderboard"</expression>
+            <column id="1410"/>
+            <column id="1411"/>
+            <column id="1412"/>
+            <header>
+                <row id="1392">
+                    <cell id="1393">
+                        <label id="1394">
+                            <text-property name="text">Sales Rep</text-property>
+                        </label>
+                    </cell>
+                    <cell id="1395">
+                        <label id="1396">
+                            <text-property name="text">Forecast</text-property>
+                        </label>
+                    </cell>
+                    <cell id="1397">
+                        <label id="1398">
+                            <text-property name="text">Pct of Quota</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="1399">
+                    <cell id="1400">
+                        <data id="1401">
+                            <property name="resultSetColumn">Sales Rep</property>
+                        </data>
+                    </cell>
+                    <cell id="1402">
+                        <data id="1403">
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">$#,##0.00{RoundingMode=HALF_UP}</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">Forecast</property>
+                        </data>
+                    </cell>
+                    <cell id="1404">
+                        <data id="1405">
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">Pct of Quota</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+    </body>
+</report>

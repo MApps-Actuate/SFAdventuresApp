@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="ClassicModels" id="1097">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.eclipse.birt.report.data.oda.sampledb.Driver</property>
+            <property name="odaURL">jdbc:classicmodels:sampledb</property>
+            <property name="odaUser">ClassicModels</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Monthly Revenue by Region" id="820">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">Continent</property>
+                    <expression name="expression">if (row["TERR"] == "EMEA") 
+ "EU"
+else if (row["TERR"] == "Japan") 
+  "AS"
+else if (row["TERR"] == "APAC") 
+  "AU"
+else 
+  row["TERR"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">TERR</property>
+                    <property name="analysis">attribute</property>
+                    <text-property name="displayName">TERR</text-property>
+                    <text-property name="heading">TERR</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">YR</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">YR</text-property>
+                    <text-property name="heading">YR</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Sale Amount</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Sale Amount</text-property>
+                    <text-property name="heading">Sale Amount</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MNTH</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">MNTH</text-property>
+                    <text-property name="heading">MNTH</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">TERR</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">YR</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Sale Amount</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">MNTH</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Continent</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">ClassicModels</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">TERR</property>
+                    <property name="nativeName">TERR</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">YR</property>
+                    <property name="nativeName">YR</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Sale Amount</property>
+                    <property name="nativeName">Sale Amount</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">MNTH</property>
+                    <property name="nativeName">MNTH</property>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select terr, yr, sum (qty * prc) as "Sale Amount",mnth from
+(
+   select 
+   CLASSICMODELS.OFFICES.TERRITORY,
+   year (CLASSICMODELS.ORDERS.ORDERDATE) as "Year", 
+   CLASSICMODELS.ORDERDETAILS.QUANTITYORDERED,
+   CLASSICMODELS.ORDERDETAILS.PRICEEACH,
+   month (CLASSICMODELS.ORDERS.ORDERDATE)
+   from 
+   CLASSICMODELS.OFFICES,
+   CLASSICMODELS.ORDERS, 
+   CLASSICMODELS.ORDERDETAILS,
+   CLASSICMODELS.EMPLOYEES,
+   CLASSICMODELS.CUSTOMERS
+   where CLASSICMODELS.ORDERDETAILS.ORDERNUMBER = CLASSICMODELS.ORDERS.ORDERNUMBER
+   and CLASSICMODELS.CUSTOMERS.CUSTOMERNUMBER = CLASSICMODELS.ORDERS.CUSTOMERNUMBER
+   and CLASSICMODELS.CUSTOMERS.SALESREPEMPLOYEENUMBER = CLASSICMODELS.EMPLOYEES.EMPLOYEENUMBER
+   and CLASSICMODELS.EMPLOYEES.OFFICECODE = CLASSICMODELS.OFFICES.OFFICECODE
+)
+terrsales (terr, yr, qty, prc, mnth)
+group by terr, yr, mnth]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <property name="linkedDataModels">
+        <linked-data-model name="Monthly Revenue by Region Data Model" id="1098">
+            <property name="aliasDataSets">
+                <alias-data-set name="Monthly Revenue by Region" id="1105">
+                    <property name="originDataSet">Monthly Revenue by Region</property>
+                </alias-data-set>
+            </property>
+            <property name="categories">
+                <category name="Monthly Revenue by Region" id="1099">
+                    <property name="categoryColumns">
+                        <category-column name="TERR" id="1100">
+                            <property name="aliasDataSet">Monthly Revenue by Region Data Model/Monthly Revenue by Region</property>
+                            <property name="resultSetColumnName">TERR</property>
+                        </category-column>
+                        <category-column name="YR" id="1101">
+                            <property name="aliasDataSet">Monthly Revenue by Region Data Model/Monthly Revenue by Region</property>
+                            <property name="resultSetColumnName">YR</property>
+                        </category-column>
+                        <category-column name="Sale Amount" id="1102">
+                            <property name="aliasDataSet">Monthly Revenue by Region Data Model/Monthly Revenue by Region</property>
+                            <property name="resultSetColumnName">Sale Amount</property>
+                        </category-column>
+                        <category-column name="MNTH" id="1103">
+                            <property name="aliasDataSet">Monthly Revenue by Region Data Model/Monthly Revenue by Region</property>
+                            <property name="resultSetColumnName">MNTH</property>
+                        </category-column>
+                        <category-column name="Continent" id="1104">
+                            <property name="aliasDataSet">Monthly Revenue by Region Data Model/Monthly Revenue by Region</property>
+                            <property name="resultSetColumnName">Continent</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+    </property>
+</datamart>

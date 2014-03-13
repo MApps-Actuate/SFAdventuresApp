@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="units">in</property>
+    <property name="theme">defaultTheme</property>
+    <data-sources>
+        <oda-data-source extensionID="com.actuate.birt.labs.data.oda.twitter" name="Twitter 1_1 search data source" id="5">
+            <property name="connectionTimeout">10</property>
+            <property name="useSSL">true</property>
+            <property name="resultType">mixed</property>
+            <property name="maxResultEntries">150</property>
+            <encrypted-property name="appKey" encryptionID="jce">b0d098004fd87c17d94dac9f7016f4a332b18ba437347c15</encrypted-property>
+            <encrypted-property name="appSecret" encryptionID="jce">f026dea51e63fc917ac9407bd6a67b83edc3281d6d95969d7d2998c322969224c190982581a4deba1bd3fb3bc02abfc5</encrypted-property>
+            <encrypted-property name="accessToken" encryptionID="jce">132e7ac234246e76fe217ce9241f40bdadaed086e72ae99f460dd6b7341df51fdc8bef7601fe7502d6366aa8b299d0649ea3a175bbcf09f4</encrypted-property>
+            <encrypted-property name="accessTokenSecret" encryptionID="jce">79d067f55cac50cac1cb7775f9926e27ee2ee13cb8121ee29ff9ff2a793a71064513812d9f023e76d26be827f290a2db</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <themes>
+        <theme name="defaultTheme" id="4"/>
+    </themes>
+    <page-setup>
+        <simple-master-page name="NewSimpleMasterPage" id="3"/>
+    </page-setup>
+</library>

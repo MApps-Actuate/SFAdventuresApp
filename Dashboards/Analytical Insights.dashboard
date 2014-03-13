@@ -1,0 +1,2035 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <xml-property name="externalMetadata">
+        <external-datamarts>
+            <datamart-node location="file:/C:/Users/bcombs/workspace42/SFAdventures/Data%20Objects/SalesAnalysisMetric.data">
+                <reference-elements>NewDataMartDataSource;</reference-elements>
+                <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+                    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+                    <data-sources>
+                        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="Flat File" id="2">
+                            <property name="HOME">C:\Users\bcombs\workspace42\SFAdventures\data</property>
+                            <property name="DELIMTYPE">COMMA</property>
+                            <property name="CHARSET">UTF-8</property>
+                            <property name="INCLCOLUMNNAME">YES</property>
+                            <property name="INCLTYPELINE">NO</property>
+                            <property name="TRAILNULLCOLS">NO</property>
+                        </oda-data-source>
+                    </data-sources>
+                    <data-sets>
+                        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Sales Analysis" id="3">
+                            <list-property name="columnHints">
+                                <structure>
+                                    <property name="columnName">Amt</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">Amt</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Channel</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Channel</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Date</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Date</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Product Line</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Product Line</text-property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Promotion</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Promotion</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                            </list-property>
+                            <list-property name="parameters"/>
+                            <structure name="cachedMetaData">
+                                <list-property name="resultSet">
+                                    <structure>
+                                        <property name="position">1</property>
+                                        <property name="name">Amt</property>
+                                        <property name="dataType">float</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">2</property>
+                                        <property name="name">Channel</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">3</property>
+                                        <property name="name">Date</property>
+                                        <property name="dataType">date</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">4</property>
+                                        <property name="name">Product Line</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">5</property>
+                                        <property name="name">Promotion</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                </list-property>
+                            </structure>
+                            <property name="dataSource">Flat File</property>
+                            <list-property name="resultSet">
+                                <structure>
+                                    <property name="position">1</property>
+                                    <property name="name">Amt</property>
+                                    <property name="nativeName">Amt</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">8</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">2</property>
+                                    <property name="name">Channel</property>
+                                    <property name="nativeName">Channel</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">3</property>
+                                    <property name="name">Date</property>
+                                    <property name="nativeName">Date</property>
+                                    <property name="dataType">date</property>
+                                    <property name="nativeDataType">91</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">4</property>
+                                    <property name="name">Product Line</property>
+                                    <property name="nativeName">Product Line</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">5</property>
+                                    <property name="name">Promotion</property>
+                                    <property name="nativeName">Promotion</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                            </list-property>
+                            <xml-property name="queryText"><![CDATA[select "Amt", "Channel", "Date", "Product Line", "Promotion" from "SalesAnalysisMetrics.csv" : {"Amt","Amt",DOUBLE;"Channel","Channel",STRING;"Date","Date",DATE;"Product Line","Product Line",STRING;"Promotion","Promotion",STRING}]]></xml-property>
+                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Amt</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Amt</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Channel</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Channel</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Date</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Date</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Line</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Line</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Promotion</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Promotion</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+                        </oda-data-set>
+                    </data-sets>
+                    <property name="linkedDataModels">
+                        <linked-data-model name="Sales Analysis Model" id="27">
+                            <property name="aliasDataSets">
+                                <alias-data-set name="Sales Analysis" id="34">
+                                    <property name="originDataSet">Sales Analysis</property>
+                                </alias-data-set>
+                            </property>
+                            <property name="drillPaths">
+                                <drill-path id="35">
+                                    <text-property name="displayName">Channel</text-property>
+                                    <simple-property-list name="drillPathColumns">
+                                        <value>dataSetRow["Channel"]</value>
+                                    </simple-property-list>
+                                </drill-path>
+                                <drill-path id="36">
+                                    <text-property name="displayName">Promotion</text-property>
+                                    <simple-property-list name="drillPathColumns">
+                                        <value>dataSetRow["Promotion"]</value>
+                                    </simple-property-list>
+                                </drill-path>
+                                <drill-path id="37">
+                                    <text-property name="displayName">Product</text-property>
+                                    <simple-property-list name="drillPathColumns">
+                                        <value>dataSetRow["Product Line"]</value>
+                                    </simple-property-list>
+                                </drill-path>
+                                <drill-path id="38">
+                                    <text-property name="displayName">Date</text-property>
+                                    <simple-property-list name="drillPathColumns">
+                                        <value>dataSetRow["Date"]["Year"]</value>
+                                        <value>dataSetRow["Date"]["Quarter"]</value>
+                                    </simple-property-list>
+                                </drill-path>
+                            </property>
+                            <property name="categories">
+                                <category name="Sales Analysis" id="28">
+                                    <property name="categoryColumns">
+                                        <category-column name="Amt" id="29">
+                                            <property name="aliasDataSet">Sales Analysis Model/Sales Analysis</property>
+                                            <property name="resultSetColumnName">Amt</property>
+                                        </category-column>
+                                        <category-column name="Channel" id="30">
+                                            <property name="aliasDataSet">Sales Analysis Model/Sales Analysis</property>
+                                            <property name="resultSetColumnName">Channel</property>
+                                        </category-column>
+                                        <category-column name="Date" id="31">
+                                            <property name="aliasDataSet">Sales Analysis Model/Sales Analysis</property>
+                                            <property name="resultSetColumnName">Date</property>
+                                        </category-column>
+                                        <category-column name="Product Line" id="32">
+                                            <property name="aliasDataSet">Sales Analysis Model/Sales Analysis</property>
+                                            <property name="resultSetColumnName">Product Line</property>
+                                        </category-column>
+                                        <category-column name="Promotion" id="33">
+                                            <property name="aliasDataSet">Sales Analysis Model/Sales Analysis</property>
+                                            <property name="resultSetColumnName">Promotion</property>
+                                        </category-column>
+                                        <category-column name="Sales Revenue" id="39">
+                                            <expression name="expression" type="javascript">dataSetRow["Amt"]</expression>
+                                            <property name="dataType">float</property>
+                                            <property name="horizontalAlign">right</property>
+                                            <structure name="valueFormat">
+                                                <property name="category">Currency</property>
+                                                <property name="pattern">$#,##0.00{RoundingMode=HALF_UP}</property>
+                                            </structure>
+                                        </category-column>
+                                    </property>
+                                </category>
+                            </property>
+                            <property name="pushDown">true</property>
+                        </linked-data-model>
+                    </property>
+                </datamart>
+            </datamart-node>
+            <datamart-node location="file:/C:/Actuate/iHub3/modules/BIRTiHub/iHub/shared/storage/file/015/631.dat">
+                <reference-elements>NewDataMartDataSource1;</reference-elements>
+                <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+                    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+                    <data-sources>
+                        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="FlatFile" id="2">
+                            <property name="HOME">Flatfiles/</property>
+                            <property name="DELIMTYPE">COMMA</property>
+                            <property name="CHARSET">UTF-8</property>
+                            <property name="INCLCOLUMNNAME">YES</property>
+                            <property name="INCLTYPELINE">NO</property>
+                            <property name="TRAILNULLCOLS">NO</property>
+                        </oda-data-source>
+                    </data-sources>
+                    <data-sets>
+                        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Promotions" id="3">
+                            <list-property name="columnHints">
+                                <structure>
+                                    <property name="columnName">Date</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Date</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Line</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Line</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Amt</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">Amt</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Channel</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Channel</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Promotion</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Promotion</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                            </list-property>
+                            <structure name="cachedMetaData">
+                                <list-property name="resultSet">
+                                    <structure>
+                                        <property name="position">1</property>
+                                        <property name="name">Date</property>
+                                        <property name="dataType">date</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">2</property>
+                                        <property name="name">Line</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">3</property>
+                                        <property name="name">Amt</property>
+                                        <property name="dataType">decimal</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">4</property>
+                                        <property name="name">Channel</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">5</property>
+                                        <property name="name">Promotion</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                </list-property>
+                            </structure>
+                            <property name="dataSource">FlatFile</property>
+                            <list-property name="resultSet">
+                                <structure>
+                                    <property name="position">1</property>
+                                    <property name="name">Date</property>
+                                    <property name="nativeName">Date</property>
+                                    <property name="dataType">date</property>
+                                    <property name="nativeDataType">91</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">2</property>
+                                    <property name="name">Line</property>
+                                    <property name="nativeName">Line</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">3</property>
+                                    <property name="name">Amt</property>
+                                    <property name="nativeName">Amt</property>
+                                    <property name="dataType">decimal</property>
+                                    <property name="nativeDataType">2</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">4</property>
+                                    <property name="name">Channel</property>
+                                    <property name="nativeName">Channel</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">5</property>
+                                    <property name="name">Promotion</property>
+                                    <property name="nativeName">Promotion</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                            </list-property>
+                            <xml-property name="queryText"><![CDATA[select "Date", "Line", "Amt", "Channel", "Promotion" from "PromotionalAnalysis.csv" : {"Date","Date",DATE;"Line","Line",STRING;"Amt","Amt",BIGDECIMAL;"Channel","Channel",STRING;"Promotion","Promotion",STRING}]]></xml-property>
+                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Date</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Date</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Line</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Line</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Amt</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Amt</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Channel</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Channel</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Promotion</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Promotion</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+                        </oda-data-set>
+                    </data-sets>
+                    <property name="linkedDataModels">
+                        <linked-data-model name="Data Model" id="4">
+                            <property name="aliasDataSets">
+                                <alias-data-set name="Promotions" id="11">
+                                    <property name="originDataSet">Promotions</property>
+                                </alias-data-set>
+                            </property>
+                            <property name="categories">
+                                <category name="Promotions" id="5">
+                                    <property name="categoryColumns">
+                                        <category-column name="Date" id="6">
+                                            <property name="aliasDataSet">Data Model/Promotions</property>
+                                            <property name="resultSetColumnName">Date</property>
+                                        </category-column>
+                                        <category-column name="Line" id="7">
+                                            <property name="aliasDataSet">Data Model/Promotions</property>
+                                            <property name="resultSetColumnName">Line</property>
+                                        </category-column>
+                                        <category-column name="Amt" id="8">
+                                            <property name="aliasDataSet">Data Model/Promotions</property>
+                                            <property name="resultSetColumnName">Amt</property>
+                                        </category-column>
+                                        <category-column name="Channel" id="9">
+                                            <property name="aliasDataSet">Data Model/Promotions</property>
+                                            <property name="resultSetColumnName">Channel</property>
+                                        </category-column>
+                                        <category-column name="Promotion" id="10">
+                                            <property name="aliasDataSet">Data Model/Promotions</property>
+                                            <property name="resultSetColumnName">Promotion</property>
+                                        </category-column>
+                                    </property>
+                                </category>
+                            </property>
+                            <property name="pushDown">true</property>
+                        </linked-data-model>
+                    </property>
+                </datamart>
+            </datamart-node>
+        </external-datamarts>
+    </xml-property>
+    <property name="layoutPreference">auto layout</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <data-mart-data-source name="NewDataMartDataSource" id="9">
+            <property name="datamartURL">Data Objects/SalesAnalysisMetric</property>
+            <property name="datamartVersion">-1</property>
+            <property name="accessType">latest</property>
+        </data-mart-data-source>
+        <data-mart-data-source name="NewDataMartDataSource1" id="90">
+            <property name="datamartURL">Data Objects/PromotionalAnalysis</property>
+            <property name="datamartVersion">-1</property>
+            <property name="accessType">latest</property>
+        </data-mart-data-source>
+    </data-sources>
+    <data-sets>
+        <data-mart-data-set name="NewDataMartDataSource1::Promotions" id="98">
+            <property name="dataSource">NewDataMartDataSource1</property>
+            <property name="dataObject">Promotions</property>
+        </data-mart-data-set>
+    </data-sets>
+    <property name="linkedDataModels">
+        <data-mart-linked-data-model name="NewDataMartDataSource1::Data Model" id="91">
+            <property name="dataSource">NewDataMartDataSource1</property>
+            <property name="dataObject">Data Model</property>
+        </data-mart-linked-data-model>
+    </property>
+    <body>
+        <extended-item extensionName="Chart" name="Sales Revenue by Year_ by Channel_c02235d7-d6e5-4e8e-8ff3-8f118b90ccdd" id="51">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay" orientation="1">
+  <block>
+   <children _type="TitleBlock" visible="false" auto="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="">
+      <font bold="false" italic="false" underline="false"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="true" orientation="0" position="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title visible="true">
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.range.selector" value="false"/>
+  <extendedProperties name="jschart.navigator" value="false"/>
+  <extendedProperties name="jschart.scroll" value="true"/>
+  <extendedProperties name="keep.hierarchy.category" value="true"/>
+  <extendedProperties name="keep.hierarchy.series" value="true"/>
+  <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="5"/>
+   <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <interactivity enable="true" legendBehavior="1"/>
+  <emptyMessage visible="true">
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="0" gapWidth="0.5" labelPosition="1" staggered="false" interval="1" categoryAxis="true">
+   <title visible="false">
+    <caption value="">
+     <font bold="false" italic="false" underline="false"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes type="0" labelPosition="2" primaryAxis="true" percent="false">
+    <title visible="false">
+     <caption value="">
+      <font bold="false" italic="false" underline="false"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions sorting="0">
+     <query definition="row[&quot;Channel&quot;]"/>
+     <series _type="LineSeries" seriesIdentifier="Amt" stacked="false" paletteLineColor="true">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Amt&quot;]">
+       <grouping enabled="true"/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="0"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label visible="true">
+     <caption>
+      <font bold="false" italic="false" underline="false" rotation="0.0"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale step="0.0" stepNumber="1"/>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions sorting="0">
+    <query definition=""/>
+    <series seriesIdentifier="Date/Year">
+     <label>
+      <caption value="Date/Year"/>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;Date/Year&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingInterval="0.0"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label visible="true">
+    <caption>
+     <font bold="false" italic="false" underline="false" rotation="0.0"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaNumberFormatSpecifier" pattern="###"/>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+            <property name="outputFormat">JS</property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">between</property>
+                    <expression name="expr">dataSetRow["Date"]["Year"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="constant">2008</value>
+                    </simple-property-list>
+                    <expression name="value2" type="constant">2012</expression>
+                    <property name="filterTarget">DataSet</property>
+                    <property name="updateAggregation">true</property>
+                </structure>
+            </list-property>
+            <property name="height">159pt</property>
+            <property name="width">273pt</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Date/Year</property>
+                    <text-property name="displayName">Date/Year</text-property>
+                    <expression name="expression">dataSetRow["Date"]["Year"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Amt</property>
+                    <expression name="expression">dataSetRow["Amt"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Channel</property>
+                    <expression name="expression">dataSetRow["Channel"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <property name="theme">ThemesReportItems3.Modern</property>
+            <property name="linkedDataModel">NewDataMartDataSource1::Data Model</property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">copyHyperlink</property>
+                    <property name="type">string</property>
+                </structure>
+            </list-property>
+            <property name="copyHyperlink">true</property>
+        </extended-item>
+        <extended-item extensionName="Chart" name="Product Line Revenue History_dcdd9715-8ac1-4e03-afc0-ef6b5427af35" id="55">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay" orientation="1">
+  <block>
+   <children _type="TitleBlock" visible="false" auto="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="">
+      <font bold="false" italic="false" underline="false"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="true" orientation="0" position="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title visible="true">
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.range.selector" value="false"/>
+  <extendedProperties name="jschart.navigator" value="true"/>
+  <extendedProperties name="jschart.scroll" value="true"/>
+  <extendedProperties name="keep.hierarchy.category" value="false"/>
+  <extendedProperties name="keep.hierarchy.series" value="false"/>
+  <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="QWER"/>
+   <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <interactivity enable="true" legendBehavior="1"/>
+  <emptyMessage visible="true">
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3" gapWidth="0.5" labelPosition="1" staggered="false" interval="1" categoryAxis="true">
+   <title visible="false">
+    <caption value="">
+     <font bold="false" italic="false" underline="false"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes type="0" labelPosition="2" primaryAxis="true" percent="false">
+    <title visible="false">
+     <caption value="">
+      <font bold="false" italic="false" underline="false"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions sorting="0">
+     <query definition="row[&quot;Line&quot;]"/>
+     <series _type="LineSeries" seriesIdentifier="Amt" stacked="false" paletteLineColor="true">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Amt&quot;]">
+       <grouping enabled="true"/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="0"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label visible="true">
+     <caption>
+      <font bold="false" italic="false" underline="false" rotation="0.0"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale step="0.0" stepNumber="1"/>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions sorting="0">
+    <query definition=""/>
+    <series seriesIdentifier="Date">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;Date&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingUnit="7" groupType="1"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label visible="true">
+    <caption>
+     <font bold="false" italic="false" underline="false" rotation="0.0"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+            <property name="outputFormat">JS</property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">in</property>
+                    <expression name="expr">dataSetRow["Line"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="constant">Touring</value>
+                    </simple-property-list>
+                    <property name="filterTarget">DataSet</property>
+                    <property name="updateAggregation">true</property>
+                </structure>
+                <structure>
+                    <property name="operator">in</property>
+                    <expression name="expr">dataSetRow["Channel"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="constant">Specialty Bike Shop</value>
+                    </simple-property-list>
+                    <property name="filterTarget">DataSet</property>
+                    <property name="updateAggregation">true</property>
+                </structure>
+            </list-property>
+            <property name="height">159pt</property>
+            <property name="width">273pt</property>
+            <property name="dataSet">NewDataMartDataSource1::Promotions</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Date</property>
+                    <expression name="expression">dataSetRow["Date"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">Amt</property>
+                    <expression name="expression">dataSetRow["Amt"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Line</property>
+                    <expression name="expression">dataSetRow["Line"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <property name="theme">ThemesReportItems3.Modern</property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">copyHyperlink</property>
+                    <property name="type">string</property>
+                </structure>
+            </list-property>
+            <property name="copyHyperlink">true</property>
+        </extended-item>
+        <extended-item extensionName="Chart" name="Sales Revenue by Year_ by Promotion_d491a2f9-5465-48fc-82f6-4f3d6946b099" id="59">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Column Chart" subType="SideBySide" orientation="1">
+  <block>
+   <children _type="TitleBlock" visible="false" auto="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="">
+      <font bold="false" italic="false" underline="false"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="true" orientation="0" position="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title visible="true">
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.range.selector" value="false"/>
+  <extendedProperties name="jschart.navigator" value="true"/>
+  <extendedProperties name="jschart.scroll" value="true"/>
+  <extendedProperties name="keep.hierarchy.category" value="false"/>
+  <extendedProperties name="keep.hierarchy.series" value="false"/>
+  <extendedProperties name="jschart.glass.style" value="false"/>
+  <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="QWER"/>
+   <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <interactivity enable="true" legendBehavior="1"/>
+  <emptyMessage visible="true">
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3" gapWidth="0.5" labelPosition="1" staggered="false" interval="1" categoryAxis="true">
+   <title visible="false">
+    <caption value="">
+     <font bold="false" italic="false" underline="false"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes type="0" labelPosition="2" primaryAxis="true" percent="false">
+    <title visible="false">
+     <caption value="">
+      <font bold="false" italic="false" underline="false"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions sorting="0">
+     <query definition="row[&quot;Promotion&quot;]"/>
+     <series _type="BarSeries" seriesIdentifier="Amt" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Amt&quot;]">
+       <grouping enabled="true"/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="0"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label visible="true">
+     <caption>
+      <font bold="false" italic="false" underline="false" rotation="0.0"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale step="0.0" stepNumber="1"/>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions sorting="0">
+    <query definition=""/>
+    <series seriesIdentifier="Date">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;Date&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingUnit="7" groupType="1"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label visible="true">
+    <caption>
+     <font bold="false" italic="false" underline="false" rotation="0.0"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+            <property name="outputFormat">JS</property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">in</property>
+                    <expression name="expr">dataSetRow["Line"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="constant">Touring</value>
+                    </simple-property-list>
+                    <property name="filterTarget">DataSet</property>
+                    <property name="updateAggregation">true</property>
+                </structure>
+                <structure>
+                    <property name="operator">in</property>
+                    <expression name="expr">dataSetRow["Channel"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="constant">Specialty Bike Shop</value>
+                    </simple-property-list>
+                    <property name="filterTarget">DataSet</property>
+                    <property name="updateAggregation">true</property>
+                </structure>
+            </list-property>
+            <property name="height">159pt</property>
+            <property name="width">273pt</property>
+            <property name="dataSet">NewDataMartDataSource1::Promotions</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Date</property>
+                    <expression name="expression">dataSetRow["Date"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">Amt</property>
+                    <expression name="expression">dataSetRow["Amt"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Promotion</property>
+                    <expression name="expression">dataSetRow["Promotion"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <property name="theme">ThemesReportItems3.Modern</property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">copyHyperlink</property>
+                    <property name="type">string</property>
+                </structure>
+            </list-property>
+            <property name="copyHyperlink">true</property>
+        </extended-item>
+        <extended-item extensionName="Crosstab" extensionVersion="3.7.0" name="Sales Analysis_8525c12e-f9fc-448d-bfef-71b79d80f4a7"
+ id="63">
+            <property name="measures">
+                <extended-item extensionName="ComputedMeasureView" name="Amt(SUM)" id="119">
+                    <property name="measureName">Amt(SUM)</property>
+                    <property name="detail">
+                        <extended-item extensionName="AggregationCell" id="120">
+                            <property name="aggregationOnRow">Line/Line</property>
+                            <property name="aggregationOnColumn">Channel/Channel</property>
+                            <property name="content">
+                                <data id="124">
+                                    <structure name="numberFormat">
+                                        <property name="category">General Number</property>
+                                        <property name="pattern">General Number</property>
+                                    </structure>
+                                    <property name="resultSetColumn">Amt(SUM)_Line/Line_Channel/Channel</property>
+                                </data>
+                            </property>
+                        </extended-item>
+                    </property>
+                    <property name="header">
+                        <extended-item extensionName="CrosstabCell" id="121">
+                            <property name="content">
+                                <label id="122">
+                                    <text-property name="text">Amt(SUM)</text-property>
+                                </label>
+                            </property>
+                        </extended-item>
+                    </property>
+                </extended-item>
+            </property>
+            <property name="rows">
+                <extended-item extensionName="CrosstabView" id="106">
+                    <property name="views">
+                        <extended-item extensionName="DimensionView" id="108">
+                            <property name="dimension">Line</property>
+                            <property name="levels">
+                                <extended-item extensionName="LevelView" name="NewLevel View" id="109">
+                                    <property name="level">Line/Line</property>
+                                    <property name="member">
+                                        <extended-item extensionName="CrosstabCell" id="110">
+                                            <property name="content">
+                                                <data name="Line" id="111">
+                                                    <property name="resultSetColumn">Line</property>
+                                                </data>
+                                            </property>
+                                        </extended-item>
+                                    </property>
+                                </extended-item>
+                            </property>
+                        </extended-item>
+                    </property>
+                </extended-item>
+            </property>
+            <property name="columns">
+                <extended-item extensionName="CrosstabView" id="107">
+                    <property name="views">
+                        <extended-item extensionName="DimensionView" id="113">
+                            <property name="dimension">Channel</property>
+                            <property name="levels">
+                                <extended-item extensionName="LevelView" name="NewLevel View1" id="114">
+                                    <property name="level">Channel/Channel</property>
+                                    <property name="member">
+                                        <extended-item extensionName="CrosstabCell" id="115">
+                                            <property name="content">
+                                                <data name="Channel" id="116">
+                                                    <property name="resultSetColumn">Channel</property>
+                                                </data>
+                                            </property>
+                                        </extended-item>
+                                    </property>
+                                </extended-item>
+                            </property>
+                        </extended-item>
+                    </property>
+                </extended-item>
+            </property>
+            <property name="header">
+                <extended-item extensionName="CrosstabCell" id="123"/>
+                <extended-item extensionName="CrosstabCell" id="105">
+                    <property name="content">
+                        <label id="118">
+                            <text-property name="text">Line</text-property>
+                        </label>
+                    </property>
+                </extended-item>
+            </property>
+            <property name="filter">
+                <filter-condition-element>
+                    <expression name="expr">dataSetRow["Date"]["Year"]</expression>
+                    <property name="operator">between</property>
+                    <simple-property-list name="value1">
+                        <value type="constant">2008</value>
+                    </simple-property-list>
+                    <expression name="value2" type="constant">2012</expression>
+                    <property name="filterTarget">DataSet</property>
+                </filter-condition-element>
+            </property>
+            <property name="rowPageBreakInterval">40</property>
+            <property name="columnPageBreakInterval">10</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Line</property>
+                    <expression name="expression">dataSetRow["Line"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Channel</property>
+                    <expression name="expression">dataSetRow["Channel"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Amt(SUM)_Line/Line_Channel/Channel</property>
+                    <text-property name="displayName">Amt(SUM)</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Amt"]</expression>
+                    <property name="dataType">decimal</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>Line/Line</value>
+                        <value>Channel/Channel</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                </structure>
+            </list-property>
+            <property name="theme">ThemesReportItems3.modern-crosstab</property>
+            <property name="linkedDataModel">NewDataMartDataSource1::Data Model</property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">__DA_USE_DEFAULT_HYPERLINK</property>
+                    <property name="type">boolean</property>
+                </structure>
+                <structure>
+                    <property name="name">__DA_ENABLE_PAGEBREAK</property>
+                    <property name="type">boolean</property>
+                </structure>
+            </list-property>
+            <property name="__DA_USE_DEFAULT_HYPERLINK">true</property>
+            <property name="__DA_ENABLE_PAGEBREAK">true</property>
+        </extended-item>
+    </body>
+    <property name="dashboardView">
+        <dashboard id="2">
+            <property name="activeTab">180a3b33-87c3-4efd-af27-ac689d7b111c</property>
+            <property name="tabs">
+                <tab-element name="180a3b33-87c3-4efd-af27-ac689d7b111c" id="3">
+                    <property name="title">Analytical Insights</property>
+                    <property name="backgroundColor">auto</property>
+                    <property name="freeFormGadgets">
+                        <gadget name="Gadget_d90d739e-789f-4ea1-bfd1-831e2c535d04" id="100">
+                            <property name="x">18px</property>
+                            <property name="y">18px</property>
+                            <property name="height">71px</property>
+                            <property name="width">571px</property>
+                            <property name="title">Select Year Range</property>
+                            <property name="showTitle">true</property>
+                            <property name="showBorder">true</property>
+                            <property name="zIndex">2</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">71px</property>
+                            <property name="width">571px</property>
+                            <property name="caption">
+                                <gadget-caption id="101">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Tahoma"</property>
+                                    <property name="fontSize">16pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#505050</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <slider-data-selector id="12">
+                                    <property name="linkedDataModel">NewDataMartDataSource1::Data Model</property>
+                                    <property name="operator">between</property>
+                                    <simple-property-list name="columnNames">
+                                        <value>Date/Year</value>
+                                        <value>Date/Year</value>
+                                    </simple-property-list>
+                                    <simple-property-list name="selectedValues">
+                                        <value>2008</value>
+                                        <value>2012</value>
+                                    </simple-property-list>
+                                    <property name="orientation">horizontal</property>
+                                    <property name="thumbType">dual</property>
+                                    <expression name="defaultValue1" type="javascript">2006</expression>
+                                    <expression name="defaultValue2" type="javascript">2012</expression>
+                                    <property name="autoAdjustTickMarks">true</property>
+                                    <property name="tickInterval">1</property>
+                                    <property name="autoRange">true</property>
+                                    <property name="minValue">0</property>
+                                    <property name="maxValue">100</property>
+                                    <property name="showTickMarks">true</property>
+                                </slider-data-selector>
+                            </property>
+                            <property name="observers">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="gadget">f7d977a8-310c-4541-8aae-8cccb96c6fa8</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_ce74bc1d-5729-4c73-8b5f-63cf750e4d48</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_0c51b675-a208-47e7-9866-ac285b6cbe70</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                        </gadget>
+                        <gadget name="f7d977a8-310c-4541-8aae-8cccb96c6fa8" id="102">
+                            <property name="x">10px</property>
+                            <property name="y">149px</property>
+                            <property name="height">150px</property>
+                            <property name="width">686px</property>
+                            <property name="zIndex">1</property>
+                            <property name="isVisible">false</property>
+                            <property name="height">150px</property>
+                            <property name="width">686px</property>
+                            <property name="caption">
+                                <gadget-caption id="104">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"tahoma", "arial", "verdana", sans-serif</property>
+                                    <property name="fontSize">8pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="color">#000000</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <current-selections id="103"/>
+                            </property>
+                            <property name="subscribeTo">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="gadget">Gadget_afb197ac-3666-40cc-bc6e-f40e3789beb5</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_5342d1b2-9d1c-49a5-bff5-081808c4b5b0</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_d90d739e-789f-4ea1-bfd1-831e2c535d04</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29" id="40">
+                            <property name="x">18px</property>
+                            <property name="y">162px</property>
+                            <property name="height">91px</property>
+                            <property name="width">175px</property>
+                            <property name="title">Channel</property>
+                            <property name="showTitle">true</property>
+                            <property name="showBorder">true</property>
+                            <property name="zIndex">3</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">91px</property>
+                            <property name="width">175px</property>
+                            <property name="caption">
+                                <gadget-caption id="41">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Tahoma"</property>
+                                    <property name="fontSize">16pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#505050</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <list-data-selector id="42">
+                                    <property name="dataSet">NewDataMartDataSource1::Promotions</property>
+                                    <property name="sortDirection">asc</property>
+                                    <property name="operator">in</property>
+                                    <simple-property-list name="columnNames">
+                                        <value>Channel</value>
+                                        <value>Channel</value>
+                                    </simple-property-list>
+                                    <simple-property-list name="selectedValues">
+                                        <value>Specialty Bike Shop</value>
+                                    </simple-property-list>
+                                    <property name="allowMultiValue">true</property>
+                                    <property name="enableSearch">false</property>
+                                    <property name="listLimit">1000</property>
+                                </list-data-selector>
+                            </property>
+                            <property name="observers">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="gadget">f7d977a8-310c-4541-8aae-8cccb96c6fa8</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_5342d1b2-9d1c-49a5-bff5-081808c4b5b0</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_afb197ac-3666-40cc-bc6e-f40e3789beb5</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_6ce545a7-b6fb-4b58-9b28-5c46da75f7e0</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_5262619a-366c-48bf-a6ad-f96328e2eb88</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                            <property name="subscribeTo">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="gadget">Gadget_5342d1b2-9d1c-49a5-bff5-081808c4b5b0</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_afb197ac-3666-40cc-bc6e-f40e3789beb5</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_5342d1b2-9d1c-49a5-bff5-081808c4b5b0" id="43">
+                            <property name="x">216px</property>
+                            <property name="y">162px</property>
+                            <property name="height">91px</property>
+                            <property name="width">175px</property>
+                            <property name="title">Promotion</property>
+                            <property name="showTitle">true</property>
+                            <property name="showBorder">true</property>
+                            <property name="zIndex">4</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">91px</property>
+                            <property name="width">175px</property>
+                            <property name="caption">
+                                <gadget-caption id="44">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Tahoma"</property>
+                                    <property name="fontSize">16pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#505050</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <list-data-selector id="45">
+                                    <property name="dataSet">NewDataMartDataSource1::Promotions</property>
+                                    <property name="sortDirection">asc</property>
+                                    <property name="operator">in</property>
+                                    <simple-property-list name="columnNames">
+                                        <value>Promotion</value>
+                                        <value>Promotion</value>
+                                    </simple-property-list>
+                                    <property name="allowMultiValue">true</property>
+                                    <property name="enableSearch">false</property>
+                                    <property name="listLimit">1000</property>
+                                </list-data-selector>
+                            </property>
+                            <property name="observers">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="gadget">f7d977a8-310c-4541-8aae-8cccb96c6fa8</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_afb197ac-3666-40cc-bc6e-f40e3789beb5</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_6ce545a7-b6fb-4b58-9b28-5c46da75f7e0</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_5262619a-366c-48bf-a6ad-f96328e2eb88</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                            <property name="subscribeTo">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="gadget">Gadget_afb197ac-3666-40cc-bc6e-f40e3789beb5</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_afb197ac-3666-40cc-bc6e-f40e3789beb5" id="46">
+                            <property name="x">414px</property>
+                            <property name="y">162px</property>
+                            <property name="height">91px</property>
+                            <property name="width">175px</property>
+                            <property name="title">Product Line</property>
+                            <property name="showTitle">true</property>
+                            <property name="showBorder">true</property>
+                            <property name="zIndex">5</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">91px</property>
+                            <property name="width">175px</property>
+                            <property name="caption">
+                                <gadget-caption id="47">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Tahoma"</property>
+                                    <property name="fontSize">16pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#505050</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <list-data-selector id="48">
+                                    <property name="dataSet">NewDataMartDataSource1::Promotions</property>
+                                    <property name="sortDirection">asc</property>
+                                    <property name="operator">in</property>
+                                    <simple-property-list name="columnNames">
+                                        <value>Line</value>
+                                        <value>Line</value>
+                                    </simple-property-list>
+                                    <simple-property-list name="selectedValues">
+                                        <value>Touring</value>
+                                    </simple-property-list>
+                                    <property name="allowMultiValue">true</property>
+                                    <property name="enableSearch">false</property>
+                                    <property name="listLimit">1000</property>
+                                </list-data-selector>
+                            </property>
+                            <property name="observers">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="gadget">f7d977a8-310c-4541-8aae-8cccb96c6fa8</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_6ce545a7-b6fb-4b58-9b28-5c46da75f7e0</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_5262619a-366c-48bf-a6ad-f96328e2eb88</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_5342d1b2-9d1c-49a5-bff5-081808c4b5b0</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                            <property name="subscribeTo">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="gadget">Gadget_5342d1b2-9d1c-49a5-bff5-081808c4b5b0</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_ce74bc1d-5729-4c73-8b5f-63cf750e4d48" id="49">
+                            <property name="x">612px</property>
+                            <property name="y">18px</property>
+                            <property name="height">236px</property>
+                            <property name="width">571px</property>
+                            <property name="title">Sales Revenue by Year, by Channel</property>
+                            <property name="showTitle">true</property>
+                            <property name="showBorder">true</property>
+                            <property name="zIndex">6</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">236px</property>
+                            <property name="width">571px</property>
+                            <property name="caption">
+                                <gadget-caption id="50">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Tahoma"</property>
+                                    <property name="fontSize">16pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#505050</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="52">
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="internalReportLetRef">Sales Revenue by Year_ by Channel_c02235d7-d6e5-4e8e-8ff3-8f118b90ccdd</property>
+                                </data-view>
+                            </property>
+                            <property name="subscribeTo">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="gadget">Gadget_d90d739e-789f-4ea1-bfd1-831e2c535d04</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_6ce545a7-b6fb-4b58-9b28-5c46da75f7e0" id="53">
+                            <property name="x">18px</property>
+                            <property name="y">324px</property>
+                            <property name="height">236px</property>
+                            <property name="width">571px</property>
+                            <property name="title">Product Line Revenue History</property>
+                            <property name="showTitle">true</property>
+                            <property name="showBorder">true</property>
+                            <property name="zIndex">7</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">236px</property>
+                            <property name="width">571px</property>
+                            <property name="caption">
+                                <gadget-caption id="54">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Tahoma"</property>
+                                    <property name="fontSize">16pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#505050</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="56">
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="internalReportLetRef">Product Line Revenue History_dcdd9715-8ac1-4e03-afc0-ef6b5427af35</property>
+                                </data-view>
+                            </property>
+                            <property name="subscribeTo">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="gadget">Gadget_afb197ac-3666-40cc-bc6e-f40e3789beb5</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_5342d1b2-9d1c-49a5-bff5-081808c4b5b0</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_5262619a-366c-48bf-a6ad-f96328e2eb88" id="57">
+                            <property name="x">612px</property>
+                            <property name="y">324px</property>
+                            <property name="height">236px</property>
+                            <property name="width">571px</property>
+                            <property name="title">Sales Revenue by Year, by Promotion</property>
+                            <property name="showTitle">true</property>
+                            <property name="showBorder">true</property>
+                            <property name="zIndex">8</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">236px</property>
+                            <property name="width">571px</property>
+                            <property name="caption">
+                                <gadget-caption id="58">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Tahoma"</property>
+                                    <property name="fontSize">16pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#505050</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="60">
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="internalReportLetRef">Sales Revenue by Year_ by Promotion_d491a2f9-5465-48fc-82f6-4f3d6946b099</property>
+                                </data-view>
+                            </property>
+                            <property name="subscribeTo">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="gadget">Gadget_afb197ac-3666-40cc-bc6e-f40e3789beb5</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_5342d1b2-9d1c-49a5-bff5-081808c4b5b0</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_0c51b675-a208-47e7-9866-ac285b6cbe70" id="61">
+                            <property name="x">18px</property>
+                            <property name="y">630px</property>
+                            <property name="height">200px</property>
+                            <property name="width">1165px</property>
+                            <property name="title">Sales Analysis</property>
+                            <property name="showTitle">true</property>
+                            <property name="showBorder">true</property>
+                            <property name="zIndex">9</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">200px</property>
+                            <property name="width">1165px</property>
+                            <property name="caption">
+                                <gadget-caption id="62">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Tahoma"</property>
+                                    <property name="fontSize">16pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#505050</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="65">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">showViewerToolbar</property>
+                                            <property name="type">boolean</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="showViewerToolbar">true</property>
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="internalReportLetRef">Sales Analysis_8525c12e-f9fc-448d-bfef-71b79d80f4a7</property>
+                                </data-view>
+                            </property>
+                            <property name="subscribeTo">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="gadget">Gadget_d90d739e-789f-4ea1-bfd1-831e2c535d04</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                        </gadget>
+                    </property>
+                </tab-element>
+            </property>
+        </dashboard>
+    </property>
+</report>
