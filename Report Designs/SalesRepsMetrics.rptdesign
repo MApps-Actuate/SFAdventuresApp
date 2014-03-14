@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">fixed layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="Flat File" id="1185">
+            <property name="HOME">Flatfiles/</property>
+            <property name="DELIMTYPE">COMMA</property>
+            <property name="CHARSET">UTF-8</property>
+            <property name="INCLCOLUMNNAME">YES</property>
+            <property name="INCLTYPELINE">NO</property>
+            <property name="TRAILNULLCOLS">NO</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Sales Reps" id="1186">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">PctQuota</property>
+                    <expression name="expression" type="javascript">Math.abs(((row["Goal"]-row["Closed"])/row["Goal"])-1) * 100</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Close Date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Close Date</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Closed</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Closed</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Forecast</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Forecast</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Goal</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Goal</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Opportunity</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Opportunity</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">progress</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">progress</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Region</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Region</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Sales Rep</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Sales Rep</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PctQuota</property>
+                    <property name="analysis">measure</property>
+                </structure>
+            </list-property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">top-n</property>
+                    <expression name="expr" type="javascript">row["Forecast"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">10</value>
+                    </simple-property-list>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Close Date</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Closed</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Forecast</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Goal</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Opportunity</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">progress</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Region</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Sales Rep</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">PctQuota</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Flat File</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Close Date</property>
+                    <property name="nativeName">Close Date</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Closed</property>
+                    <property name="nativeName">Closed</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Forecast</property>
+                    <property name="nativeName">Forecast</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Goal</property>
+                    <property name="nativeName">Goal</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Opportunity</property>
+                    <property name="nativeName">Opportunity</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">progress</property>
+                    <property name="nativeName">progress</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Region</property>
+                    <property name="nativeName">Region</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Sales Rep</property>
+                    <property name="nativeName">Sales Rep</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Close Date", "Closed", "Forecast", "Goal", "Opportunity", "progress", "Region", "Sales Rep" from "execsalesmetrics.csv" : {"Close Date","Close Date",DATE;"Closed","Closed",INT;"Forecast","Forecast",INT;"Goal","Goal",INT;"Opportunity","Opportunity",STRING;"progress","progress",STRING;"Region","Region",STRING;"Sales Rep","Sales Rep",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Close Date</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Close Date</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Closed</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Closed</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Forecast</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Forecast</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Opportunity</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Opportunity</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>progress</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>progress</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Region</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Region</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Sales Rep</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Sales Rep</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <extended-item extensionName="Chart" id="1188">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side">
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,212.0,130.0"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.zoom" value="x"/>
+  <extendedProperties name="keep.hierarchy.category" value="false"/>
+  <extendedProperties name="keep.hierarchy.series" value="false"/>
+  <extendedProperties name="jschart.series.shadow" value="true"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="A, B, C"/>
+   <orthogonalSampleData dataSetRepresentation="5,4,12" seriesDefinitionIndex="0"/>
+   <orthogonalSampleData dataSetRepresentation="10.0,8.0,24.0" seriesDefinitionIndex="1"/>
+   <orthogonalSampleData dataSetRepresentation="42,91,62,9,21" seriesDefinitionIndex="2"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes>
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="Closed" stacked="false" riser="0">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Closed&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="Goal" stacked="false" riser="0">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Goal&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <associatedAxes titlePosition="3" labelPosition="3" primaryAxis="false">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="LineSeries" seriesIdentifier="% of Quota" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;PctQuota&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin type="1">
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;Sales Rep&quot;]"/>
+     <dataPoint separator=", ">
+      <components type="1"/>
+     </dataPoint>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font rotation="90.0"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+            <property name="outputFormat">JS</property>
+            <property name="inheritColumns">false</property>
+            <property name="height">3.5520833333333335in</property>
+            <property name="width">7.59375in</property>
+            <expression name="bookmark" type="javascript">"SalesRepTable"</expression>
+            <property name="dataSet">Sales Reps</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Close Date</property>
+                    <text-property name="displayName">Close Date</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Close Date"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">Closed</property>
+                    <text-property name="displayName">Closed</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Closed"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Goal</property>
+                    <text-property name="displayName">Goal</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Goal"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Opportunity</property>
+                    <text-property name="displayName">Opportunity</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Opportunity"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">progress</property>
+                    <text-property name="displayName">progress</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["progress"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Region</property>
+                    <text-property name="displayName">Region</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Region"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Sales Rep</property>
+                    <text-property name="displayName">Sales Rep</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Sales Rep"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">PctQuota</property>
+                    <text-property name="displayName">PctQuota</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PctQuota"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <property name="theme">ThemesReportItems3.Modern</property>
+        </extended-item>
+    </body>
+    <property name="pageVariables">
+        <variable-element name="g_dataPart">
+            <expression name="value" type="javascript">""</expression>
+            <property name="type">report</property>
+        </variable-element>
+    </property>
+</report>

@@ -1972,7 +1972,7 @@
                     </property>
                 </datamart>
             </datamart-node>
-            <datamart-node location="file:/C:/Applications/SFAdventures/Data%20Objects/StaticData.datadesign">
+            <datamart-node location="file:/C:/Applications/SFAdventuresApp/Data%20Objects/StaticData.datadesign">
                 <reference-elements>StaticData;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
                     <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
@@ -2387,208 +2387,6 @@
                                 <ex-property>
                                     <name>DATA</name>
                                     <value>[["6800500","8000000"]]</value>
-                                </ex-property>
-                            </list-property>
-                        </oda-data-set>
-                        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="teamleader" id="1099">
-                            <list-property name="columnHints">
-                                <structure>
-                                    <property name="columnName">Forecast</property>
-                                    <property name="analysis">measure</property>
-                                    <text-property name="displayName">Forecast</text-property>
-                                    <property name="onColumnLayout">false</property>
-                                    <text-property name="heading">Forecast</text-property>
-                                    <property name="analysisColumn">Forecast</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Sales Rep</property>
-                                    <property name="analysis">attribute</property>
-                                    <text-property name="displayName">Sales Rep</text-property>
-                                    <property name="onColumnLayout">false</property>
-                                    <text-property name="heading">Sales Rep</text-property>
-                                    <property name="analysisColumn">Sales Rep</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">percentquota</property>
-                                    <property name="analysis">attribute</property>
-                                    <text-property name="displayName">percentquota</text-property>
-                                    <property name="onColumnLayout">false</property>
-                                    <text-property name="heading">percentquota</text-property>
-                                    <property name="analysisColumn">percentquota</property>
-                                </structure>
-                            </list-property>
-                            <list-property name="parameters"/>
-                            <list-property name="sortHints">
-                                <structure>
-                                    <property name="columnName">dataSetRow["Forecast"]</property>
-                                    <property name="direction">desc</property>
-                                    <property name="isOptional">true</property>
-                                </structure>
-                            </list-property>
-                            <structure name="cachedMetaData">
-                                <list-property name="resultSet">
-                                    <structure>
-                                        <property name="position">1</property>
-                                        <property name="name">Forecast</property>
-                                        <property name="dataType">float</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">2</property>
-                                        <property name="name">Sales Rep</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">3</property>
-                                        <property name="name">percentquota</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                </list-property>
-                            </structure>
-                            <property name="dataSource">static</property>
-                            <list-property name="resultSet">
-                                <structure>
-                                    <property name="position">1</property>
-                                    <property name="name">Forecast</property>
-                                    <property name="nativeName">Forecast</property>
-                                    <property name="dataType">float</property>
-                                    <property name="nativeDataType">4</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">2</property>
-                                    <property name="name">Sales Rep</property>
-                                    <property name="nativeName">Sales Rep</property>
-                                    <property name="dataType">string</property>
-                                    <property name="nativeDataType">1</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">3</property>
-                                    <property name="name">percentquota</property>
-                                    <property name="nativeName">percentquota</property>
-                                    <property name="dataType">string</property>
-                                    <property name="nativeDataType">1</property>
-                                </structure>
-                            </list-property>
-                            <xml-property name="queryText"><![CDATA[{"Columns":["Forecast","Sales Rep","percentquota"],"Types":[4,1,1]}]]></xml-property>
-                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>2.0</Version>
-  <design:ResultSets derivedMetaData="true">
-    <design:resultSetDefinitions>
-      <design:resultSetColumns>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Opportunity</design:name>
-              <design:position>1</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>Opportunity</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Opportunity</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Forecast</design:name>
-              <design:position>2</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>Forecast</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Forecast</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Close Date</design:name>
-              <design:position>3</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>Close Date</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Close Date</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Region</design:name>
-              <design:position>4</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>Region</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Region</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Sales Rep</design:name>
-              <design:position>5</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>Sales Rep</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Sales Rep</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-      </design:resultSetColumns>
-      <design:criteria/>
-    </design:resultSetDefinitions>
-  </design:ResultSets>
-</model:DesignValues>]]></xml-property>
-                            <list-property name="privateDriverProperties">
-                                <ex-property>
-                                    <name>DATA</name>
-                                    <value>[["98887","Kendra Haran","98"],["76526","Gianna Ables","89"],["53765","Paul Stalter","97"]]</value>
                                 </ex-property>
                             </list-property>
                         </oda-data-set>
@@ -6316,8 +6114,8 @@ group by terr, yr, mnth]]></xml-property>
                                 <gadget-caption id="11">
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Tahoma"</property>
-                                    <property name="fontSize">16pt</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
                                     <property name="fontWeight">normal</property>
                                     <property name="fontStyle">normal</property>
                                     <property name="color">#505050</property>
@@ -6370,8 +6168,8 @@ group by terr, yr, mnth]]></xml-property>
                                 <gadget-caption id="1292">
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Tahoma"</property>
-                                    <property name="fontSize">16pt</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
                                     <property name="fontWeight">normal</property>
                                     <property name="fontStyle">normal</property>
                                     <property name="color">#505050</property>
@@ -6386,7 +6184,7 @@ group by terr, yr, mnth]]></xml-property>
                             </property>
                         </gadget>
                         <gadget name="Gadget_96dda6f8-fa72-4d1c-b3c2-14d9b55697cc" id="1300">
-                            <property name="x">774px</property>
+                            <property name="x">717px</property>
                             <property name="y">360px</property>
                             <property name="height">365px</property>
                             <property name="width">101px</property>
@@ -6423,49 +6221,11 @@ group by terr, yr, mnth]]></xml-property>
                                 </data-view>
                             </property>
                         </gadget>
-                        <gadget name="Gadget_93da0170-76bb-4ce6-82a7-aa8a8abd6a6b" id="1317">
-                            <property name="x">900px</property>
-                            <property name="y">360px</property>
-                            <property name="height">365px</property>
-                            <property name="width">551px</property>
-                            <property name="title">Worldwide Revenue Performance to Date</property>
-                            <property name="showTitle">true</property>
-                            <property name="showBorder">true</property>
-                            <property name="zIndex">7</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">365px</property>
-                            <property name="width">551px</property>
-                            <property name="caption">
-                                <gadget-caption id="1318">
-                                    <property name="showCaption">true</property>
-                                    <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Tahoma"</property>
-                                    <property name="fontSize">16pt</property>
-                                    <property name="fontWeight">normal</property>
-                                    <property name="fontStyle">normal</property>
-                                    <property name="color">#505050</property>
-                                    <property name="textUnderline">none</property>
-                                </gadget-caption>
-                            </property>
-                            <property name="content">
-                                <data-view id="1322">
-                                    <list-property name="userProperties">
-                                        <structure>
-                                            <property name="name">reportlibrary</property>
-                                            <property name="type">string</property>
-                                        </structure>
-                                    </list-property>
-                                    <property name="reportlibrary">{"reportLibrary":"/Report Libraries/SFAdventures.rptlibrary","reportItem":"WW Revenue to Date"}</property>
-                                    <property name="gadgetType">viewer</property>
-                                    <property name="internalReportLetRef">WW Revenue to Date1</property>
-                                </data-view>
-                            </property>
-                        </gadget>
                         <gadget name="Gadget_7ce3ebc4-0559-4f0d-9978-6ce54c068b1e" id="1365">
                             <property name="x">18px</property>
                             <property name="y">360px</property>
                             <property name="height">362px</property>
-                            <property name="width">728px</property>
+                            <property name="width">666px</property>
                             <property name="title">Sales Reps Commit vs Quota vs Pct of Sales</property>
                             <property name="externalGadgetURI">/Applications/SFAdventures/Report Designs/execsalesmetrics.rptdesign</property>
                             <property name="showTitle">true</property>
@@ -6473,7 +6233,7 @@ group by terr, yr, mnth]]></xml-property>
                             <property name="zIndex">11</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">362px</property>
-                            <property name="width">728px</property>
+                            <property name="width">666px</property>
                             <property name="caption">
                                 <gadget-caption id="1366">
                                     <property name="showCaption">true</property>
@@ -6498,7 +6258,7 @@ group by terr, yr, mnth]]></xml-property>
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/Applications/SFAdventures/Report Designs/execsalesmetrics.rptdocument</property>
+                                            <property name="sourceFile">/Applications/SFAdventuresApp/Report Designs/SalesRepsMetrics.rptdocument</property>
                                             <property name="targetBookmark">SalesRepTable</property>
                                         </external-element-ref>
                                     </property>
@@ -6542,8 +6302,51 @@ group by terr, yr, mnth]]></xml-property>
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/Applications/SFAdventures/Report Designs/execsalesmetrics.rptdocument</property>
+                                            <property name="sourceFile">/Applications/SFAdventuresApp/Report Designs/Top10Opportunities.rptdesign</property>
                                             <property name="targetBookmark">Top 10 Opportunities</property>
+                                        </external-element-ref>
+                                    </property>
+                                </data-view>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_ae3c7ecc-69b8-45f0-acb1-e383c93afe8d" id="1378">
+                            <property name="x">846px</property>
+                            <property name="y">360px</property>
+                            <property name="height">364px</property>
+                            <property name="width">530px</property>
+                            <property name="title">World Sales Performance to Date</property>
+                            <property name="externalGadgetURI">/Applications/SFAdventuresApp/Report Designs/WorldSales.rptdocument</property>
+                            <property name="showTitle">true</property>
+                            <property name="showBorder">true</property>
+                            <property name="zIndex">13</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">364px</property>
+                            <property name="width">530px</property>
+                            <property name="caption">
+                                <gadget-caption id="1379">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="1380">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">showViewerToolbar</property>
+                                            <property name="type">boolean</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="showViewerToolbar">false</property>
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="externalContentRef">
+                                        <external-element-ref>
+                                            <property name="sourceFile">/Applications/SFAdventuresApp/Report Designs/WorldSales.rptdocument</property>
                                         </external-element-ref>
                                     </property>
                                 </data-view>

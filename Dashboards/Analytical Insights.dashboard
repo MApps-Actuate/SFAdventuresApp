@@ -1491,8 +1491,8 @@
                                 <gadget-caption id="101">
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Tahoma"</property>
-                                    <property name="fontSize">16pt</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
                                     <property name="fontWeight">normal</property>
                                     <property name="fontStyle">normal</property>
                                     <property name="color">#505050</property>
@@ -1604,8 +1604,8 @@
                                 <gadget-caption id="41">
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Tahoma"</property>
-                                    <property name="fontSize">16pt</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
                                     <property name="fontWeight">normal</property>
                                     <property name="fontStyle">normal</property>
                                     <property name="color">#505050</property>
@@ -1688,8 +1688,8 @@
                                 <gadget-caption id="44">
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Tahoma"</property>
-                                    <property name="fontSize">16pt</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
                                     <property name="fontWeight">normal</property>
                                     <property name="fontStyle">normal</property>
                                     <property name="color">#505050</property>
@@ -1769,8 +1769,8 @@
                                 <gadget-caption id="47">
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Tahoma"</property>
-                                    <property name="fontSize">16pt</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
                                     <property name="fontWeight">normal</property>
                                     <property name="fontStyle">normal</property>
                                     <property name="color">#505050</property>
@@ -1853,8 +1853,8 @@
                                 <gadget-caption id="50">
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Tahoma"</property>
-                                    <property name="fontSize">16pt</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
                                     <property name="fontWeight">normal</property>
                                     <property name="fontStyle">normal</property>
                                     <property name="color">#505050</property>
@@ -1895,8 +1895,8 @@
                                 <gadget-caption id="54">
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Tahoma"</property>
-                                    <property name="fontSize">16pt</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
                                     <property name="fontWeight">normal</property>
                                     <property name="fontStyle">normal</property>
                                     <property name="color">#505050</property>
@@ -1945,8 +1945,8 @@
                                 <gadget-caption id="58">
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Tahoma"</property>
-                                    <property name="fontSize">16pt</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
                                     <property name="fontWeight">normal</property>
                                     <property name="fontStyle">normal</property>
                                     <property name="color">#505050</property>
@@ -1995,8 +1995,8 @@
                                 <gadget-caption id="62">
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Tahoma"</property>
-                                    <property name="fontSize">16pt</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
                                     <property name="fontWeight">normal</property>
                                     <property name="fontStyle">normal</property>
                                     <property name="color">#505050</property>
