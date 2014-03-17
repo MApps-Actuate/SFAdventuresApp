@@ -1981,6 +1981,8 @@
                     </data-sources>
                     <data-sets>
                         <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="gauge" id="8">
+                            <property name="isVisible">false</property>
+                            <property name="nullsOrdering">nulls lowest</property>
                             <list-property name="columnHints">
                                 <structure>
                                     <property name="columnName">revtodate</property>
@@ -1988,6 +1990,8 @@
                                     <text-property name="displayName">revtodate</text-property>
                                     <property name="onColumnLayout">false</property>
                                     <text-property name="heading">revtodate</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
                                 </structure>
                                 <structure>
                                     <property name="columnName">commish</property>
@@ -1995,6 +1999,8 @@
                                     <text-property name="displayName">commish</text-property>
                                     <property name="onColumnLayout">false</property>
                                     <text-property name="heading">commish</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
                                 </structure>
                                 <structure>
                                     <property name="columnName">MyGoal</property>
@@ -2002,6 +2008,8 @@
                                     <text-property name="displayName">MyGoal</text-property>
                                     <property name="onColumnLayout">false</property>
                                     <text-property name="heading">MyGoal</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
                                 </structure>
                             </list-property>
                             <list-property name="parameters"/>
@@ -2109,7 +2117,235 @@
                                 </ex-property>
                             </list-property>
                         </oda-data-set>
+                        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="regiongauge" id="1288">
+                            <property name="isVisible">false</property>
+                            <property name="nullsOrdering">nulls lowest</property>
+                            <list-property name="columnHints">
+                                <structure>
+                                    <property name="columnName">Rev To Date</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="displayName">Rev To Date</text-property>
+                                    <property name="onColumnLayout">false</property>
+                                    <text-property name="heading">Rev To Date</text-property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Region Goal</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="displayName">Region Goal</text-property>
+                                    <property name="onColumnLayout">false</property>
+                                    <text-property name="heading">Region Goal</text-property>
+                                </structure>
+                            </list-property>
+                            <list-property name="parameters"/>
+                            <structure name="cachedMetaData">
+                                <list-property name="resultSet">
+                                    <structure>
+                                        <property name="position">1</property>
+                                        <property name="name">Rev To Date</property>
+                                        <property name="dataType">float</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">2</property>
+                                        <property name="name">Region Goal</property>
+                                        <property name="dataType">float</property>
+                                    </structure>
+                                </list-property>
+                            </structure>
+                            <property name="dataSource">static</property>
+                            <list-property name="resultSet">
+                                <structure>
+                                    <property name="position">1</property>
+                                    <property name="name">Rev To Date</property>
+                                    <property name="nativeName">Rev To Date</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">4</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">2</property>
+                                    <property name="name">Region Goal</property>
+                                    <property name="nativeName">Region Goal</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">4</property>
+                                </structure>
+                            </list-property>
+                            <xml-property name="queryText"><![CDATA[{"Columns":["Rev To Date","Region Goal"],"Types":[4,4]}]]></xml-property>
+                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>percentquota</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>percentquota</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>percentquota</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>commish</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>commish</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>commish</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+                            <list-property name="privateDriverProperties">
+                                <ex-property>
+                                    <name>DATA</name>
+                                    <value>[["6800500","8000000"]]</value>
+                                </ex-property>
+                            </list-property>
+                        </oda-data-set>
+                        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="static" id="59">
+                            <property name="isVisible">false</property>
+                            <property name="nullsOrdering">nulls lowest</property>
+                            <list-property name="columnHints">
+                                <structure>
+                                    <property name="columnName">goal</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="displayName">goal</text-property>
+                                    <property name="onColumnLayout">false</property>
+                                    <text-property name="heading">goal</text-property>
+                                    <property name="analysisColumn">goal</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">actual</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="displayName">actual</text-property>
+                                    <property name="onColumnLayout">false</property>
+                                    <text-property name="heading">actual</text-property>
+                                    <property name="analysisColumn">actual</property>
+                                </structure>
+                            </list-property>
+                            <list-property name="parameters"/>
+                            <structure name="cachedMetaData">
+                                <list-property name="resultSet">
+                                    <structure>
+                                        <property name="position">1</property>
+                                        <property name="name">goal</property>
+                                        <property name="dataType">decimal</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">2</property>
+                                        <property name="name">actual</property>
+                                        <property name="dataType">decimal</property>
+                                    </structure>
+                                </list-property>
+                            </structure>
+                            <property name="dataSource">static</property>
+                            <list-property name="resultSet">
+                                <structure>
+                                    <property name="position">1</property>
+                                    <property name="name">goal</property>
+                                    <property name="nativeName">goal</property>
+                                    <property name="dataType">decimal</property>
+                                    <property name="nativeDataType">5</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">2</property>
+                                    <property name="name">actual</property>
+                                    <property name="nativeName">actual</property>
+                                    <property name="dataType">decimal</property>
+                                    <property name="nativeDataType">5</property>
+                                </structure>
+                            </list-property>
+                            <xml-property name="queryText"><![CDATA[{"Columns":["goal","actual"],"Types":[5,5]}]]></xml-property>
+                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>goal</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>5</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>goal</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>goal</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>actual</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>5</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>actual</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>actual</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+                            <list-property name="privateDriverProperties">
+                                <ex-property>
+                                    <name>DATA</name>
+                                    <value>[["10000000","5765245"]]</value>
+                                </ex-property>
+                            </list-property>
+                        </oda-data-set>
                         <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="leads" id="1128">
+                            <property name="isVisible">true</property>
+                            <property name="nullsOrdering">nulls lowest</property>
                             <list-property name="columnHints">
                                 <structure>
                                     <property name="columnName">Leads</property>
@@ -2277,335 +2513,6 @@
                                 <ex-property>
                                     <name>DATA</name>
                                     <value>[["6","Online Inquiry"],["5","Inbound Calls"],["3","Ad Campaign"],["2","Tradeshow"]]</value>
-                                </ex-property>
-                            </list-property>
-                        </oda-data-set>
-                        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="regiongauge" id="1288">
-                            <list-property name="columnHints">
-                                <structure>
-                                    <property name="columnName">Rev To Date</property>
-                                    <property name="analysis">measure</property>
-                                    <text-property name="displayName">Rev To Date</text-property>
-                                    <property name="onColumnLayout">false</property>
-                                    <text-property name="heading">Rev To Date</text-property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Region Goal</property>
-                                    <property name="analysis">measure</property>
-                                    <text-property name="displayName">Region Goal</text-property>
-                                    <property name="onColumnLayout">false</property>
-                                    <text-property name="heading">Region Goal</text-property>
-                                </structure>
-                            </list-property>
-                            <list-property name="parameters"/>
-                            <structure name="cachedMetaData">
-                                <list-property name="resultSet">
-                                    <structure>
-                                        <property name="position">1</property>
-                                        <property name="name">Rev To Date</property>
-                                        <property name="dataType">float</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">2</property>
-                                        <property name="name">Region Goal</property>
-                                        <property name="dataType">float</property>
-                                    </structure>
-                                </list-property>
-                            </structure>
-                            <property name="dataSource">static</property>
-                            <list-property name="resultSet">
-                                <structure>
-                                    <property name="position">1</property>
-                                    <property name="name">Rev To Date</property>
-                                    <property name="nativeName">Rev To Date</property>
-                                    <property name="dataType">float</property>
-                                    <property name="nativeDataType">4</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">2</property>
-                                    <property name="name">Region Goal</property>
-                                    <property name="nativeName">Region Goal</property>
-                                    <property name="dataType">float</property>
-                                    <property name="nativeDataType">4</property>
-                                </structure>
-                            </list-property>
-                            <xml-property name="queryText"><![CDATA[{"Columns":["Rev To Date","Region Goal"],"Types":[4,4]}]]></xml-property>
-                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>2.0</Version>
-  <design:ResultSets derivedMetaData="true">
-    <design:resultSetDefinitions>
-      <design:resultSetColumns>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>percentquota</design:name>
-              <design:position>1</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>percentquota</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>percentquota</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>commish</design:name>
-              <design:position>2</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>commish</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>commish</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-      </design:resultSetColumns>
-      <design:criteria/>
-    </design:resultSetDefinitions>
-  </design:ResultSets>
-</model:DesignValues>]]></xml-property>
-                            <list-property name="privateDriverProperties">
-                                <ex-property>
-                                    <name>DATA</name>
-                                    <value>[["6800500","8000000"]]</value>
-                                </ex-property>
-                            </list-property>
-                        </oda-data-set>
-                        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="map" id="867">
-                            <list-property name="columnHints">
-                                <structure>
-                                    <property name="columnName">ID</property>
-                                    <property name="analysis">dimension</property>
-                                    <text-property name="displayName">ID</text-property>
-                                    <text-property name="heading">ID</text-property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Actual</property>
-                                    <property name="analysis">measure</property>
-                                    <text-property name="displayName">Actual</text-property>
-                                    <text-property name="heading">Actual</text-property>
-                                </structure>
-                            </list-property>
-                            <structure name="cachedMetaData">
-                                <list-property name="resultSet">
-                                    <structure>
-                                        <property name="position">1</property>
-                                        <property name="name">ID</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">2</property>
-                                        <property name="name">Actual</property>
-                                        <property name="dataType">decimal</property>
-                                    </structure>
-                                </list-property>
-                            </structure>
-                            <property name="dataSource">static</property>
-                            <list-property name="resultSet">
-                                <structure>
-                                    <property name="position">1</property>
-                                    <property name="name">ID</property>
-                                    <property name="nativeName">ID</property>
-                                    <property name="dataType">string</property>
-                                    <property name="nativeDataType">1</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">2</property>
-                                    <property name="name">Actual</property>
-                                    <property name="nativeName">Actual</property>
-                                    <property name="dataType">decimal</property>
-                                    <property name="nativeDataType">5</property>
-                                </structure>
-                            </list-property>
-                            <xml-property name="queryText"><![CDATA[{"Columns":["ID","Actual"],"Types":[1,5]}]]></xml-property>
-                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>2.0</Version>
-  <design:ResultSets derivedMetaData="true">
-    <design:resultSetDefinitions>
-      <design:resultSetColumns>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>ID</design:name>
-              <design:position>1</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>ID</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>ID</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Actual</design:name>
-              <design:position>2</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>5</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>Actual</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Actual</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-      </design:resultSetColumns>
-      <design:criteria/>
-    </design:resultSetDefinitions>
-  </design:ResultSets>
-</model:DesignValues>]]></xml-property>
-                            <list-property name="privateDriverProperties">
-                                <ex-property>
-                                    <name>DATA</name>
-                                    <value>[["01","50000000"],["02","50000000"],["03","40000000"],["04","40000000"],["05","40000000"]]</value>
-                                </ex-property>
-                            </list-property>
-                        </oda-data-set>
-                        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="static" id="59">
-                            <list-property name="columnHints">
-                                <structure>
-                                    <property name="columnName">goal</property>
-                                    <property name="analysis">measure</property>
-                                    <text-property name="displayName">goal</text-property>
-                                    <property name="onColumnLayout">false</property>
-                                    <text-property name="heading">goal</text-property>
-                                    <property name="analysisColumn">goal</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">actual</property>
-                                    <property name="analysis">measure</property>
-                                    <text-property name="displayName">actual</text-property>
-                                    <property name="onColumnLayout">false</property>
-                                    <text-property name="heading">actual</text-property>
-                                    <property name="analysisColumn">actual</property>
-                                </structure>
-                            </list-property>
-                            <list-property name="parameters"/>
-                            <structure name="cachedMetaData">
-                                <list-property name="resultSet">
-                                    <structure>
-                                        <property name="position">1</property>
-                                        <property name="name">goal</property>
-                                        <property name="dataType">decimal</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">2</property>
-                                        <property name="name">actual</property>
-                                        <property name="dataType">decimal</property>
-                                    </structure>
-                                </list-property>
-                            </structure>
-                            <property name="dataSource">static</property>
-                            <list-property name="resultSet">
-                                <structure>
-                                    <property name="position">1</property>
-                                    <property name="name">goal</property>
-                                    <property name="nativeName">goal</property>
-                                    <property name="dataType">decimal</property>
-                                    <property name="nativeDataType">5</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">2</property>
-                                    <property name="name">actual</property>
-                                    <property name="nativeName">actual</property>
-                                    <property name="dataType">decimal</property>
-                                    <property name="nativeDataType">5</property>
-                                </structure>
-                            </list-property>
-                            <xml-property name="queryText"><![CDATA[{"Columns":["goal","actual"],"Types":[5,5]}]]></xml-property>
-                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>2.0</Version>
-  <design:ResultSets derivedMetaData="true">
-    <design:resultSetDefinitions>
-      <design:resultSetColumns>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>goal</design:name>
-              <design:position>1</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>5</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>goal</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>goal</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>actual</design:name>
-              <design:position>2</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>5</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>actual</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>actual</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-      </design:resultSetColumns>
-      <design:criteria/>
-    </design:resultSetDefinitions>
-  </design:ResultSets>
-</model:DesignValues>]]></xml-property>
-                            <list-property name="privateDriverProperties">
-                                <ex-property>
-                                    <name>DATA</name>
-                                    <value>[["10000000","5765245"]]</value>
                                 </ex-property>
                             </list-property>
                         </oda-data-set>
@@ -2848,52 +2755,6 @@ group by terr, yr, mnth]]></xml-property>
         </data-mart-data-source>
     </data-sources>
     <data-sets>
-        <data-mart-data-set name="Static" id="1306">
-            <list-property name="columnHints">
-                <structure>
-                    <property name="columnName">goal</property>
-                    <property name="analysis">measure</property>
-                    <text-property name="displayName">goal</text-property>
-                    <property name="onColumnLayout">false</property>
-                    <text-property name="heading">goal</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">actual</property>
-                    <property name="analysis">measure</property>
-                    <text-property name="displayName">actual</text-property>
-                    <property name="onColumnLayout">false</property>
-                    <text-property name="heading">actual</text-property>
-                </structure>
-            </list-property>
-            <structure name="cachedMetaData">
-                <list-property name="resultSet">
-                    <structure>
-                        <property name="position">1</property>
-                        <property name="name">goal</property>
-                        <property name="dataType">decimal</property>
-                    </structure>
-                    <structure>
-                        <property name="position">2</property>
-                        <property name="name">actual</property>
-                        <property name="dataType">decimal</property>
-                    </structure>
-                </list-property>
-            </structure>
-            <property name="dataSource">StaticData</property>
-            <property name="dataObject">static</property>
-            <list-property name="selectedColumns">
-                <structure>
-                    <property name="position">1</property>
-                    <property name="name">goal</property>
-                    <property name="dataType">decimal</property>
-                </structure>
-                <structure>
-                    <property name="position">2</property>
-                    <property name="name">actual</property>
-                    <property name="dataType">decimal</property>
-                </structure>
-            </list-property>
-        </data-mart-data-set>
         <data-mart-data-set name="Monthly Revenue by Region" id="1316">
             <list-property name="columnHints">
                 <structure>
@@ -3063,6 +2924,52 @@ group by terr, yr, mnth]]></xml-property>
                     <property name="position">5</property>
                     <property name="name">Continent</property>
                     <property name="dataType">string</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+        <data-mart-data-set name="Static" id="1306">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">goal</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">goal</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">goal</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">actual</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">actual</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">actual</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">goal</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">actual</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">StaticData</property>
+            <property name="dataObject">static</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">goal</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">actual</property>
+                    <property name="dataType">decimal</property>
                 </structure>
             </list-property>
         </data-mart-data-set>
@@ -5259,7 +5166,6 @@ group by terr, yr, mnth]]></xml-property>
      </outline>
     </title>
    </children>
-   <bounds _body=",,,179.25"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -5436,7 +5342,7 @@ group by terr, yr, mnth]]></xml-property>
 ]]></xml-property>
             <property name="outputFormat">JS</property>
             <property name="height">179.25pt</property>
-            <property name="width">488pt</property>
+            <property name="width">296.25pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Region</property>
@@ -5511,7 +5417,6 @@ group by terr, yr, mnth]]></xml-property>
      </outline>
     </title>
    </children>
-   <bounds _body=",,,179.25"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -5687,7 +5592,7 @@ group by terr, yr, mnth]]></xml-property>
 ]]></xml-property>
             <property name="outputFormat">JS</property>
             <property name="height">179.25pt</property>
-            <property name="width">273pt</property>
+            <property name="width">288.75pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Region</property>
@@ -5714,60 +5619,6 @@ group by terr, yr, mnth]]></xml-property>
                 </structure>
             </list-property>
             <property name="copyHyperlink">true</property>
-        </extended-item>
-        <extended-item extensionName="FlashGadgets" name="Sales Goal vs Forecast" id="1307">
-            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="1.0">
- <Gadget backgroundColor="FEFEFE" borderColor="000000" borderThickness="2" borderTransparency="255" colorScheme="1" prefix="" showBorder="false" showGaugeLabels="false" showGlassStyle="false" showShadow="false" showValueAboveNeedle="false" subType="VBullet" suffix="" title="" turnOffAnimation="false" turnOffDefaultAnimination="false" type="Bullet" version="1.0.0" zOrderPosition="1">
-  <gadgetPartsSupportingEffects _body="background"/>
-  <gadgetPartsSupportingEffects _body="caption"/>
-  <gadgetPartsSupportingEffects _body="subcaption"/>
-  <gadgetPartsSupportingEffects _body="plot"/>
-  <gadgetPartsSupportingEffects _body="tickmarks"/>
-  <gadgetPartsSupportingEffects _body="tickvalues"/>
-  <gadgetPartsSupportingEffects _body="limitvalues"/>
-  <gadgetPartsSupportingEffects _body="colorrange"/>
-  <gadgetPartsSupportingEffects _body="target"/>
-  <gadgetPartsSupportingEffects _body="tooltip"/>
-  <scale autoAdjustMajorTickMarks="false" majorTickMarksCount="5" max="10000000" min="0" minorTickMarksCount="4"/>
-  <region color="db462e" endValue="2500000.0" label="A" startValue="0.0"/>
-  <region color="f4d760" endValue="7500000.0" label="B" startValue="2500000.0"/>
-  <region color="9ecc4c" endValue="1.0E7" label="C" startValue="7500000.0"/>
-  <thresholds color="3366ff" isDashed="false" isTrendZone="false" length="90" lineWidth="3" markerRadius="4" showMarker="false" showThreshold="true" showValueOnTop="true" startValue="8000000.0" transparency="255"/>
-  <ticks maxLabel="" minLabel="" placeTicksInside="false" placeValuesInside="false" showLimits="true" showTickMarks="true" showTickValues="true" ticksBelowGauge="true" ticksOnRight="false">
-   <major color="b7b7b7" height="8" width="1"/>
-   <minor color="b7b7b7" height="3" width="1"/>
-  </ticks>
-  <toolTip showToolTip="true"/>
-  <addOns _type="TextAddOn" addOnType="5" name="AddOn0" showAddOn="true" x="40.0" y="30.0" fontColor="505050" fontFamily="Tahoma" horizontalAlignment="0" label="FORECAST" verticalAlignment="1" wrapMaxHeight="50.0" wrapMaxWidth="30.0"/>
-  <valueDefinition query="row[&quot;actual&quot;]"/>
-  <linearGauge showNeedleAbove="false" showNeedleValue="true" showRoundCorners="true">
-   <needle borderColor="999999" borderTransparency="255" borderWidth="1" fillColor="000000" fillTransparency="255" shape="0" size="10" tooltipShowValue="true"/>
-  </linearGauge>
-  <bullet showRoundCorners="true">
-   <valueIndicator borderTransparency="255" borderWidth="1" color="4e91c6" showBorder="false" transparency="255" width="40"/>
-   <bulletPlot borderTransparency="255" borderWidth="2" showAsDot="false" showBorder="false" showShadow="false" showValueLabel="true"/>
-  </bullet>
-  <font color="555555" font="Tahoma" size="10"/>
- </Gadget>
-</ActuateChart>
-]]></xml-property>
-            <property name="inheritColumns">false</property>
-            <property name="outputFormat">JS</property>
-            <property name="height">365pt</property>
-            <property name="width">101pt</property>
-            <property name="dataSet">Static</property>
-            <list-property name="boundDataColumns">
-                <structure>
-                    <property name="name">goal</property>
-                    <expression name="expression" type="javascript">dataSetRow["goal"]</expression>
-                    <property name="dataType">decimal</property>
-                </structure>
-                <structure>
-                    <property name="name">actual</property>
-                    <expression name="expression" type="javascript">dataSetRow["actual"]</expression>
-                    <property name="dataType">decimal</property>
-                </structure>
-            </list-property>
         </extended-item>
         <extended-item extensionName="Map" name="WW Revenue to Date" id="1314">
             <xml-property name="xmlRepresentation"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
@@ -6089,6 +5940,60 @@ group by terr, yr, mnth]]></xml-property>
                 </structure>
             </list-property>
         </extended-item>
+        <extended-item extensionName="FlashGadgets" name="Sales Goal vs Forecast" id="1307">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="1.0">
+ <Gadget backgroundColor="FEFEFE" borderColor="000000" borderThickness="2" borderTransparency="255" colorScheme="1" prefix="" showBorder="false" showGaugeLabels="false" showGlassStyle="false" showShadow="false" showValueAboveNeedle="false" subType="VBullet" suffix="" title="" turnOffAnimation="false" turnOffDefaultAnimination="false" type="Bullet" version="1.0.0" zOrderPosition="1">
+  <gadgetPartsSupportingEffects _body="background"/>
+  <gadgetPartsSupportingEffects _body="caption"/>
+  <gadgetPartsSupportingEffects _body="subcaption"/>
+  <gadgetPartsSupportingEffects _body="plot"/>
+  <gadgetPartsSupportingEffects _body="tickmarks"/>
+  <gadgetPartsSupportingEffects _body="tickvalues"/>
+  <gadgetPartsSupportingEffects _body="limitvalues"/>
+  <gadgetPartsSupportingEffects _body="colorrange"/>
+  <gadgetPartsSupportingEffects _body="target"/>
+  <gadgetPartsSupportingEffects _body="tooltip"/>
+  <scale autoAdjustMajorTickMarks="false" majorTickMarksCount="5" max="10000000" min="0" minorTickMarksCount="4"/>
+  <region color="db462e" endValue="2500000.0" label="A" startValue="0.0"/>
+  <region color="f4d760" endValue="7500000.0" label="B" startValue="2500000.0"/>
+  <region color="9ecc4c" endValue="1.0E7" label="C" startValue="7500000.0"/>
+  <thresholds color="3366ff" isDashed="false" isTrendZone="false" length="90" lineWidth="3" markerRadius="4" showMarker="false" showThreshold="true" showValueOnTop="true" startValue="8000000.0" transparency="255"/>
+  <ticks maxLabel="" minLabel="" placeTicksInside="false" placeValuesInside="false" showLimits="true" showTickMarks="true" showTickValues="true" ticksBelowGauge="true" ticksOnRight="false">
+   <major color="b7b7b7" height="8" width="1"/>
+   <minor color="b7b7b7" height="3" width="1"/>
+  </ticks>
+  <toolTip showToolTip="true"/>
+  <addOns _type="TextAddOn" addOnType="5" name="AddOn0" showAddOn="true" x="40.0" y="30.0" fontColor="505050" fontFamily="Tahoma" horizontalAlignment="0" label="FORECAST" verticalAlignment="1" wrapMaxHeight="50.0" wrapMaxWidth="30.0"/>
+  <valueDefinition query="row[&quot;actual&quot;]"/>
+  <linearGauge showNeedleAbove="false" showNeedleValue="true" showRoundCorners="true">
+   <needle borderColor="999999" borderTransparency="255" borderWidth="1" fillColor="000000" fillTransparency="255" shape="0" size="10" tooltipShowValue="true"/>
+  </linearGauge>
+  <bullet showRoundCorners="true">
+   <valueIndicator borderTransparency="255" borderWidth="1" color="4e91c6" showBorder="false" transparency="255" width="40"/>
+   <bulletPlot borderTransparency="255" borderWidth="2" showAsDot="false" showBorder="false" showShadow="false" showValueLabel="true"/>
+  </bullet>
+  <font color="555555" font="Tahoma" size="10"/>
+ </Gadget>
+</ActuateChart>
+]]></xml-property>
+            <property name="inheritColumns">false</property>
+            <property name="outputFormat">JS</property>
+            <property name="height">246pt</property>
+            <property name="width">93pt</property>
+            <property name="dataSet">Static</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">goal</property>
+                    <expression name="expression" type="javascript">dataSetRow["goal"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">actual</property>
+                    <expression name="expression" type="javascript">dataSetRow["actual"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+        </extended-item>
     </body>
     <property name="dashboardView">
         <dashboard id="2">
@@ -6099,17 +6004,17 @@ group by terr, yr, mnth]]></xml-property>
                     <property name="backgroundColor">auto</property>
                     <property name="freeFormGadgets">
                         <gadget name="Gadget_f93c9bd3-f84f-458e-b610-113774fea545" id="10">
-                            <property name="x">540px</property>
+                            <property name="x">522px</property>
                             <property name="y">18px</property>
                             <property name="height">274px</property>
-                            <property name="width">407px</property>
+                            <property name="width">410px</property>
                             <property name="title">Pipeline vs Goal</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">2</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">274px</property>
-                            <property name="width">407px</property>
+                            <property name="width">410px</property>
                             <property name="caption">
                                 <gadget-caption id="11">
                                     <property name="showCaption">true</property>
@@ -6153,17 +6058,17 @@ group by terr, yr, mnth]]></xml-property>
                             </property>
                         </gadget>
                         <gadget name="Gadget_f9998708-f916-4b9d-8987-25c4d7879cdc" id="1291">
-                            <property name="x">972px</property>
+                            <property name="x">954px</property>
                             <property name="y">18px</property>
                             <property name="height">274px</property>
-                            <property name="width">407px</property>
+                            <property name="width">410px</property>
                             <property name="title">Forecast vs Quota</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">4</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">274px</property>
-                            <property name="width">407px</property>
+                            <property name="width">410px</property>
                             <property name="caption">
                                 <gadget-caption id="1292">
                                     <property name="showCaption">true</property>
@@ -6180,44 +6085,6 @@ group by terr, yr, mnth]]></xml-property>
                                 <data-view id="1294">
                                     <property name="gadgetType">viewer</property>
                                     <property name="internalReportLetRef">Forecast vs Quota_dcd3a9ad-75ea-48cf-bc5a-1b95e4a919fa</property>
-                                </data-view>
-                            </property>
-                        </gadget>
-                        <gadget name="Gadget_96dda6f8-fa72-4d1c-b3c2-14d9b55697cc" id="1300">
-                            <property name="x">717px</property>
-                            <property name="y">360px</property>
-                            <property name="height">365px</property>
-                            <property name="width">101px</property>
-                            <property name="title">Sales Goal</property>
-                            <property name="showTitle">true</property>
-                            <property name="showBorder">true</property>
-                            <property name="zIndex">6</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">365px</property>
-                            <property name="width">101px</property>
-                            <property name="caption">
-                                <gadget-caption id="1301">
-                                    <property name="showCaption">true</property>
-                                    <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Source Sans Pro"</property>
-                                    <property name="fontSize">16pt</property>
-                                    <property name="fontWeight">normal</property>
-                                    <property name="fontStyle">normal</property>
-                                    <property name="color">#FFFFFF</property>
-                                    <property name="textUnderline">none</property>
-                                </gadget-caption>
-                            </property>
-                            <property name="content">
-                                <data-view id="1308">
-                                    <list-property name="userProperties">
-                                        <structure>
-                                            <property name="name">reportlibrary</property>
-                                            <property name="type">string</property>
-                                        </structure>
-                                    </list-property>
-                                    <property name="reportlibrary">{"reportLibrary":"/Report Libraries/SFAdventures.rptlibrary","reportItem":"Sales Goal vs Forecast"}</property>
-                                    <property name="gadgetType">viewer</property>
-                                    <property name="internalReportLetRef">Sales Goal vs Forecast</property>
                                 </data-view>
                             </property>
                         </gadget>
@@ -6268,16 +6135,16 @@ group by terr, yr, mnth]]></xml-property>
                         <gadget name="Gadget_ae94de93-4ce2-4622-ac2d-0741af59a2d6" id="1368">
                             <property name="x">18px</property>
                             <property name="y">18px</property>
-                            <property name="height">277px</property>
-                            <property name="width">493px</property>
+                            <property name="height">274px</property>
+                            <property name="width">482px</property>
                             <property name="title">Top 10 Opportunities</property>
                             <property name="externalGadgetURI">/Applications/SFAdventures/Report Designs/execsalesmetrics.rptdocument</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">12</property>
                             <property name="showScrollBar">false</property>
-                            <property name="height">277px</property>
-                            <property name="width">493px</property>
+                            <property name="height">274px</property>
+                            <property name="width">482px</property>
                             <property name="caption">
                                 <gadget-caption id="1369">
                                     <property name="showCaption">true</property>
@@ -6310,18 +6177,18 @@ group by terr, yr, mnth]]></xml-property>
                             </property>
                         </gadget>
                         <gadget name="Gadget_ae3c7ecc-69b8-45f0-acb1-e383c93afe8d" id="1378">
-                            <property name="x">846px</property>
+                            <property name="x">862px</property>
                             <property name="y">360px</property>
-                            <property name="height">364px</property>
-                            <property name="width">530px</property>
+                            <property name="height">362px</property>
+                            <property name="width">501px</property>
                             <property name="title">World Sales Performance to Date</property>
                             <property name="externalGadgetURI">/Applications/SFAdventuresApp/Report Designs/WorldSales.rptdocument</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">13</property>
                             <property name="showScrollBar">false</property>
-                            <property name="height">364px</property>
-                            <property name="width">530px</property>
+                            <property name="height">362px</property>
+                            <property name="width">501px</property>
                             <property name="caption">
                                 <gadget-caption id="1379">
                                     <property name="showCaption">true</property>
@@ -6349,6 +6216,44 @@ group by terr, yr, mnth]]></xml-property>
                                             <property name="sourceFile">/Applications/SFAdventuresApp/Report Designs/WorldSales.rptdocument</property>
                                         </external-element-ref>
                                     </property>
+                                </data-view>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_a529d831-b6fa-482f-9e82-7e31e4cbb0c4" id="1384">
+                            <property name="x">702px</property>
+                            <property name="y">360px</property>
+                            <property name="height">362px</property>
+                            <property name="width">141px</property>
+                            <property name="title">Goal</property>
+                            <property name="showTitle">true</property>
+                            <property name="showBorder">true</property>
+                            <property name="zIndex">14</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">362px</property>
+                            <property name="width">141px</property>
+                            <property name="caption">
+                                <gadget-caption id="1385">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="1386">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">reportlibrary</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="reportlibrary">{"reportLibrary":"/Applications/SFAdventuresApp/SFAdventures.rptlibrary","reportItem":"Sales Goal vs Forecast"}</property>
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="internalReportLetRef">Sales Goal vs Forecast</property>
                                 </data-view>
                             </property>
                         </gadget>

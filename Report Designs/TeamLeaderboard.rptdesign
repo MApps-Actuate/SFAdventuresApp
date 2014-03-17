@@ -209,7 +209,7 @@
     </page-setup>
     <body>
         <table id="1391">
-            <property name="width">3.75in</property>
+            <property name="width">500px</property>
             <property name="dataSet">TeamLeaderboard</property>
             <property name="theme">ThemesReportItems3.Modern Table</property>
             <list-property name="boundDataColumns">
@@ -238,6 +238,7 @@
             <column id="1412"/>
             <header>
                 <row id="1392">
+                    <property name="backgroundColor">#3578AD</property>
                     <cell id="1393">
                         <label id="1394">
                             <text-property name="text">Sales Rep</text-property>
@@ -259,11 +260,13 @@
                 <row id="1399">
                     <cell id="1400">
                         <data id="1401">
+                            <property name="paddingLeft">3pt</property>
                             <property name="resultSetColumn">Sales Rep</property>
                         </data>
                     </cell>
                     <cell id="1402">
                         <data id="1403">
+                            <property name="paddingRight">3pt</property>
                             <structure name="numberFormat">
                                 <property name="category">Currency</property>
                                 <property name="pattern">$#,##0.00{RoundingMode=HALF_UP}</property>
@@ -274,6 +277,7 @@
                     </cell>
                     <cell id="1404">
                         <data id="1405">
+                            <property name="paddingRight">3pt</property>
                             <property name="textAlign">center</property>
                             <property name="resultSetColumn">Pct of Quota</property>
                         </data>

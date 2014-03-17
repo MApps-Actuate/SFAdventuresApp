@@ -623,6 +623,7 @@
      </outline>
     </title>
    </children>
+   <bounds _body=",,475.5,"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -636,7 +637,6 @@
   <extendedProperties name="keep.hierarchy.category" value="true"/>
   <extendedProperties name="keep.hierarchy.series" value="true"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
-  <extendedProperties name="jschart.series.shadow" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="5"/>
    <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
@@ -790,13 +790,13 @@
                     <simple-property-list name="value1">
                         <value type="constant">2008</value>
                     </simple-property-list>
-                    <expression name="value2" type="constant">2012</expression>
+                    <expression name="value2" type="constant">2013</expression>
                     <property name="filterTarget">DataSet</property>
                     <property name="updateAggregation">true</property>
                 </structure>
             </list-property>
             <property name="height">159pt</property>
-            <property name="width">273pt</property>
+            <property name="width">475.5pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Date/Year</property>
@@ -885,7 +885,6 @@
   <extendedProperties name="keep.hierarchy.category" value="false"/>
   <extendedProperties name="keep.hierarchy.series" value="false"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
-  <extendedProperties name="jschart.series.shadow" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="QWER"/>
    <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
@@ -1032,20 +1031,12 @@
             <property name="outputFormat">JS</property>
             <list-property name="filter">
                 <structure>
-                    <property name="operator">in</property>
-                    <expression name="expr">dataSetRow["Line"]</expression>
+                    <property name="operator">between</property>
+                    <expression name="expr">dataSetRow["Date"]</expression>
                     <simple-property-list name="value1">
-                        <value type="constant">Touring</value>
+                        <value type="constant">2008</value>
                     </simple-property-list>
-                    <property name="filterTarget">DataSet</property>
-                    <property name="updateAggregation">true</property>
-                </structure>
-                <structure>
-                    <property name="operator">in</property>
-                    <expression name="expr">dataSetRow["Channel"]</expression>
-                    <simple-property-list name="value1">
-                        <value type="constant">Specialty Bike Shop</value>
-                    </simple-property-list>
+                    <expression name="value2" type="constant">2013</expression>
                     <property name="filterTarget">DataSet</property>
                     <property name="updateAggregation">true</property>
                 </structure>
@@ -1126,6 +1117,7 @@
      </outline>
     </title>
    </children>
+   <bounds _body=",,475.5,"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -1140,7 +1132,6 @@
   <extendedProperties name="keep.hierarchy.series" value="false"/>
   <extendedProperties name="jschart.glass.style" value="false"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
-  <extendedProperties name="jschart.series.shadow" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="QWER"/>
    <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
@@ -1281,26 +1272,18 @@
             <property name="outputFormat">JS</property>
             <list-property name="filter">
                 <structure>
-                    <property name="operator">in</property>
-                    <expression name="expr">dataSetRow["Line"]</expression>
+                    <property name="operator">between</property>
+                    <expression name="expr">dataSetRow["Date"]</expression>
                     <simple-property-list name="value1">
-                        <value type="constant">Touring</value>
+                        <value type="constant">2008</value>
                     </simple-property-list>
-                    <property name="filterTarget">DataSet</property>
-                    <property name="updateAggregation">true</property>
-                </structure>
-                <structure>
-                    <property name="operator">in</property>
-                    <expression name="expr">dataSetRow["Channel"]</expression>
-                    <simple-property-list name="value1">
-                        <value type="constant">Specialty Bike Shop</value>
-                    </simple-property-list>
+                    <expression name="value2" type="constant">2013</expression>
                     <property name="filterTarget">DataSet</property>
                     <property name="updateAggregation">true</property>
                 </structure>
             </list-property>
             <property name="height">159pt</property>
-            <property name="width">273pt</property>
+            <property name="width">475.5pt</property>
             <property name="dataSet">NewDataMartDataSource1::Promotions</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -1340,10 +1323,62 @@
                             <property name="content">
                                 <data id="124">
                                     <structure name="numberFormat">
-                                        <property name="category">General Number</property>
-                                        <property name="pattern">General Number</property>
+                                        <property name="category">Currency</property>
+                                        <property name="pattern">$#,##0</property>
                                     </structure>
                                     <property name="resultSetColumn">Amt(SUM)_Line/Line_Channel/Channel</property>
+                                </data>
+                            </property>
+                        </extended-item>
+                    </property>
+                    <property name="aggregations">
+                        <extended-item extensionName="AggregationCell" id="127">
+                            <property name="aggregationOnColumn">Channel/Channel</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="backgroundColor">#F1F1F1</property>
+                            <property name="textAlign">right</property>
+                            <property name="content">
+                                <data id="128">
+                                    <property name="backgroundColor">#F1F1F1</property>
+                                    <property name="fontWeight">bold</property>
+                                    <structure name="numberFormat">
+                                        <property name="category">Currency</property>
+                                        <property name="pattern">$#,##0</property>
+                                    </structure>
+                                    <property name="textAlign">right</property>
+                                    <property name="resultSetColumn">Amt(SUM)_Channel/Channel</property>
+                                </data>
+                            </property>
+                        </extended-item>
+                        <extended-item extensionName="AggregationCell" id="131">
+                            <property name="aggregationOnRow">Line/Line</property>
+                            <property name="fontStyle">normal</property>
+                            <property name="content">
+                                <data id="132">
+                                    <structure name="numberFormat">
+                                        <property name="category">Currency</property>
+                                        <property name="pattern">$#,##0</property>
+                                    </structure>
+                                    <property name="resultSetColumn">Amt(SUM)_Line/Line</property>
+                                </data>
+                            </property>
+                        </extended-item>
+                        <extended-item extensionName="AggregationCell" id="133">
+                            <property name="fontStyle">italic</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="backgroundColor">#F1F1F1</property>
+                            <property name="textAlign">right</property>
+                            <property name="content">
+                                <data id="134">
+                                    <property name="backgroundColor">#F1F1F1</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="fontStyle">italic</property>
+                                    <structure name="numberFormat">
+                                        <property name="category">Currency</property>
+                                        <property name="pattern">$#,##0</property>
+                                    </structure>
+                                    <property name="textAlign">right</property>
+                                    <property name="resultSetColumn">Amt(SUM)</property>
                                 </data>
                             </property>
                         </extended-item>
@@ -1356,11 +1391,27 @@
                                 </label>
                             </property>
                         </extended-item>
+                        <extended-item extensionName="CrosstabCell" id="135">
+                            <property name="content">
+                                <label id="136">
+                                    <text-property name="text">Amt(SUM)</text-property>
+                                </label>
+                            </property>
+                        </extended-item>
                     </property>
                 </extended-item>
             </property>
             <property name="rows">
                 <extended-item extensionName="CrosstabView" id="106">
+                    <property name="grandTotal">
+                        <extended-item extensionName="CrosstabCell" id="126">
+                            <property name="content">
+                                <label id="129">
+                                    <text-property name="text">Grand Total</text-property>
+                                </label>
+                            </property>
+                        </extended-item>
+                    </property>
                     <property name="views">
                         <extended-item extensionName="DimensionView" id="108">
                             <property name="dimension">Line</property>
@@ -1384,6 +1435,15 @@
             </property>
             <property name="columns">
                 <extended-item extensionName="CrosstabView" id="107">
+                    <property name="grandTotal">
+                        <extended-item extensionName="CrosstabCell" id="130">
+                            <property name="content">
+                                <label id="137">
+                                    <text-property name="text">Grand Total</text-property>
+                                </label>
+                            </property>
+                        </extended-item>
+                    </property>
                     <property name="views">
                         <extended-item extensionName="DimensionView" id="113">
                             <property name="dimension">Channel</property>
@@ -1422,8 +1482,9 @@
                     <simple-property-list name="value1">
                         <value type="constant">2008</value>
                     </simple-property-list>
-                    <expression name="value2" type="constant">2012</expression>
+                    <expression name="value2" type="constant">2013</expression>
                     <property name="filterTarget">DataSet</property>
+                    <property name="updateAggregation">true</property>
                 </filter-condition-element>
             </property>
             <property name="rowPageBreakInterval">40</property>
@@ -1448,6 +1509,30 @@
                         <value>Line/Line</value>
                         <value>Channel/Channel</value>
                     </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                </structure>
+                <structure>
+                    <property name="name">Amt(SUM)_Channel/Channel</property>
+                    <expression name="expression">dataSetRow["Amt"]</expression>
+                    <property name="dataType">float</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>Channel/Channel</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                </structure>
+                <structure>
+                    <property name="name">Amt(SUM)_Line/Line</property>
+                    <expression name="expression">dataSetRow["Amt"]</expression>
+                    <property name="dataType">float</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>Line/Line</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                </structure>
+                <structure>
+                    <property name="name">Amt(SUM)</property>
+                    <expression name="expression">dataSetRow["Amt"]</expression>
+                    <property name="dataType">float</property>
                     <property name="aggregateFunction">SUM</property>
                 </structure>
             </list-property>
@@ -1479,14 +1564,14 @@
                             <property name="x">18px</property>
                             <property name="y">18px</property>
                             <property name="height">71px</property>
-                            <property name="width">571px</property>
+                            <property name="width">642px</property>
                             <property name="title">Select Year Range</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">2</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">71px</property>
-                            <property name="width">571px</property>
+                            <property name="width">642px</property>
                             <property name="caption">
                                 <gadget-caption id="101">
                                     <property name="showCaption">true</property>
@@ -1509,7 +1594,7 @@
                                     </simple-property-list>
                                     <simple-property-list name="selectedValues">
                                         <value>2008</value>
-                                        <value>2012</value>
+                                        <value>2013</value>
                                     </simple-property-list>
                                     <property name="orientation">horizontal</property>
                                     <property name="thumbType">dual</property>
@@ -1537,6 +1622,17 @@
                                         </event-object>
                                         <event-object>
                                             <property name="gadget">Gadget_0c51b675-a208-47e7-9866-ac285b6cbe70</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="appliedTo">Date</property>
+                                            <property name="gadget">Gadget_5262619a-366c-48bf-a6ad-f96328e2eb88</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="appliedTo">Date</property>
+                                            <property name="gadget">Gadget_6ce545a7-b6fb-4b58-9b28-5c46da75f7e0</property>
+                                            <property name="dirty">false</property>
                                         </event-object>
                                     </property>
                                 </event-subscriber>
@@ -1592,14 +1688,14 @@
                             <property name="x">18px</property>
                             <property name="y">162px</property>
                             <property name="height">91px</property>
-                            <property name="width">175px</property>
+                            <property name="width">190px</property>
                             <property name="title">Channel</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">3</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">91px</property>
-                            <property name="width">175px</property>
+                            <property name="width">190px</property>
                             <property name="caption">
                                 <gadget-caption id="41">
                                     <property name="showCaption">true</property>
@@ -1620,9 +1716,6 @@
                                     <simple-property-list name="columnNames">
                                         <value>Channel</value>
                                         <value>Channel</value>
-                                    </simple-property-list>
-                                    <simple-property-list name="selectedValues">
-                                        <value>Specialty Bike Shop</value>
                                     </simple-property-list>
                                     <property name="allowMultiValue">true</property>
                                     <property name="enableSearch">false</property>
@@ -1653,6 +1746,11 @@
                                             <property name="gadget">Gadget_5262619a-366c-48bf-a6ad-f96328e2eb88</property>
                                             <property name="dirty">false</property>
                                         </event-object>
+                                        <event-object>
+                                            <property name="appliedTo">Channel</property>
+                                            <property name="gadget">Gadget_ce74bc1d-5729-4c73-8b5f-63cf750e4d48</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
                                     </property>
                                 </event-subscriber>
                             </property>
@@ -1673,17 +1771,17 @@
                             </property>
                         </gadget>
                         <gadget name="Gadget_5342d1b2-9d1c-49a5-bff5-081808c4b5b0" id="43">
-                            <property name="x">216px</property>
+                            <property name="x">450px</property>
                             <property name="y">162px</property>
                             <property name="height">91px</property>
-                            <property name="width">175px</property>
+                            <property name="width">210px</property>
                             <property name="title">Promotion</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">4</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">91px</property>
-                            <property name="width">175px</property>
+                            <property name="width">210px</property>
                             <property name="caption">
                                 <gadget-caption id="44">
                                     <property name="showCaption">true</property>
@@ -1734,6 +1832,11 @@
                                             <property name="gadget">Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29</property>
                                             <property name="dirty">false</property>
                                         </event-object>
+                                        <event-object>
+                                            <property name="appliedTo">Promotion</property>
+                                            <property name="gadget">Gadget_ce74bc1d-5729-4c73-8b5f-63cf750e4d48</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
                                     </property>
                                 </event-subscriber>
                             </property>
@@ -1754,17 +1857,17 @@
                             </property>
                         </gadget>
                         <gadget name="Gadget_afb197ac-3666-40cc-bc6e-f40e3789beb5" id="46">
-                            <property name="x">414px</property>
+                            <property name="x">234px</property>
                             <property name="y">162px</property>
                             <property name="height">91px</property>
-                            <property name="width">175px</property>
+                            <property name="width">195px</property>
                             <property name="title">Product Line</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">5</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">91px</property>
-                            <property name="width">175px</property>
+                            <property name="width">195px</property>
                             <property name="caption">
                                 <gadget-caption id="47">
                                     <property name="showCaption">true</property>
@@ -1785,9 +1888,6 @@
                                     <simple-property-list name="columnNames">
                                         <value>Line</value>
                                         <value>Line</value>
-                                    </simple-property-list>
-                                    <simple-property-list name="selectedValues">
-                                        <value>Touring</value>
                                     </simple-property-list>
                                     <property name="allowMultiValue">true</property>
                                     <property name="enableSearch">false</property>
@@ -1818,6 +1918,11 @@
                                             <property name="gadget">Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29</property>
                                             <property name="dirty">false</property>
                                         </event-object>
+                                        <event-object>
+                                            <property name="appliedTo">Line</property>
+                                            <property name="gadget">Gadget_ce74bc1d-5729-4c73-8b5f-63cf750e4d48</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
                                     </property>
                                 </event-subscriber>
                             </property>
@@ -1838,17 +1943,17 @@
                             </property>
                         </gadget>
                         <gadget name="Gadget_ce74bc1d-5729-4c73-8b5f-63cf750e4d48" id="49">
-                            <property name="x">612px</property>
+                            <property name="x">691px</property>
                             <property name="y">18px</property>
                             <property name="height">236px</property>
-                            <property name="width">571px</property>
+                            <property name="width">651px</property>
                             <property name="title">Sales Revenue by Year, by Channel</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">6</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">236px</property>
-                            <property name="width">571px</property>
+                            <property name="width">651px</property>
                             <property name="caption">
                                 <gadget-caption id="50">
                                     <property name="showCaption">true</property>
@@ -1875,6 +1980,21 @@
                                             <property name="gadget">Gadget_d90d739e-789f-4ea1-bfd1-831e2c535d04</property>
                                             <property name="dirty">false</property>
                                         </event-object>
+                                        <event-object>
+                                            <property name="appliedTo">Channel</property>
+                                            <property name="gadget">Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="appliedTo">Promotion</property>
+                                            <property name="gadget">Gadget_5342d1b2-9d1c-49a5-bff5-081808c4b5b0</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="appliedTo">Line</property>
+                                            <property name="gadget">Gadget_afb197ac-3666-40cc-bc6e-f40e3789beb5</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
                                     </property>
                                 </event-subscriber>
                             </property>
@@ -1883,14 +2003,14 @@
                             <property name="x">18px</property>
                             <property name="y">324px</property>
                             <property name="height">236px</property>
-                            <property name="width">571px</property>
+                            <property name="width">640px</property>
                             <property name="title">Product Line Revenue History</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">7</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">236px</property>
-                            <property name="width">571px</property>
+                            <property name="width">640px</property>
                             <property name="caption">
                                 <gadget-caption id="54">
                                     <property name="showCaption">true</property>
@@ -1925,22 +2045,27 @@
                                             <property name="gadget">Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29</property>
                                             <property name="dirty">false</property>
                                         </event-object>
+                                        <event-object>
+                                            <property name="appliedTo">Date</property>
+                                            <property name="gadget">Gadget_d90d739e-789f-4ea1-bfd1-831e2c535d04</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
                                     </property>
                                 </event-subscriber>
                             </property>
                         </gadget>
                         <gadget name="Gadget_5262619a-366c-48bf-a6ad-f96328e2eb88" id="57">
-                            <property name="x">612px</property>
+                            <property name="x">691px</property>
                             <property name="y">324px</property>
                             <property name="height">236px</property>
-                            <property name="width">571px</property>
+                            <property name="width">651px</property>
                             <property name="title">Sales Revenue by Year, by Promotion</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">8</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">236px</property>
-                            <property name="width">571px</property>
+                            <property name="width">651px</property>
                             <property name="caption">
                                 <gadget-caption id="58">
                                     <property name="showCaption">true</property>
@@ -1975,6 +2100,11 @@
                                             <property name="gadget">Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29</property>
                                             <property name="dirty">false</property>
                                         </event-object>
+                                        <event-object>
+                                            <property name="appliedTo">Date</property>
+                                            <property name="gadget">Gadget_d90d739e-789f-4ea1-bfd1-831e2c535d04</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
                                     </property>
                                 </event-subscriber>
                             </property>
@@ -1983,14 +2113,14 @@
                             <property name="x">18px</property>
                             <property name="y">630px</property>
                             <property name="height">200px</property>
-                            <property name="width">1165px</property>
+                            <property name="width">1323px</property>
                             <property name="title">Sales Analysis</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">9</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">200px</property>
-                            <property name="width">1165px</property>
+                            <property name="width">1323px</property>
                             <property name="caption">
                                 <gadget-caption id="62">
                                     <property name="showCaption">true</property>
@@ -2022,6 +2152,7 @@
                                     <property name="eventObjects">
                                         <event-object>
                                             <property name="gadget">Gadget_d90d739e-789f-4ea1-bfd1-831e2c535d04</property>
+                                            <property name="dirty">false</property>
                                         </event-object>
                                     </property>
                                 </event-subscriber>

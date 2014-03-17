@@ -2823,6 +2823,8 @@
                     </data-sources>
                     <data-sets>
                         <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="gauge" id="8">
+                            <property name="isVisible">false</property>
+                            <property name="nullsOrdering">nulls lowest</property>
                             <list-property name="columnHints">
                                 <structure>
                                     <property name="columnName">revtodate</property>
@@ -2830,6 +2832,8 @@
                                     <text-property name="displayName">revtodate</text-property>
                                     <property name="onColumnLayout">false</property>
                                     <text-property name="heading">revtodate</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
                                 </structure>
                                 <structure>
                                     <property name="columnName">commish</property>
@@ -2837,6 +2841,8 @@
                                     <text-property name="displayName">commish</text-property>
                                     <property name="onColumnLayout">false</property>
                                     <text-property name="heading">commish</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
                                 </structure>
                                 <structure>
                                     <property name="columnName">MyGoal</property>
@@ -2844,6 +2850,8 @@
                                     <text-property name="displayName">MyGoal</text-property>
                                     <property name="onColumnLayout">false</property>
                                     <text-property name="heading">MyGoal</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
                                 </structure>
                             </list-property>
                             <list-property name="parameters"/>
@@ -2951,7 +2959,235 @@
                                 </ex-property>
                             </list-property>
                         </oda-data-set>
+                        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="regiongauge" id="1288">
+                            <property name="isVisible">false</property>
+                            <property name="nullsOrdering">nulls lowest</property>
+                            <list-property name="columnHints">
+                                <structure>
+                                    <property name="columnName">Rev To Date</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="displayName">Rev To Date</text-property>
+                                    <property name="onColumnLayout">false</property>
+                                    <text-property name="heading">Rev To Date</text-property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Region Goal</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="displayName">Region Goal</text-property>
+                                    <property name="onColumnLayout">false</property>
+                                    <text-property name="heading">Region Goal</text-property>
+                                </structure>
+                            </list-property>
+                            <list-property name="parameters"/>
+                            <structure name="cachedMetaData">
+                                <list-property name="resultSet">
+                                    <structure>
+                                        <property name="position">1</property>
+                                        <property name="name">Rev To Date</property>
+                                        <property name="dataType">float</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">2</property>
+                                        <property name="name">Region Goal</property>
+                                        <property name="dataType">float</property>
+                                    </structure>
+                                </list-property>
+                            </structure>
+                            <property name="dataSource">static</property>
+                            <list-property name="resultSet">
+                                <structure>
+                                    <property name="position">1</property>
+                                    <property name="name">Rev To Date</property>
+                                    <property name="nativeName">Rev To Date</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">4</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">2</property>
+                                    <property name="name">Region Goal</property>
+                                    <property name="nativeName">Region Goal</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">4</property>
+                                </structure>
+                            </list-property>
+                            <xml-property name="queryText"><![CDATA[{"Columns":["Rev To Date","Region Goal"],"Types":[4,4]}]]></xml-property>
+                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>percentquota</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>percentquota</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>percentquota</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>commish</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>commish</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>commish</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+                            <list-property name="privateDriverProperties">
+                                <ex-property>
+                                    <name>DATA</name>
+                                    <value>[["6800500","8000000"]]</value>
+                                </ex-property>
+                            </list-property>
+                        </oda-data-set>
+                        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="static" id="59">
+                            <property name="isVisible">false</property>
+                            <property name="nullsOrdering">nulls lowest</property>
+                            <list-property name="columnHints">
+                                <structure>
+                                    <property name="columnName">goal</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="displayName">goal</text-property>
+                                    <property name="onColumnLayout">false</property>
+                                    <text-property name="heading">goal</text-property>
+                                    <property name="analysisColumn">goal</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">actual</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="displayName">actual</text-property>
+                                    <property name="onColumnLayout">false</property>
+                                    <text-property name="heading">actual</text-property>
+                                    <property name="analysisColumn">actual</property>
+                                </structure>
+                            </list-property>
+                            <list-property name="parameters"/>
+                            <structure name="cachedMetaData">
+                                <list-property name="resultSet">
+                                    <structure>
+                                        <property name="position">1</property>
+                                        <property name="name">goal</property>
+                                        <property name="dataType">decimal</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">2</property>
+                                        <property name="name">actual</property>
+                                        <property name="dataType">decimal</property>
+                                    </structure>
+                                </list-property>
+                            </structure>
+                            <property name="dataSource">static</property>
+                            <list-property name="resultSet">
+                                <structure>
+                                    <property name="position">1</property>
+                                    <property name="name">goal</property>
+                                    <property name="nativeName">goal</property>
+                                    <property name="dataType">decimal</property>
+                                    <property name="nativeDataType">5</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">2</property>
+                                    <property name="name">actual</property>
+                                    <property name="nativeName">actual</property>
+                                    <property name="dataType">decimal</property>
+                                    <property name="nativeDataType">5</property>
+                                </structure>
+                            </list-property>
+                            <xml-property name="queryText"><![CDATA[{"Columns":["goal","actual"],"Types":[5,5]}]]></xml-property>
+                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>goal</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>5</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>goal</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>goal</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>actual</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>5</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>actual</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>actual</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+                            <list-property name="privateDriverProperties">
+                                <ex-property>
+                                    <name>DATA</name>
+                                    <value>[["10000000","5765245"]]</value>
+                                </ex-property>
+                            </list-property>
+                        </oda-data-set>
                         <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="leads" id="1128">
+                            <property name="isVisible">true</property>
+                            <property name="nullsOrdering">nulls lowest</property>
                             <list-property name="columnHints">
                                 <structure>
                                     <property name="columnName">Leads</property>
@@ -3122,537 +3358,6 @@
                                 </ex-property>
                             </list-property>
                         </oda-data-set>
-                        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="regiongauge" id="1288">
-                            <list-property name="columnHints">
-                                <structure>
-                                    <property name="columnName">Rev To Date</property>
-                                    <property name="analysis">measure</property>
-                                    <text-property name="displayName">Rev To Date</text-property>
-                                    <property name="onColumnLayout">false</property>
-                                    <text-property name="heading">Rev To Date</text-property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Region Goal</property>
-                                    <property name="analysis">measure</property>
-                                    <text-property name="displayName">Region Goal</text-property>
-                                    <property name="onColumnLayout">false</property>
-                                    <text-property name="heading">Region Goal</text-property>
-                                </structure>
-                            </list-property>
-                            <list-property name="parameters"/>
-                            <structure name="cachedMetaData">
-                                <list-property name="resultSet">
-                                    <structure>
-                                        <property name="position">1</property>
-                                        <property name="name">Rev To Date</property>
-                                        <property name="dataType">float</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">2</property>
-                                        <property name="name">Region Goal</property>
-                                        <property name="dataType">float</property>
-                                    </structure>
-                                </list-property>
-                            </structure>
-                            <property name="dataSource">static</property>
-                            <list-property name="resultSet">
-                                <structure>
-                                    <property name="position">1</property>
-                                    <property name="name">Rev To Date</property>
-                                    <property name="nativeName">Rev To Date</property>
-                                    <property name="dataType">float</property>
-                                    <property name="nativeDataType">4</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">2</property>
-                                    <property name="name">Region Goal</property>
-                                    <property name="nativeName">Region Goal</property>
-                                    <property name="dataType">float</property>
-                                    <property name="nativeDataType">4</property>
-                                </structure>
-                            </list-property>
-                            <xml-property name="queryText"><![CDATA[{"Columns":["Rev To Date","Region Goal"],"Types":[4,4]}]]></xml-property>
-                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>2.0</Version>
-  <design:ResultSets derivedMetaData="true">
-    <design:resultSetDefinitions>
-      <design:resultSetColumns>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>percentquota</design:name>
-              <design:position>1</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>percentquota</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>percentquota</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>commish</design:name>
-              <design:position>2</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>commish</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>commish</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-      </design:resultSetColumns>
-      <design:criteria/>
-    </design:resultSetDefinitions>
-  </design:ResultSets>
-</model:DesignValues>]]></xml-property>
-                            <list-property name="privateDriverProperties">
-                                <ex-property>
-                                    <name>DATA</name>
-                                    <value>[["6800500","8000000"]]</value>
-                                </ex-property>
-                            </list-property>
-                        </oda-data-set>
-                        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="teamleader" id="1099">
-                            <list-property name="columnHints">
-                                <structure>
-                                    <property name="columnName">Forecast</property>
-                                    <property name="analysis">measure</property>
-                                    <text-property name="displayName">Forecast</text-property>
-                                    <property name="onColumnLayout">false</property>
-                                    <text-property name="heading">Forecast</text-property>
-                                    <property name="analysisColumn">Forecast</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Sales Rep</property>
-                                    <property name="analysis">attribute</property>
-                                    <text-property name="displayName">Sales Rep</text-property>
-                                    <property name="onColumnLayout">false</property>
-                                    <text-property name="heading">Sales Rep</text-property>
-                                    <property name="analysisColumn">Sales Rep</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">percentquota</property>
-                                    <property name="analysis">attribute</property>
-                                    <text-property name="displayName">percentquota</text-property>
-                                    <property name="onColumnLayout">false</property>
-                                    <text-property name="heading">percentquota</text-property>
-                                    <property name="analysisColumn">percentquota</property>
-                                </structure>
-                            </list-property>
-                            <list-property name="parameters"/>
-                            <list-property name="sortHints">
-                                <structure>
-                                    <property name="columnName">dataSetRow["Forecast"]</property>
-                                    <property name="direction">desc</property>
-                                    <property name="isOptional">true</property>
-                                </structure>
-                            </list-property>
-                            <structure name="cachedMetaData">
-                                <list-property name="resultSet">
-                                    <structure>
-                                        <property name="position">1</property>
-                                        <property name="name">Forecast</property>
-                                        <property name="dataType">float</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">2</property>
-                                        <property name="name">Sales Rep</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">3</property>
-                                        <property name="name">percentquota</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                </list-property>
-                            </structure>
-                            <property name="dataSource">static</property>
-                            <list-property name="resultSet">
-                                <structure>
-                                    <property name="position">1</property>
-                                    <property name="name">Forecast</property>
-                                    <property name="nativeName">Forecast</property>
-                                    <property name="dataType">float</property>
-                                    <property name="nativeDataType">4</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">2</property>
-                                    <property name="name">Sales Rep</property>
-                                    <property name="nativeName">Sales Rep</property>
-                                    <property name="dataType">string</property>
-                                    <property name="nativeDataType">1</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">3</property>
-                                    <property name="name">percentquota</property>
-                                    <property name="nativeName">percentquota</property>
-                                    <property name="dataType">string</property>
-                                    <property name="nativeDataType">1</property>
-                                </structure>
-                            </list-property>
-                            <xml-property name="queryText"><![CDATA[{"Columns":["Forecast","Sales Rep","percentquota"],"Types":[4,1,1]}]]></xml-property>
-                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>2.0</Version>
-  <design:ResultSets derivedMetaData="true">
-    <design:resultSetDefinitions>
-      <design:resultSetColumns>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Opportunity</design:name>
-              <design:position>1</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>Opportunity</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Opportunity</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Forecast</design:name>
-              <design:position>2</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>Forecast</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Forecast</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Close Date</design:name>
-              <design:position>3</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>Close Date</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Close Date</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Region</design:name>
-              <design:position>4</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>Region</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Region</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Sales Rep</design:name>
-              <design:position>5</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>Sales Rep</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Sales Rep</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-      </design:resultSetColumns>
-      <design:criteria/>
-    </design:resultSetDefinitions>
-  </design:ResultSets>
-</model:DesignValues>]]></xml-property>
-                            <list-property name="privateDriverProperties">
-                                <ex-property>
-                                    <name>DATA</name>
-                                    <value>[["98887","Kendra Haran","98"],["76526","Gianna Ables","89"],["53765","Paul Stalter","97"]]</value>
-                                </ex-property>
-                            </list-property>
-                        </oda-data-set>
-                        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="map" id="867">
-                            <list-property name="columnHints">
-                                <structure>
-                                    <property name="columnName">ID</property>
-                                    <property name="analysis">dimension</property>
-                                    <text-property name="displayName">ID</text-property>
-                                    <text-property name="heading">ID</text-property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Actual</property>
-                                    <property name="analysis">measure</property>
-                                    <text-property name="displayName">Actual</text-property>
-                                    <text-property name="heading">Actual</text-property>
-                                </structure>
-                            </list-property>
-                            <structure name="cachedMetaData">
-                                <list-property name="resultSet">
-                                    <structure>
-                                        <property name="position">1</property>
-                                        <property name="name">ID</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">2</property>
-                                        <property name="name">Actual</property>
-                                        <property name="dataType">decimal</property>
-                                    </structure>
-                                </list-property>
-                            </structure>
-                            <property name="dataSource">static</property>
-                            <list-property name="resultSet">
-                                <structure>
-                                    <property name="position">1</property>
-                                    <property name="name">ID</property>
-                                    <property name="nativeName">ID</property>
-                                    <property name="dataType">string</property>
-                                    <property name="nativeDataType">1</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">2</property>
-                                    <property name="name">Actual</property>
-                                    <property name="nativeName">Actual</property>
-                                    <property name="dataType">decimal</property>
-                                    <property name="nativeDataType">5</property>
-                                </structure>
-                            </list-property>
-                            <xml-property name="queryText"><![CDATA[{"Columns":["ID","Actual"],"Types":[1,5]}]]></xml-property>
-                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>2.0</Version>
-  <design:ResultSets derivedMetaData="true">
-    <design:resultSetDefinitions>
-      <design:resultSetColumns>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>ID</design:name>
-              <design:position>1</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>ID</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>ID</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Actual</design:name>
-              <design:position>2</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>5</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>Actual</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Actual</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-      </design:resultSetColumns>
-      <design:criteria/>
-    </design:resultSetDefinitions>
-  </design:ResultSets>
-</model:DesignValues>]]></xml-property>
-                            <list-property name="privateDriverProperties">
-                                <ex-property>
-                                    <name>DATA</name>
-                                    <value>[["01","50000000"],["02","50000000"],["03","40000000"],["04","40000000"],["05","40000000"]]</value>
-                                </ex-property>
-                            </list-property>
-                        </oda-data-set>
-                        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="static" id="59">
-                            <list-property name="columnHints">
-                                <structure>
-                                    <property name="columnName">goal</property>
-                                    <property name="analysis">measure</property>
-                                    <text-property name="displayName">goal</text-property>
-                                    <property name="onColumnLayout">false</property>
-                                    <text-property name="heading">goal</text-property>
-                                    <property name="analysisColumn">goal</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">actual</property>
-                                    <property name="analysis">measure</property>
-                                    <text-property name="displayName">actual</text-property>
-                                    <property name="onColumnLayout">false</property>
-                                    <text-property name="heading">actual</text-property>
-                                    <property name="analysisColumn">actual</property>
-                                </structure>
-                            </list-property>
-                            <list-property name="parameters"/>
-                            <structure name="cachedMetaData">
-                                <list-property name="resultSet">
-                                    <structure>
-                                        <property name="position">1</property>
-                                        <property name="name">goal</property>
-                                        <property name="dataType">decimal</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">2</property>
-                                        <property name="name">actual</property>
-                                        <property name="dataType">decimal</property>
-                                    </structure>
-                                </list-property>
-                            </structure>
-                            <property name="dataSource">static</property>
-                            <list-property name="resultSet">
-                                <structure>
-                                    <property name="position">1</property>
-                                    <property name="name">goal</property>
-                                    <property name="nativeName">goal</property>
-                                    <property name="dataType">decimal</property>
-                                    <property name="nativeDataType">5</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">2</property>
-                                    <property name="name">actual</property>
-                                    <property name="nativeName">actual</property>
-                                    <property name="dataType">decimal</property>
-                                    <property name="nativeDataType">5</property>
-                                </structure>
-                            </list-property>
-                            <xml-property name="queryText"><![CDATA[{"Columns":["goal","actual"],"Types":[5,5]}]]></xml-property>
-                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>2.0</Version>
-  <design:ResultSets derivedMetaData="true">
-    <design:resultSetDefinitions>
-      <design:resultSetColumns>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>goal</design:name>
-              <design:position>1</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>5</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>goal</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>goal</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>actual</design:name>
-              <design:position>2</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>5</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>actual</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>actual</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-      </design:resultSetColumns>
-      <design:criteria/>
-    </design:resultSetDefinitions>
-  </design:ResultSets>
-</model:DesignValues>]]></xml-property>
-                            <list-property name="privateDriverProperties">
-                                <ex-property>
-                                    <name>DATA</name>
-                                    <value>[["10000000","5765245"]]</value>
-                                </ex-property>
-                            </list-property>
-                        </oda-data-set>
                     </data-sets>
                 </datamart>
             </datamart-node>
@@ -3803,6 +3508,10 @@
         <data-mart-data-set name="NewDataMartDataSource::Pipelline" id="1372">
             <property name="dataSource">NewDataMartDataSource</property>
             <property name="dataObject">Pipelline</property>
+        </data-mart-data-set>
+        <data-mart-data-set name="NewDataMartDataSource::Customer Orders" id="1431">
+            <property name="dataSource">NewDataMartDataSource</property>
+            <property name="dataObject">Customer Orders</property>
         </data-mart-data-set>
     </data-sets>
     <themes>
@@ -4422,7 +4131,7 @@
     <body>
         <extended-item extensionName="Chart" name="Leads_b7eba606-a683-4e87-936c-43c0c952eef5" id="23">
             <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
- <ChartWithAxes version="2.6.1" type="Column Chart" subType="SideBySide" orientation="1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="SideBySide" orientation="0">
   <block>
    <children _type="TitleBlock" visible="false" auto="false">
     <outline>
@@ -4474,13 +4183,13 @@
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.range.selector" value="false"/>
+  <extendedProperties name="jschart.navigator" value="false"/>
+  <extendedProperties name="jschart.scroll" value="true"/>
   <extendedProperties name="keep.hierarchy.category" value="false"/>
   <extendedProperties name="keep.hierarchy.series" value="false"/>
   <extendedProperties name="jschart.glass.style" value="false"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
-  <extendedProperties name="jschart.range.selector" value="false"/>
-  <extendedProperties name="jschart.navigator" value="false"/>
-  <extendedProperties name="jschart.scroll" value="true"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="QWER"/>
@@ -4497,17 +4206,17 @@
   <axes type="2" gapWidth="0.5" labelPosition="1" staggered="false" interval="1" categoryAxis="true">
    <title visible="false">
     <caption value="">
-     <font bold="false" italic="false" underline="false"/>
+     <font bold="false" italic="false" underline="false" rotation="90.0"/>
     </caption>
     <background _nil="1"/>
     <outline>
      <color _nil="1"/>
     </outline>
    </title>
-   <associatedAxes type="0" labelPosition="2" primaryAxis="true" percent="false">
+   <associatedAxes type="0" labelPosition="2" staggered="false" primaryAxis="true" percent="false">
     <title visible="false">
      <caption value="">
-      <font bold="false" italic="false" underline="false"/>
+      <font bold="false" italic="false" underline="false" rotation="0.0"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -4516,7 +4225,7 @@
     </title>
     <seriesDefinitions>
      <query definition=""/>
-     <series _type="BarSeries" seriesIdentifier="Leads" stacked="false">
+     <series _type="BarSeries" seriesIdentifier="Leads" labelPosition="5" stacked="false">
       <label>
        <caption value="Leads"/>
        <background _nil="1"/>
@@ -4691,7 +4400,7 @@
             <property name="inheritColumns">false</property>
             <property name="outputFormat">JS</property>
             <property name="height">85pt</property>
-            <property name="width">375pt</property>
+            <property name="width">363pt</property>
             <property name="dataSet">Gauge</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -4751,7 +4460,7 @@
             <property name="inheritColumns">false</property>
             <property name="outputFormat">JS</property>
             <property name="height">85pt</property>
-            <property name="width">375pt</property>
+            <property name="width">363pt</property>
             <property name="dataSet">RegionGage</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -4768,7 +4477,7 @@
         </extended-item>
         <extended-item extensionName="Chart" name="Commit This Quarter_e7be8c49-5a5a-4bbd-81f5-02510bacb8db" id="1368">
             <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
- <ChartWithAxes version="2.6.1" type="Column Chart" subType="SideBySide" orientation="1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="SideBySide" orientation="0">
   <block>
    <children _type="TitleBlock" visible="false" auto="false">
     <outline>
@@ -4820,13 +4529,13 @@
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.range.selector" value="false"/>
+  <extendedProperties name="jschart.navigator" value="false"/>
+  <extendedProperties name="jschart.scroll" value="true"/>
   <extendedProperties name="keep.hierarchy.category" value="false"/>
   <extendedProperties name="keep.hierarchy.series" value="false"/>
   <extendedProperties name="jschart.glass.style" value="false"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
-  <extendedProperties name="jschart.range.selector" value="false"/>
-  <extendedProperties name="jschart.navigator" value="false"/>
-  <extendedProperties name="jschart.scroll" value="true"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="QWER"/>
@@ -4843,17 +4552,17 @@
   <axes type="2" gapWidth="0.5" labelPosition="1" staggered="false" interval="1" categoryAxis="true">
    <title visible="false">
     <caption value="">
-     <font bold="false" italic="false" underline="false"/>
+     <font bold="false" italic="false" underline="false" rotation="90.0"/>
     </caption>
     <background _nil="1"/>
     <outline>
      <color _nil="1"/>
     </outline>
    </title>
-   <associatedAxes type="0" labelPosition="2" primaryAxis="true" percent="false">
+   <associatedAxes type="0" labelPosition="2" staggered="false" primaryAxis="true" percent="false">
     <title visible="false">
      <caption value="">
-      <font bold="false" italic="false" underline="false"/>
+      <font bold="false" italic="false" underline="false" rotation="0.0"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -4862,7 +4571,7 @@
     </title>
     <seriesDefinitions>
      <query definition=""/>
-     <series _type="BarSeries" seriesIdentifier="Total" stacked="false">
+     <series _type="BarSeries" seriesIdentifier="Total" labelPosition="5" stacked="false">
       <label>
        <caption value="Total"/>
        <background _nil="1"/>
@@ -4880,17 +4589,22 @@
       </triggers>
       <triggers condition="2">
        <action type="0">
-        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;/Report Designs/Commits.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Commits.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
        </action>
       </triggers>
       <triggers condition="2">
        <action type="0">
-        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;/Report Designs/Commits.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Commits.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
        </action>
       </triggers>
       <triggers condition="2">
        <action type="0">
-        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;/Report Designs/Commits.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Commits.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+       </action>
+      </triggers>
+      <triggers condition="2">
+       <action type="0">
+        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Commits.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
        </action>
       </triggers>
       <triggers condition="2">
@@ -4946,17 +4660,22 @@
      <dataDefinition definition="row[&quot;CUSTOMERNAME&quot;]"/>
      <triggers condition="2">
       <action type="0">
-       <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;/Report Designs/Commits.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+       <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Commits.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
       </action>
      </triggers>
      <triggers condition="2">
       <action type="0">
-       <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;/Report Designs/Commits.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+       <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Commits.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
       </action>
      </triggers>
      <triggers condition="2">
       <action type="0">
-       <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;/Report Designs/Commits.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+       <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Commits.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+      </action>
+     </triggers>
+     <triggers condition="2">
+      <action type="0">
+       <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Commits.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
       </action>
      </triggers>
      <triggers condition="2">
@@ -5020,7 +4739,7 @@
                 </structure>
             </list-property>
             <property name="height">159pt</property>
-            <property name="width">273pt</property>
+            <property name="width">221.25pt</property>
             <property name="dataSet">NewDataMartDataSource::Commits</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -5046,7 +4765,7 @@
         </extended-item>
         <extended-item extensionName="Chart" name="Next Qtr Pipeline_ffa05fc6-4af0-4617-8f52-d2d3c7ca4bc2" id="1373">
             <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
- <ChartWithAxes version="2.6.1" type="Column Chart" subType="SideBySide" orientation="1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="SideBySide" orientation="0">
   <block>
    <children _type="TitleBlock" visible="false" auto="false">
     <outline>
@@ -5098,13 +4817,13 @@
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
   <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.range.selector" value="false"/>
+  <extendedProperties name="jschart.navigator" value="false"/>
+  <extendedProperties name="jschart.scroll" value="true"/>
   <extendedProperties name="keep.hierarchy.category" value="false"/>
   <extendedProperties name="keep.hierarchy.series" value="false"/>
   <extendedProperties name="jschart.glass.style" value="false"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
-  <extendedProperties name="jschart.range.selector" value="false"/>
-  <extendedProperties name="jschart.navigator" value="false"/>
-  <extendedProperties name="jschart.scroll" value="true"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="QWER"/>
@@ -5121,17 +4840,17 @@
   <axes type="2" gapWidth="0.5" labelPosition="1" staggered="false" interval="1" categoryAxis="true">
    <title visible="false">
     <caption value="">
-     <font bold="false" italic="false" underline="false"/>
+     <font bold="false" italic="false" underline="false" rotation="90.0"/>
     </caption>
     <background _nil="1"/>
     <outline>
      <color _nil="1"/>
     </outline>
    </title>
-   <associatedAxes type="0" labelPosition="2" primaryAxis="true" percent="false">
+   <associatedAxes type="0" labelPosition="2" staggered="false" primaryAxis="true" percent="false">
     <title visible="false">
      <caption value="">
-      <font bold="false" italic="false" underline="false"/>
+      <font bold="false" italic="false" underline="false" rotation="0.0"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -5140,7 +4859,7 @@
     </title>
     <seriesDefinitions>
      <query definition=""/>
-     <series _type="BarSeries" seriesIdentifier="Total" stacked="false">
+     <series _type="BarSeries" seriesIdentifier="Total" labelPosition="5" stacked="false">
       <label>
        <caption value="Total"/>
        <background _nil="1"/>
@@ -5158,22 +4877,17 @@
       </triggers>
       <triggers condition="2">
        <action type="0">
-        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;/Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
        </action>
       </triggers>
       <triggers condition="2">
        <action type="0">
-        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;/Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
        </action>
       </triggers>
       <triggers condition="2">
        <action type="0">
-        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;/Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
-       </action>
-      </triggers>
-      <triggers condition="2">
-       <action type="0">
-        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;/Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
        </action>
       </triggers>
       <triggers condition="2">
@@ -5229,22 +4943,17 @@
      <dataDefinition definition="row[&quot;CUSTOMERNAME&quot;]"/>
      <triggers condition="2">
       <action type="0">
-       <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;/Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+       <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
       </action>
      </triggers>
      <triggers condition="2">
       <action type="0">
-       <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;/Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+       <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
       </action>
      </triggers>
      <triggers condition="2">
       <action type="0">
-       <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;/Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
-      </action>
-     </triggers>
-     <triggers condition="2">
-      <action type="0">
-       <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;/Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+       <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
       </action>
      </triggers>
      <triggers condition="2">
@@ -5309,7 +5018,7 @@
                 </structure>
             </list-property>
             <property name="height">159pt</property>
-            <property name="width">273pt</property>
+            <property name="width">235.5pt</property>
             <property name="dataSet">NewDataMartDataSource::Pipelline</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -5320,6 +5029,235 @@
                 <structure>
                     <property name="name">TOTALLINEITEM</property>
                     <text-property name="displayName">Total</text-property>
+                    <expression name="expression">dataSetRow["TOTALLINEITEM"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+            </list-property>
+            <property name="theme">ThemesReportItems3.Modern</property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">copyHyperlink</property>
+                    <property name="type">string</property>
+                </structure>
+            </list-property>
+            <property name="copyHyperlink">true</property>
+        </extended-item>
+        <extended-item extensionName="Chart" name="Doughnut Chart - Sales Data_7953509f-a829-4a37-9dea-a9c5083cebe3" id="1429">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Area Chart" subType="Overlay" orientation="1">
+  <block>
+   <children _type="TitleBlock" visible="false" auto="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="">
+      <font bold="false" italic="false" underline="false"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false" orientation="1" position="3">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title visible="true">
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.range.selector" value="false"/>
+  <extendedProperties name="jschart.navigator" value="false"/>
+  <extendedProperties name="jschart.scroll" value="false"/>
+  <extendedProperties name="keep.hierarchy.category" value="false"/>
+  <extendedProperties name="keep.hierarchy.series" value="false"/>
+  <extendedProperties name="jschart.zoom" value=""/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="QWER"/>
+   <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <interactivity enable="true" legendBehavior="1"/>
+  <emptyMessage visible="true">
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="2" gapWidth="0.5" labelPosition="1" staggered="false" interval="1" categoryAxis="true">
+   <title visible="false">
+    <caption value="">
+     <font bold="false" italic="false" underline="false"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes type="0" labelPosition="2" primaryAxis="true" percent="false">
+    <title visible="false">
+     <caption value="">
+      <font bold="false" italic="false" underline="false"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="AreaSeries" seriesIdentifier="TOTALLINEITEM" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;TOTALLINEITEM&quot;]">
+       <grouping enabled="true"/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="0"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label visible="true">
+     <caption>
+      <font bold="false" italic="false" underline="false" rotation="0.0"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale step="0.0" stepNumber="1"/>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions sorting="0">
+    <query definition=""/>
+    <series seriesIdentifier="CUSTOMERNAME">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;CUSTOMERNAME&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingInterval="0.0"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label visible="true">
+    <caption>
+     <font bold="false" italic="false" underline="false" rotation="0.0"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+            <property name="outputFormat">JS</property>
+            <property name="height">159pt</property>
+            <property name="width">273pt</property>
+            <property name="dataSet">NewDataMartDataSource::Customer Orders</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">CUSTOMERNAME</property>
+                    <expression name="expression">dataSetRow["CUSTOMERNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">TOTALLINEITEM</property>
                     <expression name="expression">dataSetRow["TOTALLINEITEM"]</expression>
                     <property name="dataType">float</property>
                 </structure>
@@ -5366,17 +5304,17 @@
                             </property>
                         </gadget>
                         <gadget name="Gadget_309e4419-9aab-42bc-8d6f-37f625ab4911" id="20">
-                            <property name="x">810px</property>
+                            <property name="x">702px</property>
                             <property name="y">18px</property>
                             <property name="height">227px</property>
-                            <property name="width">375px</property>
+                            <property name="width">320px</property>
                             <property name="title">Leads</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">4</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">227px</property>
-                            <property name="width">375px</property>
+                            <property name="width">320px</property>
                             <property name="caption">
                                 <gadget-caption id="21">
                                     <property name="showCaption">true</property>
@@ -5400,13 +5338,13 @@
                             <property name="x">18px</property>
                             <property name="y">306px</property>
                             <property name="height">391px</property>
-                            <property name="width">771px</property>
+                            <property name="width">824px</property>
                             <property name="title">My Calendar</property>
                             <property name="gadgetContentType">url</property>
                             <property name="zIndex">5</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">391px</property>
-                            <property name="width">771px</property>
+                            <property name="width">824px</property>
                             <property name="caption">
                                 <gadget-caption id="26">
                                     <property name="showCaption">true</property>
@@ -5427,17 +5365,17 @@
                             </property>
                         </gadget>
                         <gadget name="Gadget_c5cc1938-c7c7-4069-a664-67afc257ff3f" id="1359">
-                            <property name="x">810px</property>
+                            <property name="x">864px</property>
                             <property name="y">468px</property>
                             <property name="height">85px</property>
-                            <property name="width">375px</property>
+                            <property name="width">501px</property>
                             <property name="title">My Goal Progress</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">7</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">85px</property>
-                            <property name="width">375px</property>
+                            <property name="width">501px</property>
                             <property name="caption">
                                 <gadget-caption id="1360">
                                     <property name="showCaption">true</property>
@@ -5465,17 +5403,17 @@
                             </property>
                         </gadget>
                         <gadget name="Gadget_e14b52fc-85e0-42ca-8ff5-4d04b64197d1" id="1362">
-                            <property name="x">810px</property>
+                            <property name="x">864px</property>
                             <property name="y">612px</property>
                             <property name="height">85px</property>
-                            <property name="width">375px</property>
+                            <property name="width">501px</property>
                             <property name="title">Regional Rev to Goal</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">8</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">85px</property>
-                            <property name="width">375px</property>
+                            <property name="width">501px</property>
                             <property name="caption">
                                 <gadget-caption id="1363">
                                     <property name="showCaption">true</property>
@@ -5506,14 +5444,14 @@
                             <property name="x">18px</property>
                             <property name="y">18px</property>
                             <property name="height">227px</property>
-                            <property name="width">375px</property>
+                            <property name="width">320px</property>
                             <property name="title">Commit This Quarter</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">9</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">227px</property>
-                            <property name="width">375px</property>
+                            <property name="width">320px</property>
                             <property name="caption">
                                 <gadget-caption id="1367">
                                     <property name="showCaption">true</property>
@@ -5534,17 +5472,17 @@
                             </property>
                         </gadget>
                         <gadget name="Gadget_3ad2ee79-61e0-4505-8a1f-f2dda15eaf48" id="1370">
-                            <property name="x">414px</property>
+                            <property name="x">360px</property>
                             <property name="y">18px</property>
                             <property name="height">227px</property>
-                            <property name="width">375px</property>
+                            <property name="width">320px</property>
                             <property name="title">Next Qtr Pipeline</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">10</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">227px</property>
-                            <property name="width">375px</property>
+                            <property name="width">320px</property>
                             <property name="caption">
                                 <gadget-caption id="1371">
                                     <property name="showCaption">true</property>
@@ -5565,10 +5503,10 @@
                             </property>
                         </gadget>
                         <gadget name="Gadget_f5d41f47-53cd-4592-b278-1f211f81cf01" id="1423">
-                            <property name="x">810px</property>
+                            <property name="x">864px</property>
                             <property name="y">306px</property>
                             <property name="height">106px</property>
-                            <property name="width">375px</property>
+                            <property name="width">501px</property>
                             <property name="title">Team Leaderboard</property>
                             <property name="externalGadgetURI">/Applications/SFAdventures/Report Designs/TeamLeaderboard.rptdesign</property>
                             <property name="showTitle">true</property>
@@ -5576,7 +5514,7 @@
                             <property name="zIndex">11</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">106px</property>
-                            <property name="width">375px</property>
+                            <property name="width">501px</property>
                             <property name="caption">
                                 <gadget-caption id="1424">
                                     <property name="showCaption">true</property>
@@ -5605,6 +5543,37 @@
                                             <property name="targetBookmark">Team Leaderboard</property>
                                         </external-element-ref>
                                     </property>
+                                </data-view>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_ea4bef77-c5f8-4a8f-aae7-0b6ecf87813e" id="1426">
+                            <property name="x">1044px</property>
+                            <property name="y">18px</property>
+                            <property name="height">227px</property>
+                            <property name="width">320px</property>
+                            <property name="title">Total Sales Orders</property>
+                            <property name="showTitle">true</property>
+                            <property name="showBorder">true</property>
+                            <property name="zIndex">12</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">227px</property>
+                            <property name="width">320px</property>
+                            <property name="caption">
+                                <gadget-caption id="1427">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="1430">
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="internalReportLetRef">Doughnut Chart - Sales Data_7953509f-a829-4a37-9dea-a9c5083cebe3</property>
                                 </data-view>
                             </property>
                         </gadget>

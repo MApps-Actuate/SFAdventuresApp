@@ -6,6 +6,8 @@
     </data-sources>
     <data-sets>
         <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="gauge" id="8">
+            <property name="isVisible">false</property>
+            <property name="nullsOrdering">nulls lowest</property>
             <list-property name="columnHints">
                 <structure>
                     <property name="columnName">revtodate</property>
@@ -13,6 +15,8 @@
                     <text-property name="displayName">revtodate</text-property>
                     <property name="onColumnLayout">false</property>
                     <text-property name="heading">revtodate</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
                 </structure>
                 <structure>
                     <property name="columnName">commish</property>
@@ -20,6 +24,8 @@
                     <text-property name="displayName">commish</text-property>
                     <property name="onColumnLayout">false</property>
                     <text-property name="heading">commish</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
                 </structure>
                 <structure>
                     <property name="columnName">MyGoal</property>
@@ -27,6 +33,8 @@
                     <text-property name="displayName">MyGoal</text-property>
                     <property name="onColumnLayout">false</property>
                     <text-property name="heading">MyGoal</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
                 </structure>
             </list-property>
             <list-property name="parameters"/>
@@ -134,7 +142,235 @@
                 </ex-property>
             </list-property>
         </oda-data-set>
+        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="regiongauge" id="1288">
+            <property name="isVisible">false</property>
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Rev To Date</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Rev To Date</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Rev To Date</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Region Goal</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Region Goal</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Region Goal</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Rev To Date</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Region Goal</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">static</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Rev To Date</property>
+                    <property name="nativeName">Rev To Date</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Region Goal</property>
+                    <property name="nativeName">Region Goal</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{"Columns":["Rev To Date","Region Goal"],"Types":[4,4]}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>percentquota</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>percentquota</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>percentquota</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>commish</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>commish</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>commish</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>DATA</name>
+                    <value>[["6800500","8000000"]]</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="static" id="59">
+            <property name="isVisible">false</property>
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">goal</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">goal</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">goal</text-property>
+                    <property name="analysisColumn">goal</property>
+                </structure>
+                <structure>
+                    <property name="columnName">actual</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">actual</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">actual</text-property>
+                    <property name="analysisColumn">actual</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">goal</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">actual</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">static</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">goal</property>
+                    <property name="nativeName">goal</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">5</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">actual</property>
+                    <property name="nativeName">actual</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">5</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{"Columns":["goal","actual"],"Types":[5,5]}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>goal</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>5</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>goal</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>goal</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>actual</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>5</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>actual</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>actual</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>DATA</name>
+                    <value>[["10000000","5765245"]]</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
         <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="leads" id="1128">
+            <property name="isVisible">true</property>
+            <property name="nullsOrdering">nulls lowest</property>
             <list-property name="columnHints">
                 <structure>
                     <property name="columnName">Leads</property>
@@ -302,335 +538,6 @@
                 <ex-property>
                     <name>DATA</name>
                     <value>[["6","Online Inquiry"],["5","Inbound Calls"],["3","Ad Campaign"],["2","Tradeshow"]]</value>
-                </ex-property>
-            </list-property>
-        </oda-data-set>
-        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="regiongauge" id="1288">
-            <list-property name="columnHints">
-                <structure>
-                    <property name="columnName">Rev To Date</property>
-                    <property name="analysis">measure</property>
-                    <text-property name="displayName">Rev To Date</text-property>
-                    <property name="onColumnLayout">false</property>
-                    <text-property name="heading">Rev To Date</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">Region Goal</property>
-                    <property name="analysis">measure</property>
-                    <text-property name="displayName">Region Goal</text-property>
-                    <property name="onColumnLayout">false</property>
-                    <text-property name="heading">Region Goal</text-property>
-                </structure>
-            </list-property>
-            <list-property name="parameters"/>
-            <structure name="cachedMetaData">
-                <list-property name="resultSet">
-                    <structure>
-                        <property name="position">1</property>
-                        <property name="name">Rev To Date</property>
-                        <property name="dataType">float</property>
-                    </structure>
-                    <structure>
-                        <property name="position">2</property>
-                        <property name="name">Region Goal</property>
-                        <property name="dataType">float</property>
-                    </structure>
-                </list-property>
-            </structure>
-            <property name="dataSource">static</property>
-            <list-property name="resultSet">
-                <structure>
-                    <property name="position">1</property>
-                    <property name="name">Rev To Date</property>
-                    <property name="nativeName">Rev To Date</property>
-                    <property name="dataType">float</property>
-                    <property name="nativeDataType">4</property>
-                </structure>
-                <structure>
-                    <property name="position">2</property>
-                    <property name="name">Region Goal</property>
-                    <property name="nativeName">Region Goal</property>
-                    <property name="dataType">float</property>
-                    <property name="nativeDataType">4</property>
-                </structure>
-            </list-property>
-            <xml-property name="queryText"><![CDATA[{"Columns":["Rev To Date","Region Goal"],"Types":[4,4]}]]></xml-property>
-            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>2.0</Version>
-  <design:ResultSets derivedMetaData="true">
-    <design:resultSetDefinitions>
-      <design:resultSetColumns>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>percentquota</design:name>
-              <design:position>1</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>percentquota</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>percentquota</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>commish</design:name>
-              <design:position>2</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>commish</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>commish</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-      </design:resultSetColumns>
-      <design:criteria/>
-    </design:resultSetDefinitions>
-  </design:ResultSets>
-</model:DesignValues>]]></xml-property>
-            <list-property name="privateDriverProperties">
-                <ex-property>
-                    <name>DATA</name>
-                    <value>[["6800500","8000000"]]</value>
-                </ex-property>
-            </list-property>
-        </oda-data-set>
-        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="map" id="867">
-            <list-property name="columnHints">
-                <structure>
-                    <property name="columnName">ID</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="displayName">ID</text-property>
-                    <text-property name="heading">ID</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">Actual</property>
-                    <property name="analysis">measure</property>
-                    <text-property name="displayName">Actual</text-property>
-                    <text-property name="heading">Actual</text-property>
-                </structure>
-            </list-property>
-            <structure name="cachedMetaData">
-                <list-property name="resultSet">
-                    <structure>
-                        <property name="position">1</property>
-                        <property name="name">ID</property>
-                        <property name="dataType">string</property>
-                    </structure>
-                    <structure>
-                        <property name="position">2</property>
-                        <property name="name">Actual</property>
-                        <property name="dataType">decimal</property>
-                    </structure>
-                </list-property>
-            </structure>
-            <property name="dataSource">static</property>
-            <list-property name="resultSet">
-                <structure>
-                    <property name="position">1</property>
-                    <property name="name">ID</property>
-                    <property name="nativeName">ID</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">1</property>
-                </structure>
-                <structure>
-                    <property name="position">2</property>
-                    <property name="name">Actual</property>
-                    <property name="nativeName">Actual</property>
-                    <property name="dataType">decimal</property>
-                    <property name="nativeDataType">5</property>
-                </structure>
-            </list-property>
-            <xml-property name="queryText"><![CDATA[{"Columns":["ID","Actual"],"Types":[1,5]}]]></xml-property>
-            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>2.0</Version>
-  <design:ResultSets derivedMetaData="true">
-    <design:resultSetDefinitions>
-      <design:resultSetColumns>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>ID</design:name>
-              <design:position>1</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>ID</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>ID</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Actual</design:name>
-              <design:position>2</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>5</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>Actual</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Actual</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-      </design:resultSetColumns>
-      <design:criteria/>
-    </design:resultSetDefinitions>
-  </design:ResultSets>
-</model:DesignValues>]]></xml-property>
-            <list-property name="privateDriverProperties">
-                <ex-property>
-                    <name>DATA</name>
-                    <value>[["01","50000000"],["02","50000000"],["03","40000000"],["04","40000000"],["05","40000000"]]</value>
-                </ex-property>
-            </list-property>
-        </oda-data-set>
-        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="static" id="59">
-            <list-property name="columnHints">
-                <structure>
-                    <property name="columnName">goal</property>
-                    <property name="analysis">measure</property>
-                    <text-property name="displayName">goal</text-property>
-                    <property name="onColumnLayout">false</property>
-                    <text-property name="heading">goal</text-property>
-                    <property name="analysisColumn">goal</property>
-                </structure>
-                <structure>
-                    <property name="columnName">actual</property>
-                    <property name="analysis">measure</property>
-                    <text-property name="displayName">actual</text-property>
-                    <property name="onColumnLayout">false</property>
-                    <text-property name="heading">actual</text-property>
-                    <property name="analysisColumn">actual</property>
-                </structure>
-            </list-property>
-            <list-property name="parameters"/>
-            <structure name="cachedMetaData">
-                <list-property name="resultSet">
-                    <structure>
-                        <property name="position">1</property>
-                        <property name="name">goal</property>
-                        <property name="dataType">decimal</property>
-                    </structure>
-                    <structure>
-                        <property name="position">2</property>
-                        <property name="name">actual</property>
-                        <property name="dataType">decimal</property>
-                    </structure>
-                </list-property>
-            </structure>
-            <property name="dataSource">static</property>
-            <list-property name="resultSet">
-                <structure>
-                    <property name="position">1</property>
-                    <property name="name">goal</property>
-                    <property name="nativeName">goal</property>
-                    <property name="dataType">decimal</property>
-                    <property name="nativeDataType">5</property>
-                </structure>
-                <structure>
-                    <property name="position">2</property>
-                    <property name="name">actual</property>
-                    <property name="nativeName">actual</property>
-                    <property name="dataType">decimal</property>
-                    <property name="nativeDataType">5</property>
-                </structure>
-            </list-property>
-            <xml-property name="queryText"><![CDATA[{"Columns":["goal","actual"],"Types":[5,5]}]]></xml-property>
-            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>2.0</Version>
-  <design:ResultSets derivedMetaData="true">
-    <design:resultSetDefinitions>
-      <design:resultSetColumns>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>goal</design:name>
-              <design:position>1</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>5</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>goal</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>goal</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>actual</design:name>
-              <design:position>2</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>5</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>actual</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>actual</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-      </design:resultSetColumns>
-      <design:criteria/>
-    </design:resultSetDefinitions>
-  </design:ResultSets>
-</model:DesignValues>]]></xml-property>
-            <list-property name="privateDriverProperties">
-                <ex-property>
-                    <name>DATA</name>
-                    <value>[["10000000","5765245"]]</value>
                 </ex-property>
             </list-property>
         </oda-data-set>
