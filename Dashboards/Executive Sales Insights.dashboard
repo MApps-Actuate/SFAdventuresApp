@@ -1972,7 +1972,7 @@
                     </property>
                 </datamart>
             </datamart-node>
-            <datamart-node location="file:/C:/Applications/SFAdventuresApp/Data%20Objects/StaticData.datadesign">
+            <datamart-node location="file:/C:/Users/ActuateUser/git/SFAdventuresApp/Data%20Objects/StaticData.datadesign">
                 <reference-elements>StaticData;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
                     <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
@@ -6125,7 +6125,7 @@ group by terr, yr, mnth]]></xml-property>
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/Applications/SFAdventuresApp/Report Designs/SalesRepsMetrics.rptdocument</property>
+                                            <property name="sourceFile">^/Report Designs/SalesRepsMetrics.rptdocument</property>
                                             <property name="targetBookmark">SalesRepTable</property>
                                         </external-element-ref>
                                     </property>
@@ -6169,7 +6169,7 @@ group by terr, yr, mnth]]></xml-property>
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/Applications/SFAdventuresApp/Report Designs/Top10Opportunities.rptdesign</property>
+                                            <property name="sourceFile">^/Report Designs/Top10Opportunities.rptdocument</property>
                                             <property name="targetBookmark">Top 10 Opportunities</property>
                                         </external-element-ref>
                                     </property>
@@ -6213,7 +6213,7 @@ group by terr, yr, mnth]]></xml-property>
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/Applications/SFAdventuresApp/Report Designs/WorldSales.rptdocument</property>
+                                            <property name="sourceFile">^/Report Designs/WorldSales.rptdocument</property>
                                         </external-element-ref>
                                     </property>
                                 </data-view>

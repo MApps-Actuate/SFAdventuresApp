@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <com.actuate.istudio.analysis.model:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.actuate.istudio.analysis.model="http:///com.actuate.istudio.analysis.model.ecore" name="SFAdventuresApp">
+  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Analytical Insights.dashboard" path="/SFAdventuresApp/Dashboards/Analytical Insights.dashboard">
+    <missingDependencies>platform:/resource/SFAdventuresApp/Data%20Objects/PromotionalAnalysis.data</missingDependencies>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Executive Sales Insights.dashboard" path="/SFAdventuresApp/Dashboards/Executive Sales Insights.dashboard">
+    <missingDependencies>platform:/resource/SFAdventuresApp/Data%20Objects/FlatFileDO.data</missingDependencies>
+    <missingDependencies>platform:/resource/SFAdventuresApp/Data%20Objects/StaticData.datadesign</missingDependencies>
+    <missingDependencies>platform:/resource/SFAdventuresApp/Data%20Objects/ClassicModelsDO.data</missingDependencies>
+    <dataDesignMap key="//@files.10" value="1"/>
+    <dataMap key="//@files.5" value="4"/>
+    <dataMap key="//@files.3" value="2"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Sales Rep Info Hub.dashboard" path="/SFAdventuresApp/Dashboards/Sales Rep Info Hub.dashboard">
+    <missingDependencies>platform:/resource/SFAdventuresApp/Data%20Objects/FlatFileDO.data</missingDependencies>
+    <missingDependencies>platform:/resource/SFAdventuresApp/Data%20Objects/StaticData.data</missingDependencies>
+    <missingDependencies>platform:/resource/SFAdventuresApp/Data%20Objects/StaticData.datadesign</missingDependencies>
+    <dataDesignMap key="//@files.10" value="1"/>
+    <dataMap key="//@files.5" value="1"/>
+    <dataMap key="//@files.9" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="ClassicModelsDO.data" path="/SFAdventuresApp/Data Objects/ClassicModelsDO.data">
+    <targetDashboardsMap key="//@files.1" value="2"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="ClassicModelsDO.datadesign" path="/SFAdventuresApp/Data Objects/ClassicModelsDO.datadesign">
+    <dataSets name="Monthly Revenue by Region">
+      <columns name="TERR"/>
+      <columns name="YR"/>
+      <columns name="Sale Amount"/>
+      <columns name="MNTH"/>
+      <columns name="Continent" expression="if (row[&quot;TERR&quot;] == &quot;EMEA&quot;) &#xA; &quot;EU&quot;&#xA;else if (row[&quot;TERR&quot;] == &quot;Japan&quot;) &#xA;  &quot;AS&quot;&#xA;else if (row[&quot;TERR&quot;] == &quot;APAC&quot;) &#xA;  &quot;AU&quot;&#xA;else &#xA;  row[&quot;TERR&quot;]"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="FlatFileDO.data" path="/SFAdventuresApp/Data Objects/FlatFileDO.data">
+    <targetDashboardsMap key="//@files.2" value="1"/>
+    <targetDashboardsMap key="//@files.1" value="4"/>
+  </files>
   <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="FlatFileDO.datadesign" path="/SFAdventuresApp/Data Objects/FlatFileDO.datadesign">
+    <missingDependencies>platform:/resource/SFAdventuresApp/Report%20Designs/Pipeline.rptdesign</missingDependencies>
+    <missingDependencies>platform:/resource/SFAdventuresApp/Report%20Designs/Commits.rptdesign</missingDependencies>
     <dataSets name="Customer Orders">
       <columns name="CUSTOMERNAME"/>
       <columns name="CUSTOMERNUMBER"/>
@@ -64,51 +101,8 @@
       <columns name="PYTD Pipeline"/>
       <columns name="PYTD Forecast"/>
     </dataSets>
-    <linkedToReportsMap key="79298560" value="//@files.17"/>
-    <linkedToReportsMap key="79364096" value="//@files.18"/>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="StaticData.data" path="/SFAdventuresApp/Data Objects/StaticData.data">
-    <targetDashboardsMap key="//@files.9" value="1"/>
-  </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="ThemesReportItems3.rptlibrary" path="/SFAdventuresApp/ThemesReportItems3.rptlibrary" reports="//@files.12 //@files.13 //@files.14 //@files.15 //@files.16 //@files.17 //@files.18 //@files.19"/>
-  <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="StaticData.datadesign" path="/SFAdventuresApp/Data Objects/StaticData.datadesign">
-    <targetReportsMap key="//@files.19" value="1"/>
-    <targetDashboardsMap key="//@files.8" value="1"/>
-    <targetDashboardsMap key="//@files.9" value="1"/>
-    <targetLibrariesMap value="1"/>
-    <dataSets name="gauge" targetDataSets="//@files.19/@dataSets.0">
-      <columns name="revtodate" targetColumns="//@files.19/@dataSets.0/@columns.0"/>
-      <columns name="commish" targetColumns="//@files.19/@dataSets.0/@columns.1"/>
-      <columns name="MyGoal" targetColumns="//@files.19/@dataSets.0/@columns.2"/>
-    </dataSets>
-    <dataSets name="regiongauge" targetDataSets="//@files.19/@dataSets.1">
-      <columns name="Rev To Date" targetColumns="//@files.19/@dataSets.1/@columns.0"/>
-      <columns name="Region Goal" targetColumns="//@files.19/@dataSets.1/@columns.1"/>
-    </dataSets>
-    <dataSets name="static" targetDataSets="//@files.19/@dataSets.2">
-      <columns name="goal" targetColumns="//@files.19/@dataSets.2/@columns.0"/>
-      <columns name="actual" targetColumns="//@files.19/@dataSets.2/@columns.1"/>
-    </dataSets>
-    <dataSets name="leads">
-      <columns name="Leads"/>
-      <columns name="Lead Type"/>
-    </dataSets>
-  </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="ClassicModelsDO.datadesign" path="/SFAdventuresApp/Data Objects/ClassicModelsDO.datadesign">
-    <dataSets name="Monthly Revenue by Region">
-      <columns name="TERR"/>
-      <columns name="YR"/>
-      <columns name="Sale Amount"/>
-      <columns name="MNTH"/>
-      <columns name="Continent" expression="if (row[&quot;TERR&quot;] == &quot;EMEA&quot;) &#xA; &quot;EU&quot;&#xA;else if (row[&quot;TERR&quot;] == &quot;Japan&quot;) &#xA;  &quot;AS&quot;&#xA;else if (row[&quot;TERR&quot;] == &quot;APAC&quot;) &#xA;  &quot;AU&quot;&#xA;else &#xA;  row[&quot;TERR&quot;]"/>
-    </dataSets>
-  </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="ClassicModelsDO.data" path="/SFAdventuresApp/Data Objects/ClassicModelsDO.data">
-    <targetDashboardsMap key="//@files.8" value="2"/>
-  </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Analytical Insights.dashboard" path="/SFAdventuresApp/Dashboards/Analytical Insights.dashboard">
-    <dataMap key="//@files.10" value="1"/>
-  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="PromotionalAnalysis.data" path="/SFAdventuresApp/Data Objects/PromotionalAnalysis.data"/>
   <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="PromotionalAnalysis.datadesign" path="/SFAdventuresApp/Data Objects/PromotionalAnalysis.datadesign">
     <dataSets name="Promotions">
       <columns name="Date"/>
@@ -118,53 +112,47 @@
       <columns name="Promotion"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Executive Sales Insights.dashboard" path="/SFAdventuresApp/Dashboards/Executive Sales Insights.dashboard">
-    <dataDesignMap key="//@files.3" value="1"/>
-    <dataMap key="//@files.11" value="4"/>
-    <dataMap key="//@files.5" value="2"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="StaticData.data" path="/SFAdventuresApp/Data Objects/StaticData.data">
+    <targetDashboardsMap key="//@files.2" value="1"/>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Sales Rep Info Hub.dashboard" path="/SFAdventuresApp/Dashboards/Sales Rep Info Hub.dashboard">
-    <dataDesignMap key="//@files.3" value="1"/>
-    <dataMap key="//@files.11" value="1"/>
-    <dataMap key="//@files.1" value="1"/>
-  </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="PromotionalAnalysis.data" path="/SFAdventuresApp/Data Objects/PromotionalAnalysis.data">
-    <targetDashboardsMap key="//@files.6" value="1"/>
-  </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="FlatFileDO.data" path="/SFAdventuresApp/Data Objects/FlatFileDO.data">
-    <targetDashboardsMap key="//@files.8" value="4"/>
-    <targetDashboardsMap key="//@files.9" value="1"/>
-  </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="SalesRepsMetrics.rptdesign" path="/SFAdventuresApp/Report Designs/SalesRepsMetrics.rptdesign" libraries="//@files.2">
-    <dataSets name="Sales Reps">
-      <columns name="Close Date"/>
-      <columns name="Closed"/>
-      <columns name="Forecast"/>
-      <columns name="Goal"/>
-      <columns name="Opportunity"/>
-      <columns name="progress"/>
-      <columns name="Region"/>
-      <columns name="Sales Rep"/>
-      <columns name="PctQuota" expression="Math.abs(((row[&quot;Goal&quot;]-row[&quot;Closed&quot;])/row[&quot;Goal&quot;])-1) * 100"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="StaticData.datadesign" path="/SFAdventuresApp/Data Objects/StaticData.datadesign">
+    <targetReportsMap key="//@files.13" value="1"/>
+    <targetDashboardsMap key="//@files.2" value="1"/>
+    <targetDashboardsMap key="//@files.1" value="1"/>
+    <targetLibrariesMap key="//@files.19" value="1"/>
+    <dataSets name="gauge" targetDataSets="//@files.13/@dataSets.0">
+      <columns name="revtodate" targetColumns="//@files.13/@dataSets.0/@columns.0"/>
+      <columns name="commish" targetColumns="//@files.13/@dataSets.0/@columns.1"/>
+      <columns name="MyGoal" targetColumns="//@files.13/@dataSets.0/@columns.2"/>
+    </dataSets>
+    <dataSets name="regiongauge" targetDataSets="//@files.13/@dataSets.1">
+      <columns name="Rev To Date" targetColumns="//@files.13/@dataSets.1/@columns.0"/>
+      <columns name="Region Goal" targetColumns="//@files.13/@dataSets.1/@columns.1"/>
+    </dataSets>
+    <dataSets name="static" targetDataSets="//@files.13/@dataSets.2">
+      <columns name="goal" targetColumns="//@files.13/@dataSets.2/@columns.0"/>
+      <columns name="actual" targetColumns="//@files.13/@dataSets.2/@columns.1"/>
+    </dataSets>
+    <dataSets name="leads">
+      <columns name="Leads"/>
+      <columns name="Lead Type"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="TeamLeaderboard.rptdesign" path="/SFAdventuresApp/Report Designs/TeamLeaderboard.rptdesign" libraries="//@files.2">
-    <dataSets name="TeamLeaderboard">
-      <columns name="Sales Rep"/>
-      <columns name="Forecast"/>
-      <columns name="Pct of Quota"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Commits.rptdesign" path="/SFAdventuresApp/Report Designs/Commits.rptdesign">
+    <missingDependencies>platform:/resource/SFAdventuresApp/ThemesReportItems3.rptlibrary</missingDependencies>
+    <dataSets name="Commits">
+      <columns name="CUSTOMERNAME"/>
+      <columns name="CUSTOMERNUMBER"/>
+      <columns name="ORDERDATE"/>
+      <columns name="ORDERNUMBER"/>
+      <columns name="PRICEEACH"/>
+      <columns name="PRODUCTCODE"/>
+      <columns name="QUANTITYORDERED"/>
+      <columns name="TOTALLINEITEM"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorldSales.rptdesign" path="/SFAdventuresApp/Report Designs/WorldSales.rptdesign" libraries="//@files.2">
-    <dataSets name="Monthly Revenue by Region">
-      <columns name="TERR"/>
-      <columns name="YR"/>
-      <columns name="Sale Amount"/>
-      <columns name="MNTH"/>
-      <columns name="Continent" expression="if (row[&quot;TERR&quot;] == &quot;EMEA&quot;) &#xA; &quot;EU&quot;&#xA;else if (row[&quot;TERR&quot;] == &quot;Japan&quot;) &#xA;  &quot;AS&quot;&#xA;else if (row[&quot;TERR&quot;] == &quot;APAC&quot;) &#xA;  &quot;AU&quot;&#xA;else &#xA;  row[&quot;TERR&quot;]"/>
-    </dataSets>
-  </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Customer History.rptdesign" path="/SFAdventuresApp/Report Designs/Customer History.rptdesign" libraries="//@files.2">
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Customer History.rptdesign" path="/SFAdventuresApp/Report Designs/Customer History.rptdesign">
+    <missingDependencies>platform:/resource/SFAdventuresApp/ThemesReportItems3.rptlibrary</missingDependencies>
     <dataSets name="Order Details">
       <columns name="PRODUCTCODE"/>
       <columns name="PRODUCTNAME"/>
@@ -220,7 +208,38 @@
       <columns name="CREDITLIMIT"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Top10Opportunities.rptdesign" path="/SFAdventuresApp/Report Designs/Top10Opportunities.rptdesign" libraries="//@files.2">
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="MyGoals.rptdesign" path="/SFAdventuresApp/Report Designs/MyGoals.rptdesign">
+    <missingDependencies>platform:/resource/SFAdventuresApp/ThemesReportItems3.rptlibrary</missingDependencies>
+    <dataDesignMap key="//@files.10" value="1"/>
+    <dataSets name="Gauge" sourceDataSet="//@files.10/@dataSets.0">
+      <columns name="revtodate" sourceColumns="//@files.10/@dataSets.0/@columns.0"/>
+      <columns name="commish" sourceColumns="//@files.10/@dataSets.0/@columns.1"/>
+      <columns name="MyGoal" sourceColumns="//@files.10/@dataSets.0/@columns.2"/>
+    </dataSets>
+    <dataSets name="RegionGage" sourceDataSet="//@files.10/@dataSets.1">
+      <columns name="Rev To Date" sourceColumns="//@files.10/@dataSets.1/@columns.0"/>
+      <columns name="Region Goal" sourceColumns="//@files.10/@dataSets.1/@columns.1"/>
+    </dataSets>
+    <dataSets name="Static" sourceDataSet="//@files.10/@dataSets.2">
+      <columns name="goal" sourceColumns="//@files.10/@dataSets.2/@columns.0"/>
+      <columns name="actual" sourceColumns="//@files.10/@dataSets.2/@columns.1"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Pipeline.rptdesign" path="/SFAdventuresApp/Report Designs/Pipeline.rptdesign">
+    <missingDependencies>platform:/resource/SFAdventuresApp/ThemesReportItems3.rptlibrary</missingDependencies>
+    <dataSets name="Data Set1">
+      <columns name="CUSTOMERNAME"/>
+      <columns name="CUSTOMERNUMBER"/>
+      <columns name="ORDERDATE"/>
+      <columns name="ORDERNUMBER"/>
+      <columns name="PRICEEACH"/>
+      <columns name="PRODUCTCODE"/>
+      <columns name="QUANTITYORDERED"/>
+      <columns name="TOTALLINEITEM"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="SalesRepsMetrics.rptdesign" path="/SFAdventuresApp/Report Designs/SalesRepsMetrics.rptdesign">
+    <missingDependencies>platform:/resource/SFAdventuresApp/ThemesReportItems3.rptlibrary</missingDependencies>
     <dataSets name="Sales Reps">
       <columns name="Close Date"/>
       <columns name="Closed"/>
@@ -233,46 +252,53 @@
       <columns name="PctQuota" expression="Math.abs(((row[&quot;Goal&quot;]-row[&quot;Closed&quot;])/row[&quot;Goal&quot;])-1) * 100"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Pipeline.rptdesign" path="/SFAdventuresApp/Report Designs/Pipeline.rptdesign" libraries="//@files.2">
-    <linkedFromDataDesignsMap key="//@files.0" value="1"/>
-    <dataSets name="Data Set1">
-      <columns name="CUSTOMERNAME"/>
-      <columns name="CUSTOMERNUMBER"/>
-      <columns name="ORDERDATE"/>
-      <columns name="ORDERNUMBER"/>
-      <columns name="PRICEEACH"/>
-      <columns name="PRODUCTCODE"/>
-      <columns name="QUANTITYORDERED"/>
-      <columns name="TOTALLINEITEM"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="TeamLeaderboard.rptdesign" path="/SFAdventuresApp/Report Designs/TeamLeaderboard.rptdesign">
+    <missingDependencies>platform:/resource/SFAdventuresApp/ThemesReportItems3.rptlibrary</missingDependencies>
+    <dataSets name="TeamLeaderboard">
+      <columns name="Sales Rep"/>
+      <columns name="Forecast"/>
+      <columns name="Pct of Quota"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Commits.rptdesign" path="/SFAdventuresApp/Report Designs/Commits.rptdesign" libraries="//@files.2">
-    <linkedFromDataDesignsMap key="//@files.0" value="1"/>
-    <dataSets name="Commits">
-      <columns name="CUSTOMERNAME"/>
-      <columns name="CUSTOMERNUMBER"/>
-      <columns name="ORDERDATE"/>
-      <columns name="ORDERNUMBER"/>
-      <columns name="PRICEEACH"/>
-      <columns name="PRODUCTCODE"/>
-      <columns name="QUANTITYORDERED"/>
-      <columns name="TOTALLINEITEM"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Top10Opportunities.rptdesign" path="/SFAdventuresApp/Report Designs/Top10Opportunities.rptdesign">
+    <missingDependencies>platform:/resource/SFAdventuresApp/ThemesReportItems3.rptlibrary</missingDependencies>
+    <dataSets name="Sales Reps">
+      <columns name="Close Date"/>
+      <columns name="Closed"/>
+      <columns name="Forecast"/>
+      <columns name="Goal"/>
+      <columns name="Opportunity"/>
+      <columns name="progress"/>
+      <columns name="Region"/>
+      <columns name="Sales Rep"/>
+      <columns name="PctQuota" expression="Math.abs(((row[&quot;Goal&quot;]-row[&quot;Closed&quot;])/row[&quot;Goal&quot;])-1) * 100"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="MyGoals.rptdesign" path="/SFAdventuresApp/Report Designs/MyGoals.rptdesign" libraries="//@files.2">
-    <dataDesignMap key="//@files.3" value="1"/>
-    <dataSets name="Gauge" sourceDataSet="//@files.3/@dataSets.0">
-      <columns name="revtodate" sourceColumns="//@files.3/@dataSets.0/@columns.0"/>
-      <columns name="commish" sourceColumns="//@files.3/@dataSets.0/@columns.1"/>
-      <columns name="MyGoal" sourceColumns="//@files.3/@dataSets.0/@columns.2"/>
-    </dataSets>
-    <dataSets name="RegionGage" sourceDataSet="//@files.3/@dataSets.1">
-      <columns name="Rev To Date" sourceColumns="//@files.3/@dataSets.1/@columns.0"/>
-      <columns name="Region Goal" sourceColumns="//@files.3/@dataSets.1/@columns.1"/>
-    </dataSets>
-    <dataSets name="Static" sourceDataSet="//@files.3/@dataSets.2">
-      <columns name="goal" sourceColumns="//@files.3/@dataSets.2/@columns.0"/>
-      <columns name="actual" sourceColumns="//@files.3/@dataSets.2/@columns.1"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorldSales.rptdesign" path="/SFAdventuresApp/Report Designs/WorldSales.rptdesign">
+    <missingDependencies>platform:/resource/SFAdventuresApp/ThemesReportItems3.rptlibrary</missingDependencies>
+    <dataSets name="Monthly Revenue by Region">
+      <columns name="TERR"/>
+      <columns name="YR"/>
+      <columns name="Sale Amount"/>
+      <columns name="MNTH"/>
+      <columns name="Continent" expression="if (row[&quot;TERR&quot;] == &quot;EMEA&quot;) &#xA; &quot;EU&quot;&#xA;else if (row[&quot;TERR&quot;] == &quot;Japan&quot;) &#xA;  &quot;AS&quot;&#xA;else if (row[&quot;TERR&quot;] == &quot;APAC&quot;) &#xA;  &quot;AU&quot;&#xA;else &#xA;  row[&quot;TERR&quot;]"/>
     </dataSets>
   </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="SFAdventures.rptlibrary" path="/SFAdventuresApp/SFAdventures.rptlibrary">
+    <dataDesignMap key="//@files.10" value="1"/>
+    <dataSets name="Static">
+      <columns name="goal"/>
+      <columns name="actual"/>
+    </dataSets>
+    <dataSets name="Gauge">
+      <columns name="revtodate"/>
+      <columns name="commish"/>
+      <columns name="MyGoal"/>
+    </dataSets>
+    <dataSets name="RegionGage">
+      <columns name="Rev To Date"/>
+      <columns name="Region Goal"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="ThemesReportItems3.rptlibrary" path="/SFAdventuresApp/ThemesReportItems3.rptlibrary"/>
 </com.actuate.istudio.analysis.model:Project>

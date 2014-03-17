@@ -647,7 +647,7 @@
             <property name="outputFormat">JS</property>
             <property name="inheritColumns">false</property>
             <property name="height">3.5520833333333335in</property>
-            <property name="width">7.59375in</property>
+            <property name="width">6.385416666666667in</property>
             <expression name="bookmark" type="javascript">"SalesRepTable"</expression>
             <property name="dataSet">Sales Reps</property>
             <list-property name="boundDataColumns">
