@@ -6094,7 +6094,7 @@ group by terr, yr, mnth]]></xml-property>
                             <property name="height">362px</property>
                             <property name="width">666px</property>
                             <property name="title">Sales Reps Commit vs Quota vs Pct of Sales</property>
-                            <property name="externalGadgetURI">/Applications/SFAdventures/Report Designs/execsalesmetrics.rptdesign</property>
+                            <property name="externalGadgetURI">^/Report Designs/execsalesmetrics.rptdesign</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">11</property>
@@ -6138,7 +6138,7 @@ group by terr, yr, mnth]]></xml-property>
                             <property name="height">274px</property>
                             <property name="width">482px</property>
                             <property name="title">Top 10 Opportunities</property>
-                            <property name="externalGadgetURI">/Applications/SFAdventures/Report Designs/execsalesmetrics.rptdocument</property>
+                            <property name="externalGadgetURI">^/Report Designs/execsalesmetrics.rptdocument</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">12</property>
@@ -6169,7 +6169,7 @@ group by terr, yr, mnth]]></xml-property>
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">^/Report Designs/Top10Opportunities.rptdocument</property>
+                                            <property name="sourceFile">^/Report Designs/Top10Opportunities.rptdesign</property>
                                             <property name="targetBookmark">Top 10 Opportunities</property>
                                         </external-element-ref>
                                     </property>
@@ -6182,7 +6182,7 @@ group by terr, yr, mnth]]></xml-property>
                             <property name="height">362px</property>
                             <property name="width">501px</property>
                             <property name="title">World Sales Performance to Date</property>
-                            <property name="externalGadgetURI">/Applications/SFAdventuresApp/Report Designs/WorldSales.rptdocument</property>
+                            <property name="externalGadgetURI">^/Report Designs/WorldSales.rptdocument</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">13</property>

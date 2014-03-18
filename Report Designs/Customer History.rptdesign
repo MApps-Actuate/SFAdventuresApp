@@ -3236,17 +3236,6 @@ from CLASSICMODELS.CUSTOMERS]]></xml-property>
                                     <cell id="446"/>
                                 </row>
                             </header>
-                            <footer>
-                                <row id="447">
-                                    <cell id="448"/>
-                                    <cell id="449"/>
-                                    <cell id="450"/>
-                                    <cell id="451"/>
-                                    <cell id="452"/>
-                                    <cell id="453"/>
-                                    <cell id="454"/>
-                                </row>
-                            </footer>
                         </group>
                         <detail>
                             <row id="39">
@@ -3256,7 +3245,6 @@ from CLASSICMODELS.CUSTOMERS]]></xml-property>
                                     <structure>
                                         <property name="operator">ne</property>
                                         <property name="backgroundColor">#E0E0E0</property>
-                                        <property name="fontSize">8pt</property>
                                         <property name="color">#000000</property>
                                         <expression name="testExpr" type="javascript">row.__rownum % 2</expression>
                                         <simple-property-list name="value1">

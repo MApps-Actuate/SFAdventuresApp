@@ -7,21 +7,13 @@
     <missingDependencies>platform:/resource/SFAdventuresApp/Data%20Objects/FlatFileDO.data</missingDependencies>
     <missingDependencies>platform:/resource/SFAdventuresApp/Data%20Objects/StaticData.datadesign</missingDependencies>
     <missingDependencies>platform:/resource/SFAdventuresApp/Data%20Objects/ClassicModelsDO.data</missingDependencies>
-    <dataDesignMap key="//@files.10" value="1"/>
-    <dataMap key="//@files.5" value="4"/>
-    <dataMap key="//@files.3" value="2"/>
   </files>
   <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Sales Rep Info Hub.dashboard" path="/SFAdventuresApp/Dashboards/Sales Rep Info Hub.dashboard">
     <missingDependencies>platform:/resource/SFAdventuresApp/Data%20Objects/FlatFileDO.data</missingDependencies>
     <missingDependencies>platform:/resource/SFAdventuresApp/Data%20Objects/StaticData.data</missingDependencies>
     <missingDependencies>platform:/resource/SFAdventuresApp/Data%20Objects/StaticData.datadesign</missingDependencies>
-    <dataDesignMap key="//@files.10" value="1"/>
-    <dataMap key="//@files.5" value="1"/>
-    <dataMap key="//@files.9" value="1"/>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="ClassicModelsDO.data" path="/SFAdventuresApp/Data Objects/ClassicModelsDO.data">
-    <targetDashboardsMap key="//@files.1" value="2"/>
-  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="ClassicModelsDO.data" path="/SFAdventuresApp/Data Objects/ClassicModelsDO.data"/>
   <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="ClassicModelsDO.datadesign" path="/SFAdventuresApp/Data Objects/ClassicModelsDO.datadesign">
     <dataSets name="Monthly Revenue by Region">
       <columns name="TERR"/>
@@ -31,10 +23,7 @@
       <columns name="Continent" expression="if (row[&quot;TERR&quot;] == &quot;EMEA&quot;) &#xA; &quot;EU&quot;&#xA;else if (row[&quot;TERR&quot;] == &quot;Japan&quot;) &#xA;  &quot;AS&quot;&#xA;else if (row[&quot;TERR&quot;] == &quot;APAC&quot;) &#xA;  &quot;AU&quot;&#xA;else &#xA;  row[&quot;TERR&quot;]"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="FlatFileDO.data" path="/SFAdventuresApp/Data Objects/FlatFileDO.data">
-    <targetDashboardsMap key="//@files.2" value="1"/>
-    <targetDashboardsMap key="//@files.1" value="4"/>
-  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="FlatFileDO.data" path="/SFAdventuresApp/Data Objects/FlatFileDO.data"/>
   <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="FlatFileDO.datadesign" path="/SFAdventuresApp/Data Objects/FlatFileDO.datadesign">
     <missingDependencies>platform:/resource/SFAdventuresApp/Report%20Designs/Pipeline.rptdesign</missingDependencies>
     <missingDependencies>platform:/resource/SFAdventuresApp/Report%20Designs/Commits.rptdesign</missingDependencies>
@@ -112,13 +101,9 @@
       <columns name="Promotion"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="StaticData.data" path="/SFAdventuresApp/Data Objects/StaticData.data">
-    <targetDashboardsMap key="//@files.2" value="1"/>
-  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="StaticData.data" path="/SFAdventuresApp/Data Objects/StaticData.data"/>
   <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="StaticData.datadesign" path="/SFAdventuresApp/Data Objects/StaticData.datadesign">
     <targetReportsMap key="//@files.13" value="1"/>
-    <targetDashboardsMap key="//@files.2" value="1"/>
-    <targetDashboardsMap key="//@files.1" value="1"/>
     <targetLibrariesMap key="//@files.19" value="1"/>
     <dataSets name="gauge" targetDataSets="//@files.13/@dataSets.0">
       <columns name="revtodate" targetColumns="//@files.13/@dataSets.0/@columns.0"/>

@@ -483,6 +483,7 @@ else&#13;
                                 </cell>
                                 <cell id="1201">
                                     <data id="1217">
+                                        <property name="fontSize">8pt</property>
                                         <property name="paddingLeft">3pt</property>
                                         <property name="textAlign">left</property>
                                         <property name="resultSetColumn">Opportunity</property>
@@ -490,6 +491,7 @@ else&#13;
                                 </cell>
                                 <cell id="1202">
                                     <data id="1219">
+                                        <property name="fontSize">8pt</property>
                                         <property name="paddingRight">3pt</property>
                                         <structure name="numberFormat">
                                             <property name="category">Currency</property>
@@ -501,6 +503,7 @@ else&#13;
                                 </cell>
                                 <cell id="1203">
                                     <data id="1221">
+                                        <property name="fontSize">8pt</property>
                                         <property name="paddingRight">3pt</property>
                                         <property name="textAlign">right</property>
                                         <property name="resultSetColumn">Close Date</property>
@@ -508,6 +511,7 @@ else&#13;
                                 </cell>
                                 <cell id="1226">
                                     <data id="1230">
+                                        <property name="fontSize">8pt</property>
                                         <property name="paddingRight">3pt</property>
                                         <property name="textAlign">right</property>
                                         <property name="resultSetColumn">Region</property>

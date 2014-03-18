@@ -5508,7 +5508,7 @@
                             <property name="height">106px</property>
                             <property name="width">501px</property>
                             <property name="title">Team Leaderboard</property>
-                            <property name="externalGadgetURI">/Applications/SFAdventures/Report Designs/TeamLeaderboard.rptdesign</property>
+                            <property name="externalGadgetURI">^/Report Designs/TeamLeaderboard.rptdesign</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">11</property>
@@ -5539,7 +5539,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/Applications/SFAdventuresApp/Report Designs/TeamLeaderboard.rptdocument</property>
+                                            <property name="sourceFile">^/Report Designs/TeamLeaderboard.rptdocument</property>
                                             <property name="targetBookmark">Team Leaderboard</property>
                                         </external-element-ref>
                                     </property>

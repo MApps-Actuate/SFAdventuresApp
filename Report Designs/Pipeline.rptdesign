@@ -823,18 +823,31 @@ if (!this.getViewer().isInteractive())
                     </cell>
                 </row>
                 <row id="246">
-                    <cell id="248"/>
-                    <cell id="271"/>
-                    <cell id="249"/>
-                    <cell id="250"/>
+                    <property name="backgroundColor">#F1F1F1</property>
+                    <cell id="248">
+                        <property name="backgroundColor">#F1F1F1</property>
+                    </cell>
+                    <cell id="271">
+                        <property name="backgroundColor">#F1F1F1</property>
+                    </cell>
+                    <cell id="249">
+                        <property name="backgroundColor">#F1F1F1</property>
+                    </cell>
+                    <cell id="250">
+                        <property name="backgroundColor">#F1F1F1</property>
+                    </cell>
                     <cell id="251">
+                        <property name="backgroundColor">#F1F1F1</property>
                         <label id="268">
+                            <property name="color">black</property>
                             <property name="textAlign">right</property>
                             <text-property name="text">Total:</text-property>
                         </label>
                     </cell>
                     <cell id="252">
+                        <property name="backgroundColor">#F1F1F1</property>
                         <data id="245">
+                            <property name="color">black</property>
                             <property name="paddingRight">10pt</property>
                             <structure name="numberFormat">
                                 <property name="category">Currency</property>
@@ -918,16 +931,6 @@ if (!this.getViewer().isInteractive())
                     </cell>
                 </row>
             </detail>
-            <footer>
-                <row id="197">
-                    <cell id="201"/>
-                    <cell id="273"/>
-                    <cell id="203"/>
-                    <cell id="223"/>
-                    <cell id="219"/>
-                    <cell id="205"/>
-                </row>
-            </footer>
         </table>
     </body>
     <list-property name="images">

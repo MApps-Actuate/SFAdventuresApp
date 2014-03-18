@@ -872,15 +872,6 @@ if (!this.getViewer().isInteractive())
                     </cell>
                 </row>
             </detail>
-            <footer>
-                <row id="197">
-                    <cell id="200"/>
-                    <cell id="203"/>
-                    <cell id="223"/>
-                    <cell id="219"/>
-                    <cell id="205"/>
-                </row>
-            </footer>
         </table>
     </body>
     <list-property name="images">

@@ -6,14 +6,16 @@
             <text-property name="displayName">Modern</text-property>
             <styles>
                 <style name="crosstab" id="11">
-                    <property name="fontFamily">"Tahoma"</property>
+                    <property name="fontFamily">"Verdana"</property>
                     <property name="fontSize">10pt</property>
                     <property name="color">#353535</property>
                 </style>
                 <style name="crosstab-header" id="12">
                     <property name="backgroundColor">#DDDDDD</property>
+                    <property name="fontFamily">"Verdana"</property>
                     <property name="fontSize">10pt</property>
                     <property name="fontWeight">bold</property>
+                    <property name="color">#000000</property>
                     <property name="borderBottomColor">#BBBBBB</property>
                     <property name="borderBottomStyle">solid</property>
                     <property name="borderBottomWidth">1px</property>
@@ -29,6 +31,7 @@
                 </style>
                 <style name="crosstab-detail" id="901">
                     <property name="backgroundColor">#FFFFFF</property>
+                    <property name="fontFamily">"Verdana"</property>
                     <property name="borderBottomColor">#BBBBBB</property>
                     <property name="borderBottomStyle">solid</property>
                     <property name="borderBottomWidth">1px</property>
@@ -45,25 +48,30 @@
                 </style>
                 <style name="crosstab-row-header" id="902">
                     <property name="backgroundColor">#DDDDDD</property>
+                    <property name="fontFamily">"Verdana"</property>
                     <property name="textAlign">left</property>
                 </style>
                 <style name="crosstab-column-sub-total" id="903">
                     <property name="backgroundColor">#F1F1F1</property>
+                    <property name="fontFamily">"Verdana"</property>
                     <property name="fontWeight">bold</property>
                     <property name="fontStyle">italic</property>
                 </style>
                 <style name="crosstab-row-sub-total" id="923">
                     <property name="backgroundColor">#F1F1F1</property>
+                    <property name="fontFamily">"Verdana"</property>
                     <property name="fontWeight">bold</property>
                     <property name="fontStyle">italic</property>
                 </style>
                 <style name="crosstab-column-grand-total" id="924">
                     <property name="backgroundColor">#F1F1F1</property>
+                    <property name="fontFamily">"Verdana"</property>
                     <property name="fontWeight">bold</property>
                     <property name="fontStyle">italic</property>
                 </style>
                 <style name="crosstab-row-grand-total" id="925">
                     <property name="backgroundColor">#F1F1F1</property>
+                    <property name="fontFamily">"Verdana"</property>
                     <property name="fontWeight">bold</property>
                     <property name="fontStyle">italic</property>
                 </style>
@@ -1432,7 +1440,7 @@
     </outline>
     <label>
      <caption>
-      <font name="Tahoma" size="10.0" bold="false"/>
+      <font name="Verdana" size="10.0" bold="false"/>
       <color _body=",255,85,85,85"/>
      </caption>
      <background _nil="1"/>
@@ -1469,7 +1477,7 @@
     </separator>
     <title>
      <caption>
-      <font name="Tahoma" size="10.0"/>
+      <font name="Verdana" size="10.0"/>
       <color _body=",255,85,85,85"/>
      </caption>
      <background _nil="1"/>
@@ -1595,7 +1603,7 @@
       </lineAttributes>
      </series>
      <series _type="PieSeries" seriesIdentifier="" leaderLineLength="1.0">
-      <label visible="true">
+      <label>
        <caption>
         <font name="Tahoma" size="10.0"/>
         <color _body=",255,85,85,85"/>
@@ -1607,7 +1615,6 @@
       </label>
       <dataPoint separator=", ">
        <components type="0"/>
-       <components type="3"/>
       </dataPoint>
       <title>
        <background _nil="1"/>
@@ -1615,7 +1622,7 @@
         <color _nil="1"/>
        </outline>
       </title>
-      <leaderLineAttributes>
+      <leaderLineAttributes visible="true">
        <color _body=",255,192,192,192"/>
       </leaderLineAttributes>
       <sliceOutline _body=",255,255,255,255"/>
@@ -1842,7 +1849,7 @@
     </lineAttributes>
     <label>
      <caption>
-      <font name="Tahoma" size="10.0" bold="false"/>
+      <font name="Verdana" size="10.0" bold="false"/>
       <color _body=",255,85,85,85"/>
      </caption>
      <background _nil="1"/>
@@ -1901,7 +1908,7 @@
     </lineAttributes>
     <label>
      <caption>
-      <font name="Tahoma" size="10.0"/>
+      <font name="Verdana" size="10.0"/>
       <color _body=",255,85,85,85"/>
      </caption>
      <background _nil="1"/>
@@ -1962,7 +1969,7 @@
    </lineAttributes>
    <label>
     <caption>
-     <font name="Tahoma" size="10.0" bold="false"/>
+     <font name="Verdana" size="10.0" bold="false"/>
      <color _body=",255,85,85,85"/>
     </caption>
     <background _nil="1"/>
@@ -3141,7 +3148,7 @@
         <report-item-theme type="Table" name="Modern Table" id="947">
             <styles>
                 <style name="table" id="948">
-                    <property name="fontFamily">"Arial"</property>
+                    <property name="fontFamily">"Verdana"</property>
                     <property name="fontSize">10pt</property>
                     <property name="color">#666666</property>
                     <property name="borderBottomColor">#DADADA</property>
@@ -3158,8 +3165,7 @@
                     <property name="borderTopWidth">1px</property>
                 </style>
                 <style name="table-detail-cell" id="949">
-                    <property name="fontFamily">"Arial"</property>
-                    <property name="fontSize">9pt</property>
+                    <property name="fontFamily">"Verdana"</property>
                     <property name="borderBottomColor">#DADADA</property>
                     <property name="borderBottomStyle">solid</property>
                     <property name="borderBottomWidth">1px</property>
@@ -3175,7 +3181,7 @@
                 </style>
                 <style name="table-footer-cell" id="950">
                     <property name="backgroundColor">#EDEEF3</property>
-                    <property name="fontFamily">"Arial"</property>
+                    <property name="fontFamily">"Verdana"</property>
                     <property name="fontWeight">bold</property>
                     <property name="color">#666666</property>
                     <property name="borderBottomColor">#DADADA</property>
@@ -3192,7 +3198,7 @@
                     <property name="borderTopWidth">1px</property>
                 </style>
                 <style name="table-group-footer-cell" id="951">
-                    <property name="fontFamily">"Arial"</property>
+                    <property name="fontFamily">"Verdana"</property>
                     <property name="borderBottomColor">#DADADA</property>
                     <property name="borderBottomStyle">solid</property>
                     <property name="borderBottomWidth">1px</property>
@@ -3207,8 +3213,7 @@
                     <property name="borderTopWidth">1px</property>
                 </style>
                 <style name="table-group-header-cell" id="952">
-                    <property name="fontFamily">"Arial"</property>
-                    <property name="textUnderline">underline</property>
+                    <property name="fontFamily">"Verdana"</property>
                     <property name="borderBottomColor">#DADADA</property>
                     <property name="borderBottomStyle">solid</property>
                     <property name="borderBottomWidth">1px</property>
@@ -3223,8 +3228,8 @@
                     <property name="borderTopWidth">1px</property>
                 </style>
                 <style name="table-header-cell" id="953">
-                    <property name="backgroundColor">#3578AD</property>
-                    <property name="fontFamily">"Arial"</property>
+                    <property name="backgroundColor">#0079C1</property>
+                    <property name="fontFamily">"Verdana"</property>
                     <property name="fontWeight">bold</property>
                     <property name="color">#FFFFFF</property>
                     <property name="borderBottomColor">#DADADA</property>
