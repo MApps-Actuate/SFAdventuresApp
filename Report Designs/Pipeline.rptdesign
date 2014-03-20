@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
     <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">109</property>
+        </structure>
+    </list-property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">fixed layout</property>
     <property name="bidiLayoutOrientation">ltr</property>
     <property name="imageDPI">96</property>
     <list-property name="libraries">
@@ -21,7 +28,9 @@ this.getViewer().setUIOptions(uiOptions);
 
 // If Interactivity is not enabled, enable it
 if (!this.getViewer().isInteractive())
-	this.getViewer().enableIV();]]></method>
+	this.getViewer().enableIV();
+	
+	]]></method>
     <parameters>
         <scalar-parameter name="pCustomer" id="214">
             <property name="valueType">static</property>
@@ -29,21 +38,6 @@ if (!this.getViewer().isInteractive())
             <property name="distinct">true</property>
             <simple-property-list name="defaultValue">
                 <value type="constant">Any Cycle</value>
-            </simple-property-list>
-            <list-property name="selectionList"/>
-            <property name="paramType">simple</property>
-            <property name="controlType">text-box</property>
-            <structure name="format">
-                <property name="category">Unformatted</property>
-            </structure>
-        </scalar-parameter>
-        <scalar-parameter name="CloseDate" id="281">
-            <property name="hidden">true</property>
-            <property name="valueType">static</property>
-            <property name="dataType">date</property>
-            <property name="distinct">true</property>
-            <simple-property-list name="defaultValue">
-                <value type="constant">2013-12-31</value>
             </simple-property-list>
             <list-property name="selectionList"/>
             <property name="paramType">simple</property>
@@ -65,6 +59,7 @@ if (!this.getViewer().isInteractive())
     </data-sources>
     <data-sets>
         <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Data Set1" id="109">
+            <property name="nullsOrdering">nulls lowest</property>
             <list-property name="columnHints">
                 <structure>
                     <property name="columnName">CUSTOMERNAME</property>
@@ -132,7 +127,7 @@ if (!this.getViewer().isInteractive())
                     <structure>
                         <property name="position">3</property>
                         <property name="name">ORDERDATE</property>
-                        <property name="dataType">string</property>
+                        <property name="dataType">date</property>
                     </structure>
                     <structure>
                         <property name="position">4</property>
@@ -181,8 +176,8 @@ if (!this.getViewer().isInteractive())
                     <property name="position">3</property>
                     <property name="name">ORDERDATE</property>
                     <property name="nativeName">ORDERDATE</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
                 </structure>
                 <structure>
                     <property name="position">4</property>
@@ -220,7 +215,7 @@ if (!this.getViewer().isInteractive())
                     <property name="nativeDataType">8</property>
                 </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[select "CUSTOMERNAME", "CUSTOMERNUMBER", "ORDERDATE", "ORDERNUMBER", "PRICEEACH", "PRODUCTCODE", "QUANTITYORDERED", "TOTALLINEITEM" from "Customer_Orders.csv" : {"CUSTOMERNAME","CUSTOMERNAME",STRING;"CUSTOMERNUMBER","CUSTOMERNUMBER",STRING;"ORDERDATE","ORDERDATE",STRING;"ORDERNUMBER","ORDERNUMBER",STRING;"PRICEEACH","PRICEEACH",DOUBLE;"PRODUCTCODE","PRODUCTCODE",STRING;"QUANTITYORDERED","QUANTITYORDERED",DOUBLE;"TOTALLINEITEM","TOTALLINEITEM",DOUBLE}]]></xml-property>
+            <xml-property name="queryText"><![CDATA[select "CUSTOMERNAME", "CUSTOMERNUMBER", "ORDERDATE", "ORDERNUMBER", "PRICEEACH", "PRODUCTCODE", "QUANTITYORDERED", "TOTALLINEITEM" from "Customer_Orders.csv" : {"CUSTOMERNAME","CUSTOMERNAME",STRING;"CUSTOMERNUMBER","CUSTOMERNUMBER",STRING;"ORDERDATE","ORDERDATE",DATE;"ORDERNUMBER","ORDERNUMBER",STRING;"PRICEEACH","PRICEEACH",DOUBLE;"PRODUCTCODE","PRODUCTCODE",STRING;"QUANTITYORDERED","QUANTITYORDERED",DOUBLE;"TOTALLINEITEM","TOTALLINEITEM",DOUBLE}]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
@@ -465,7 +460,7 @@ if (!this.getViewer().isInteractive())
      <color _nil="1"/>
     </outline>
     <label>
-     <caption value="Customer Orders"/>
+     <caption value=" Order Totals"/>
      <background _nil="1"/>
      <outline>
       <color _nil="1"/>
@@ -649,7 +644,7 @@ if (!this.getViewer().isInteractive())
                         <property name="outputFormat">JS</property>
                         <property name="inheritColumns">false</property>
                         <property name="height">130pt</property>
-                        <property name="width">7.770833333333333in</property>
+                        <property name="width">7.854in</property>
                         <property name="dataSet">Data Set1</property>
                         <list-property name="boundDataColumns">
                             <structure>
@@ -726,7 +721,8 @@ if (!this.getViewer().isInteractive())
                     <property name="name">ORDERDATE</property>
                     <text-property name="displayName">ORDERDATE</text-property>
                     <expression name="expression" type="javascript">dataSetRow["ORDERDATE"]</expression>
-                    <property name="dataType">string</property>
+                    <property name="dataType">date</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">ORDERNUMBER</property>
@@ -769,6 +765,12 @@ if (!this.getViewer().isInteractive())
                         </structure>
                     </list-property>
                     <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">ORDERDATE_1</property>
+                    <text-property name="displayName">ORDERDATE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ORDERDATE"]</expression>
+                    <property name="dataType">date</property>
                 </structure>
             </list-property>
             <list-property name="sort">
@@ -872,17 +874,14 @@ if (!this.getViewer().isInteractive())
                         </structure>
                     </list-property>
                     <cell id="187">
-                        <data id="282">
-                            <property name="paddingRight">10pt</property>
+                        <data id="283">
+                            <property name="paddingRight">5pt</property>
+                            <structure name="dateTimeFormat">
+                                <property name="category">Medium Date</property>
+                                <property name="pattern">Medium Date</property>
+                            </structure>
                             <property name="textAlign">right</property>
-                            <list-property name="boundDataColumns">
-                                <structure>
-                                    <property name="name">CloseDate</property>
-                                    <expression name="expression" type="javascript">params["CloseDate"]</expression>
-                                    <property name="dataType">date</property>
-                                </structure>
-                            </list-property>
-                            <property name="resultSetColumn">CloseDate</property>
+                            <property name="resultSetColumn">ORDERDATE</property>
                         </data>
                     </cell>
                     <cell id="272">
