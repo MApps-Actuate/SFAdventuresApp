@@ -428,7 +428,7 @@ if (!this.getViewer().isInteractive())
                         <property name="fontSize">12pt</property>
                         <property name="fontWeight">bold</property>
                         <property name="textAlign">center</property>
-                        <text-property name="text">Current Pipe Line</text-property>
+                        <text-property name="text">Pipeline</text-property>
                     </label>
                 </cell>
             </row>
@@ -482,7 +482,7 @@ if (!this.getViewer().isInteractive())
      </outline>
     </clientArea>
    </children>
-   <children _type="Legend" visible="false">
+   <children _type="Legend" visible="false" itemType="1">
     <outline>
      <color _nil="1"/>
     </outline>

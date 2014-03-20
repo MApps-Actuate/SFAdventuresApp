@@ -470,7 +470,7 @@ if (!this.getViewer().isInteractive())
      </outline>
     </clientArea>
    </children>
-   <children _type="Legend" visible="false">
+   <children _type="Legend" visible="false" itemType="1">
     <outline>
      <color _nil="1"/>
     </outline>
