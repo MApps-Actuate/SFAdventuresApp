@@ -6009,7 +6009,7 @@ group by terr, yr, mnth]]></xml-property>
                             <property name="height">274px</property>
                             <property name="width">410px</property>
                             <property name="title">Pipeline vs Goal</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">2</property>
                             <property name="showScrollBar">false</property>
@@ -6063,7 +6063,7 @@ group by terr, yr, mnth]]></xml-property>
                             <property name="height">274px</property>
                             <property name="width">410px</property>
                             <property name="title">Forecast vs Quota</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">4</property>
                             <property name="showScrollBar">false</property>
@@ -6095,7 +6095,7 @@ group by terr, yr, mnth]]></xml-property>
                             <property name="width">666px</property>
                             <property name="title">Sales Reps Commit vs Quota vs Pct of Sales</property>
                             <property name="externalGadgetURI">^/Report Designs/execsalesmetrics.rptdesign</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">11</property>
                             <property name="showScrollBar">false</property>
@@ -6139,7 +6139,7 @@ group by terr, yr, mnth]]></xml-property>
                             <property name="width">482px</property>
                             <property name="title">Top 10 Opportunities</property>
                             <property name="externalGadgetURI">^/Report Designs/execsalesmetrics.rptdocument</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">12</property>
                             <property name="showScrollBar">false</property>
@@ -6183,7 +6183,7 @@ group by terr, yr, mnth]]></xml-property>
                             <property name="width">501px</property>
                             <property name="title">World Sales Performance to Date</property>
                             <property name="externalGadgetURI">^/Report Designs/WorldSales.rptdocument</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">13</property>
                             <property name="showScrollBar">false</property>
@@ -6225,7 +6225,7 @@ group by terr, yr, mnth]]></xml-property>
                             <property name="height">362px</property>
                             <property name="width">141px</property>
                             <property name="title">Goal</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">14</property>
                             <property name="showScrollBar">false</property>

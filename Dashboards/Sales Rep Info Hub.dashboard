@@ -4612,6 +4612,11 @@
         <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Commits.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
        </action>
       </triggers>
+      <triggers condition="2">
+       <action type="0">
+        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Commits.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+       </action>
+      </triggers>
       <curveFitting _nil="1"/>
      </series>
     </seriesDefinitions>
@@ -4658,6 +4663,11 @@
       </outline>
      </label>
      <dataDefinition definition="row[&quot;CUSTOMERNAME&quot;]"/>
+     <triggers condition="2">
+      <action type="0">
+       <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Commits.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+      </action>
+     </triggers>
      <triggers condition="2">
       <action type="0">
        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Commits.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
@@ -4895,6 +4905,11 @@
         <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
        </action>
       </triggers>
+      <triggers condition="2">
+       <action type="0">
+        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+       </action>
+      </triggers>
       <curveFitting _nil="1"/>
      </series>
     </seriesDefinitions>
@@ -4941,6 +4956,11 @@
       </outline>
      </label>
      <dataDefinition definition="row[&quot;CUSTOMERNAME&quot;]"/>
+     <triggers condition="2">
+      <action type="0">
+       <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+      </action>
+     </triggers>
      <triggers condition="2">
       <action type="0">
        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
@@ -5309,7 +5329,7 @@
                             <property name="height">227px</property>
                             <property name="width">320px</property>
                             <property name="title">Leads</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">4</property>
                             <property name="showScrollBar">false</property>
@@ -5341,6 +5361,7 @@
                             <property name="width">824px</property>
                             <property name="title">My Calendar</property>
                             <property name="gadgetContentType">url</property>
+                            <property name="showTitle">false</property>
                             <property name="zIndex">5</property>
                             <property name="showScrollBar">false</property>
                             <property name="height">391px</property>
@@ -5370,7 +5391,7 @@
                             <property name="height">85px</property>
                             <property name="width">501px</property>
                             <property name="title">My Goal Progress</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">7</property>
                             <property name="showScrollBar">false</property>
@@ -5408,7 +5429,7 @@
                             <property name="height">85px</property>
                             <property name="width">501px</property>
                             <property name="title">Regional Rev to Goal</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">8</property>
                             <property name="showScrollBar">false</property>
@@ -5446,7 +5467,7 @@
                             <property name="height">227px</property>
                             <property name="width">320px</property>
                             <property name="title">Commit This Quarter</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">9</property>
                             <property name="showScrollBar">false</property>
@@ -5477,7 +5498,7 @@
                             <property name="height">227px</property>
                             <property name="width">320px</property>
                             <property name="title">Next Qtr Pipeline</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">10</property>
                             <property name="showScrollBar">false</property>
@@ -5509,7 +5530,7 @@
                             <property name="width">501px</property>
                             <property name="title">Team Leaderboard</property>
                             <property name="externalGadgetURI">^/Report Designs/TeamLeaderboard.rptdesign</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">11</property>
                             <property name="showScrollBar">false</property>
@@ -5552,7 +5573,7 @@
                             <property name="height">227px</property>
                             <property name="width">320px</property>
                             <property name="title">Total Sales Orders</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">12</property>
                             <property name="showScrollBar">false</property>

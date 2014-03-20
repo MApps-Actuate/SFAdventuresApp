@@ -1561,7 +1561,7 @@
                             <property name="height">71px</property>
                             <property name="width">642px</property>
                             <property name="title">Select Year Range</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">2</property>
                             <property name="showScrollBar">false</property>
@@ -1714,7 +1714,7 @@
                             <property name="height">91px</property>
                             <property name="width">190px</property>
                             <property name="title">Channel</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">3</property>
                             <property name="showScrollBar">false</property>
@@ -1811,7 +1811,7 @@
                             <property name="height">91px</property>
                             <property name="width">210px</property>
                             <property name="title">Promotion</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">4</property>
                             <property name="showScrollBar">false</property>
@@ -1908,7 +1908,7 @@
                             <property name="height">91px</property>
                             <property name="width">195px</property>
                             <property name="title">Product Line</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">5</property>
                             <property name="showScrollBar">false</property>
@@ -2005,7 +2005,7 @@
                             <property name="height">236px</property>
                             <property name="width">651px</property>
                             <property name="title">Sales Revenue by Year, by Channel</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">6</property>
                             <property name="showScrollBar">false</property>
@@ -2059,7 +2059,7 @@
                             <property name="height">236px</property>
                             <property name="width">640px</property>
                             <property name="title">Product Line Revenue History</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">7</property>
                             <property name="showScrollBar">false</property>
@@ -2113,7 +2113,7 @@
                             <property name="height">236px</property>
                             <property name="width">651px</property>
                             <property name="title">Sales Revenue by Year, by Promotion</property>
-                            <property name="showTitle">true</property>
+                            <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">8</property>
                             <property name="showScrollBar">false</property>
