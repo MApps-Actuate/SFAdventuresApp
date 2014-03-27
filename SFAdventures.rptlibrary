@@ -2999,7 +2999,7 @@
         </extended-item>
         <extended-item extensionName="FlashGadgets" name="My Goal Progress" id="1349">
             <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="1.0">
- <Gadget backgroundColor="FEFEFE" borderColor="000000" borderThickness="2" borderTransparency="255" colorScheme="1" prefix="" showBorder="false" showGaugeLabels="false" showGlassStyle="false" showShadow="false" showValueAboveNeedle="false" subType="HBullet" suffix="" title="" turnOffAnimation="false" turnOffDefaultAnimination="false" type="Bullet" version="1.0.0" zOrderPosition="2">
+ <Gadget backgroundColor="FEFEFE" borderColor="000000" borderThickness="2" borderTransparency="255" colorScheme="1" prefix="" showBorder="false" showGaugeLabels="false" showGlassStyle="false" showShadow="false" showValueAboveNeedle="false" subType="HBullet" suffix="" title="" turnOffAnimation="false" turnOffDefaultAnimination="false" type="Bullet" version="1.0.0" zOrderPosition="3">
   <gadgetPartsSupportingEffects _body="background"/>
   <gadgetPartsSupportingEffects _body="caption"/>
   <gadgetPartsSupportingEffects _body="subcaption"/>
@@ -3020,8 +3020,9 @@
    <minor color="b7b7b7" height="3" width="1"/>
   </ticks>
   <toolTip showToolTip="true"/>
-  <addOns _type="TextAddOn" addOnType="5" name="AddOn0" showAddOn="true" x="85.0" y="17.0" fontColor="575757" fontFamily="Tahoma" horizontalAlignment="0" label="Goal" verticalAlignment="1" wrapMaxHeight="50.0" wrapMaxWidth="30.0"/>
-  <addOns _type="TextAddOn" addOnType="5" name="AddOn1" showAddOn="true" x="30.0" y="17.0" fontColor="575757" fontFamily="Tahoma" horizontalAlignment="0" label="Rev to Date" verticalAlignment="1" wrapMaxHeight="50.0" wrapMaxWidth="30.0"/>
+  <addOns _type="TextAddOn" addOnType="5" name="AddOn0" showAddOn="true" x="85.0" y="17.0" fontColor="575757" fontFamily="Verdana" horizontalAlignment="0" label="Goal" verticalAlignment="1" wrapMaxHeight="50.0" wrapMaxWidth="30.0"/>
+  <addOns _type="TextAddOn" addOnType="5" name="AddOn1" showAddOn="true" x="35.0" y="17.0" fontColor="575757" fontFamily="Verdana" horizontalAlignment="0" label="Rev to Date" verticalAlignment="1" wrapMaxHeight="50.0" wrapMaxWidth="30.0"/>
+  <addOns _type="TextAddOn" addOnType="5" name="AddOn2" showAddOn="true" x="2.0" y="60.0" fontFamily="Verdana" fontSize="10" horizontalAlignment="0" label="Commisions paid to date - $35,000" verticalAlignment="0" wrapMaxHeight="50.0" wrapMaxWidth="30.0"/>
   <valueDefinition query="row[&quot;revtodate&quot;]"/>
   <linearGauge showNeedleAbove="false" showNeedleValue="true" showRoundCorners="true">
    <needle borderColor="999999" borderTransparency="255" borderWidth="1" fillColor="000000" fillTransparency="255" shape="0" size="10" tooltipShowValue="true"/>
@@ -3036,8 +3037,8 @@
 ]]></xml-property>
             <property name="inheritColumns">false</property>
             <property name="outputFormat">JS</property>
-            <property name="height">85pt</property>
-            <property name="width">375pt</property>
+            <property name="height">85px</property>
+            <property name="width">501px</property>
             <property name="dataSet">Gauge</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -3057,7 +3058,7 @@
                 </structure>
             </list-property>
         </extended-item>
-        <extended-item extensionName="FlashGadgets" name="Regional Rev to Goal" id="1351">
+        <extended-item extensionName="FlashGadgets" name="Regional Revenue to Goal" id="1351">
             <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="1.0">
  <Gadget backgroundColor="FEFEFE" borderColor="000000" borderThickness="2" borderTransparency="255" colorScheme="1" prefix="" showBorder="false" showGaugeLabels="false" showGlassStyle="false" showShadow="false" showValueAboveNeedle="false" subType="HBullet" suffix="" title="" turnOffAnimation="false" turnOffDefaultAnimination="false" type="Bullet" version="1.0.0" zOrderPosition="2">
   <gadgetPartsSupportingEffects _body="background"/>
@@ -3096,8 +3097,8 @@
 ]]></xml-property>
             <property name="inheritColumns">false</property>
             <property name="outputFormat">JS</property>
-            <property name="height">85pt</property>
-            <property name="width">375pt</property>
+            <property name="height">85px</property>
+            <property name="width">501px</property>
             <property name="dataSet">RegionGage</property>
             <list-property name="boundDataColumns">
                 <structure>

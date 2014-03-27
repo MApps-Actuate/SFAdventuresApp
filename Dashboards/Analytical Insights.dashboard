@@ -3,299 +3,12 @@
     <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
     <xml-property name="externalMetadata">
         <external-datamarts>
-            <datamart-node location="file:/C:/Users/bcombs/workspace42/SFAdventures/Data%20Objects/SalesAnalysisMetric.data">
-                <reference-elements>NewDataMartDataSource;</reference-elements>
+            <datamart-node location="file:/C:/Users/ActuateUser/git/SFAdventuresTest/Data%20Objects/SalesAnalysis.data">
+                <reference-elements>NewDataMartDataSource2;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
                     <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
                     <data-sources>
-                        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="Flat File" id="2">
-                            <property name="HOME">C:\Users\bcombs\workspace42\SFAdventures\data</property>
-                            <property name="DELIMTYPE">COMMA</property>
-                            <property name="CHARSET">UTF-8</property>
-                            <property name="INCLCOLUMNNAME">YES</property>
-                            <property name="INCLTYPELINE">NO</property>
-                            <property name="TRAILNULLCOLS">NO</property>
-                        </oda-data-source>
-                    </data-sources>
-                    <data-sets>
-                        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Sales Analysis" id="3">
-                            <list-property name="columnHints">
-                                <structure>
-                                    <property name="columnName">Amt</property>
-                                    <property name="analysis">measure</property>
-                                    <text-property name="heading">Amt</text-property>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Channel</property>
-                                    <property name="analysis">dimension</property>
-                                    <text-property name="heading">Channel</text-property>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Date</property>
-                                    <property name="analysis">dimension</property>
-                                    <text-property name="heading">Date</text-property>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Product Line</property>
-                                    <property name="analysis">dimension</property>
-                                    <text-property name="heading">Product Line</text-property>
-                                </structure>
-                                <structure>
-                                    <property name="columnName">Promotion</property>
-                                    <property name="analysis">dimension</property>
-                                    <text-property name="heading">Promotion</text-property>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
-                                </structure>
-                            </list-property>
-                            <list-property name="parameters"/>
-                            <structure name="cachedMetaData">
-                                <list-property name="resultSet">
-                                    <structure>
-                                        <property name="position">1</property>
-                                        <property name="name">Amt</property>
-                                        <property name="dataType">float</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">2</property>
-                                        <property name="name">Channel</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">3</property>
-                                        <property name="name">Date</property>
-                                        <property name="dataType">date</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">4</property>
-                                        <property name="name">Product Line</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                    <structure>
-                                        <property name="position">5</property>
-                                        <property name="name">Promotion</property>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                </list-property>
-                            </structure>
-                            <property name="dataSource">Flat File</property>
-                            <list-property name="resultSet">
-                                <structure>
-                                    <property name="position">1</property>
-                                    <property name="name">Amt</property>
-                                    <property name="nativeName">Amt</property>
-                                    <property name="dataType">float</property>
-                                    <property name="nativeDataType">8</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">2</property>
-                                    <property name="name">Channel</property>
-                                    <property name="nativeName">Channel</property>
-                                    <property name="dataType">string</property>
-                                    <property name="nativeDataType">12</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">3</property>
-                                    <property name="name">Date</property>
-                                    <property name="nativeName">Date</property>
-                                    <property name="dataType">date</property>
-                                    <property name="nativeDataType">91</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">4</property>
-                                    <property name="name">Product Line</property>
-                                    <property name="nativeName">Product Line</property>
-                                    <property name="dataType">string</property>
-                                    <property name="nativeDataType">12</property>
-                                </structure>
-                                <structure>
-                                    <property name="position">5</property>
-                                    <property name="name">Promotion</property>
-                                    <property name="nativeName">Promotion</property>
-                                    <property name="dataType">string</property>
-                                    <property name="nativeDataType">12</property>
-                                </structure>
-                            </list-property>
-                            <xml-property name="queryText"><![CDATA[select "Amt", "Channel", "Date", "Product Line", "Promotion" from "SalesAnalysisMetrics.csv" : {"Amt","Amt",DOUBLE;"Channel","Channel",STRING;"Date","Date",DATE;"Product Line","Product Line",STRING;"Promotion","Promotion",STRING}]]></xml-property>
-                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>2.0</Version>
-  <design:ResultSets derivedMetaData="true">
-    <design:resultSetDefinitions>
-      <design:resultSetColumns>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Amt</design:name>
-              <design:position>1</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Amt</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Channel</design:name>
-              <design:position>2</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Channel</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Date</design:name>
-              <design:position>3</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Date</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Line</design:name>
-              <design:position>4</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Line</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>Promotion</design:name>
-              <design:position>5</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Promotion</design:label>
-            <design:formattingHints/>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-      </design:resultSetColumns>
-      <design:criteria/>
-    </design:resultSetDefinitions>
-  </design:ResultSets>
-</model:DesignValues>]]></xml-property>
-                        </oda-data-set>
-                    </data-sets>
-                    <property name="linkedDataModels">
-                        <linked-data-model name="Sales Analysis Model" id="27">
-                            <property name="aliasDataSets">
-                                <alias-data-set name="Sales Analysis" id="34">
-                                    <property name="originDataSet">Sales Analysis</property>
-                                </alias-data-set>
-                            </property>
-                            <property name="drillPaths">
-                                <drill-path id="35">
-                                    <text-property name="displayName">Channel</text-property>
-                                    <simple-property-list name="drillPathColumns">
-                                        <value>dataSetRow["Channel"]</value>
-                                    </simple-property-list>
-                                </drill-path>
-                                <drill-path id="36">
-                                    <text-property name="displayName">Promotion</text-property>
-                                    <simple-property-list name="drillPathColumns">
-                                        <value>dataSetRow["Promotion"]</value>
-                                    </simple-property-list>
-                                </drill-path>
-                                <drill-path id="37">
-                                    <text-property name="displayName">Product</text-property>
-                                    <simple-property-list name="drillPathColumns">
-                                        <value>dataSetRow["Product Line"]</value>
-                                    </simple-property-list>
-                                </drill-path>
-                                <drill-path id="38">
-                                    <text-property name="displayName">Date</text-property>
-                                    <simple-property-list name="drillPathColumns">
-                                        <value>dataSetRow["Date"]["Year"]</value>
-                                        <value>dataSetRow["Date"]["Quarter"]</value>
-                                    </simple-property-list>
-                                </drill-path>
-                            </property>
-                            <property name="categories">
-                                <category name="Sales Analysis" id="28">
-                                    <property name="categoryColumns">
-                                        <category-column name="Amt" id="29">
-                                            <property name="aliasDataSet">Sales Analysis Model/Sales Analysis</property>
-                                            <property name="resultSetColumnName">Amt</property>
-                                        </category-column>
-                                        <category-column name="Channel" id="30">
-                                            <property name="aliasDataSet">Sales Analysis Model/Sales Analysis</property>
-                                            <property name="resultSetColumnName">Channel</property>
-                                        </category-column>
-                                        <category-column name="Date" id="31">
-                                            <property name="aliasDataSet">Sales Analysis Model/Sales Analysis</property>
-                                            <property name="resultSetColumnName">Date</property>
-                                        </category-column>
-                                        <category-column name="Product Line" id="32">
-                                            <property name="aliasDataSet">Sales Analysis Model/Sales Analysis</property>
-                                            <property name="resultSetColumnName">Product Line</property>
-                                        </category-column>
-                                        <category-column name="Promotion" id="33">
-                                            <property name="aliasDataSet">Sales Analysis Model/Sales Analysis</property>
-                                            <property name="resultSetColumnName">Promotion</property>
-                                        </category-column>
-                                        <category-column name="Sales Revenue" id="39">
-                                            <expression name="expression" type="javascript">dataSetRow["Amt"]</expression>
-                                            <property name="dataType">float</property>
-                                            <property name="horizontalAlign">right</property>
-                                            <structure name="valueFormat">
-                                                <property name="category">Currency</property>
-                                                <property name="pattern">$#,##0.00{RoundingMode=HALF_UP}</property>
-                                            </structure>
-                                        </category-column>
-                                    </property>
-                                </category>
-                            </property>
-                            <property name="pushDown">true</property>
-                        </linked-data-model>
-                    </property>
-                </datamart>
-            </datamart-node>
-            <datamart-node location="file:/C:/Actuate/iHub3/modules/BIRTiHub/iHub/shared/storage/file/015/631.dat">
-                <reference-elements>NewDataMartDataSource1;</reference-elements>
-                <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-                    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
-                    <data-sources>
-                        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="FlatFile" id="2">
+                        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="FF" id="2">
                             <property name="HOME">Flatfiles/</property>
                             <property name="DELIMTYPE">COMMA</property>
                             <property name="CHARSET">UTF-8</property>
@@ -305,7 +18,7 @@
                         </oda-data-source>
                     </data-sources>
                     <data-sets>
-                        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Promotions" id="3">
+                        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="SalesAnalysis" id="3">
                             <list-property name="columnHints">
                                 <structure>
                                     <property name="columnName">Date</property>
@@ -322,9 +35,26 @@
                                     <property name="compressed">false</property>
                                 </structure>
                                 <structure>
+                                    <property name="columnName">Product Cost</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">Product Cost</text-property>
+                                    <property name="horizontalAlign">right</property>
+                                    <structure name="valueFormat">
+                                        <property name="category">Currency</property>
+                                        <property name="pattern">$#,##0.00{RoundingMode=HALF_UP}</property>
+                                    </structure>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
                                     <property name="columnName">Amt</property>
                                     <property name="analysis">measure</property>
                                     <text-property name="heading">Amt</text-property>
+                                    <property name="horizontalAlign">right</property>
+                                    <structure name="valueFormat">
+                                        <property name="category">Currency</property>
+                                        <property name="pattern">$#,##0.00{RoundingMode=HALF_UP}</property>
+                                    </structure>
                                     <property name="indexColumn">false</property>
                                     <property name="compressed">false</property>
                                 </structure>
@@ -342,7 +72,26 @@
                                     <property name="indexColumn">false</property>
                                     <property name="compressed">false</property>
                                 </structure>
+                                <structure>
+                                    <property name="columnName">Margin</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">Margin</text-property>
+                                    <property name="horizontalAlign">right</property>
+                                    <structure name="valueFormat">
+                                        <property name="category">Currency</property>
+                                        <property name="pattern">$#,##0.00{RoundingMode=HALF_UP}</property>
+                                    </structure>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
                             </list-property>
+                            <list-property name="filter">
+                                <structure>
+                                    <property name="operator">is-not-null</property>
+                                    <expression name="expr" type="javascript">row["Date"]</expression>
+                                </structure>
+                            </list-property>
+                            <list-property name="parameters"/>
                             <structure name="cachedMetaData">
                                 <list-property name="resultSet">
                                     <structure>
@@ -357,22 +106,32 @@
                                     </structure>
                                     <structure>
                                         <property name="position">3</property>
-                                        <property name="name">Amt</property>
-                                        <property name="dataType">decimal</property>
+                                        <property name="name">Product Cost</property>
+                                        <property name="dataType">float</property>
                                     </structure>
                                     <structure>
                                         <property name="position">4</property>
+                                        <property name="name">Amt</property>
+                                        <property name="dataType">float</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">5</property>
                                         <property name="name">Channel</property>
                                         <property name="dataType">string</property>
                                     </structure>
                                     <structure>
-                                        <property name="position">5</property>
+                                        <property name="position">6</property>
                                         <property name="name">Promotion</property>
                                         <property name="dataType">string</property>
                                     </structure>
+                                    <structure>
+                                        <property name="position">7</property>
+                                        <property name="name">Margin</property>
+                                        <property name="dataType">float</property>
+                                    </structure>
                                 </list-property>
                             </structure>
-                            <property name="dataSource">FlatFile</property>
+                            <property name="dataSource">FF</property>
                             <list-property name="resultSet">
                                 <structure>
                                     <property name="position">1</property>
@@ -390,27 +149,41 @@
                                 </structure>
                                 <structure>
                                     <property name="position">3</property>
-                                    <property name="name">Amt</property>
-                                    <property name="nativeName">Amt</property>
-                                    <property name="dataType">decimal</property>
-                                    <property name="nativeDataType">2</property>
+                                    <property name="name">Product Cost</property>
+                                    <property name="nativeName">Product Cost</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">8</property>
                                 </structure>
                                 <structure>
                                     <property name="position">4</property>
+                                    <property name="name">Amt</property>
+                                    <property name="nativeName">Amt</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">8</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">5</property>
                                     <property name="name">Channel</property>
                                     <property name="nativeName">Channel</property>
                                     <property name="dataType">string</property>
                                     <property name="nativeDataType">12</property>
                                 </structure>
                                 <structure>
-                                    <property name="position">5</property>
+                                    <property name="position">6</property>
                                     <property name="name">Promotion</property>
                                     <property name="nativeName">Promotion</property>
                                     <property name="dataType">string</property>
                                     <property name="nativeDataType">12</property>
                                 </structure>
+                                <structure>
+                                    <property name="position">7</property>
+                                    <property name="name">Margin</property>
+                                    <property name="nativeName">Margin</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">8</property>
+                                </structure>
                             </list-property>
-                            <xml-property name="queryText"><![CDATA[select "Date", "Line", "Amt", "Channel", "Promotion" from "PromotionalAnalysis.csv" : {"Date","Date",DATE;"Line","Line",STRING;"Amt","Amt",BIGDECIMAL;"Channel","Channel",STRING;"Promotion","Promotion",STRING}]]></xml-property>
+                            <xml-property name="queryText"><![CDATA[select "Date", "Line", "Total Product Cost", "Amt", "Channel", "Promotion", "Margin" from "SalesAnalysis.csv" : {"Date","Date",DATE;"Line","Line",STRING;"Product Cost","Total Product Cost",DOUBLE;"Amt","Amt",DOUBLE;"Channel","Channel",STRING;"Promotion","Promotion",STRING;"Margin","Margin",DOUBLE}]]></xml-property>
                             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
@@ -452,10 +225,26 @@
         <design:resultColumnDefinitions>
           <design:attributes>
             <design:identifier>
-              <design:name>Amt</design:name>
+              <design:name>Product Cost</design:name>
               <design:position>3</design:position>
             </design:identifier>
-            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Product Cost</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Amt</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
             <design:precision>-1</design:precision>
             <design:scale>-1</design:scale>
             <design:nullability>Unknown</design:nullability>
@@ -469,7 +258,7 @@
           <design:attributes>
             <design:identifier>
               <design:name>Channel</design:name>
-              <design:position>4</design:position>
+              <design:position>5</design:position>
             </design:identifier>
             <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
             <design:precision>-1</design:precision>
@@ -485,7 +274,7 @@
           <design:attributes>
             <design:identifier>
               <design:name>Promotion</design:name>
-              <design:position>5</design:position>
+              <design:position>6</design:position>
             </design:identifier>
             <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
             <design:precision>-1</design:precision>
@@ -497,6 +286,22 @@
             <design:formattingHints/>
           </design:usageHints>
         </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Margin</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Margin</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
       </design:resultSetColumns>
       <design:criteria/>
     </design:resultSetDefinitions>
@@ -505,34 +310,42 @@
                         </oda-data-set>
                     </data-sets>
                     <property name="linkedDataModels">
-                        <linked-data-model name="Data Model" id="4">
+                        <linked-data-model name="Data Model" id="27">
                             <property name="aliasDataSets">
-                                <alias-data-set name="Promotions" id="11">
-                                    <property name="originDataSet">Promotions</property>
+                                <alias-data-set name="SalesAnalysis" id="36">
+                                    <property name="originDataSet">SalesAnalysis</property>
                                 </alias-data-set>
                             </property>
                             <property name="categories">
-                                <category name="Promotions" id="5">
+                                <category name="SalesAnalysis" id="28">
                                     <property name="categoryColumns">
-                                        <category-column name="Date" id="6">
-                                            <property name="aliasDataSet">Data Model/Promotions</property>
+                                        <category-column name="Date" id="29">
+                                            <property name="aliasDataSet">Data Model/SalesAnalysis</property>
                                             <property name="resultSetColumnName">Date</property>
                                         </category-column>
-                                        <category-column name="Line" id="7">
-                                            <property name="aliasDataSet">Data Model/Promotions</property>
+                                        <category-column name="Line" id="30">
+                                            <property name="aliasDataSet">Data Model/SalesAnalysis</property>
                                             <property name="resultSetColumnName">Line</property>
                                         </category-column>
-                                        <category-column name="Amt" id="8">
-                                            <property name="aliasDataSet">Data Model/Promotions</property>
+                                        <category-column name="Product Cost" id="31">
+                                            <property name="aliasDataSet">Data Model/SalesAnalysis</property>
+                                            <property name="resultSetColumnName">Product Cost</property>
+                                        </category-column>
+                                        <category-column name="Amt" id="32">
+                                            <property name="aliasDataSet">Data Model/SalesAnalysis</property>
                                             <property name="resultSetColumnName">Amt</property>
                                         </category-column>
-                                        <category-column name="Channel" id="9">
-                                            <property name="aliasDataSet">Data Model/Promotions</property>
+                                        <category-column name="Channel" id="33">
+                                            <property name="aliasDataSet">Data Model/SalesAnalysis</property>
                                             <property name="resultSetColumnName">Channel</property>
                                         </category-column>
-                                        <category-column name="Promotion" id="10">
-                                            <property name="aliasDataSet">Data Model/Promotions</property>
+                                        <category-column name="Promotion" id="34">
+                                            <property name="aliasDataSet">Data Model/SalesAnalysis</property>
                                             <property name="resultSetColumnName">Promotion</property>
+                                        </category-column>
+                                        <category-column name="Margin" id="35">
+                                            <property name="aliasDataSet">Data Model/SalesAnalysis</property>
+                                            <property name="resultSetColumnName">Margin</property>
                                         </category-column>
                                     </property>
                                 </category>
@@ -552,20 +365,15 @@
         </structure>
     </list-property>
     <data-sources>
-        <data-mart-data-source name="NewDataMartDataSource" id="9">
-            <property name="datamartURL">Data Objects/SalesAnalysisMetric</property>
-            <property name="datamartVersion">-1</property>
-            <property name="accessType">latest</property>
-        </data-mart-data-source>
-        <data-mart-data-source name="NewDataMartDataSource1" id="90">
-            <property name="datamartURL">Data Objects/PromotionalAnalysis</property>
+        <data-mart-data-source name="NewDataMartDataSource2" id="139">
+            <property name="datamartURL">Data Objects/SalesAnalysis</property>
             <property name="datamartVersion">-1</property>
             <property name="accessType">latest</property>
         </data-mart-data-source>
     </data-sources>
     <property name="linkedDataModels">
-        <data-mart-linked-data-model name="NewDataMartDataSource1::Data Model" id="91">
-            <property name="dataSource">NewDataMartDataSource1</property>
+        <data-mart-linked-data-model name="NewDataMartDataSource2::Data Model" id="140">
+            <property name="dataSource">NewDataMartDataSource2</property>
             <property name="dataObject">Data Model</property>
         </data-mart-linked-data-model>
     </property>
@@ -801,7 +609,7 @@
                 <structure>
                     <property name="name">Amt</property>
                     <expression name="expression">dataSetRow["Amt"]</expression>
-                    <property name="dataType">decimal</property>
+                    <property name="dataType">float</property>
                 </structure>
                 <structure>
                     <property name="name">Channel</property>
@@ -810,7 +618,7 @@
                 </structure>
             </list-property>
             <property name="theme">ThemesReportItems3.Modern</property>
-            <property name="linkedDataModel">NewDataMartDataSource1::Data Model</property>
+            <property name="linkedDataModel">NewDataMartDataSource2::Data Model</property>
             <list-property name="userProperties">
                 <structure>
                     <property name="name">copyHyperlink</property>
@@ -1047,7 +855,7 @@
                 <structure>
                     <property name="name">Amt</property>
                     <expression name="expression">dataSetRow["Amt"]</expression>
-                    <property name="dataType">decimal</property>
+                    <property name="dataType">float</property>
                 </structure>
                 <structure>
                     <property name="name">Line</property>
@@ -1056,7 +864,7 @@
                 </structure>
             </list-property>
             <property name="theme">ThemesReportItems3.Modern</property>
-            <property name="linkedDataModel">NewDataMartDataSource1::Data Model</property>
+            <property name="linkedDataModel">NewDataMartDataSource2::Data Model</property>
             <list-property name="userProperties">
                 <structure>
                     <property name="name">copyHyperlink</property>
@@ -1288,7 +1096,7 @@
                 <structure>
                     <property name="name">Amt</property>
                     <expression name="expression">dataSetRow["Amt"]</expression>
-                    <property name="dataType">decimal</property>
+                    <property name="dataType">float</property>
                 </structure>
                 <structure>
                     <property name="name">Promotion</property>
@@ -1297,7 +1105,7 @@
                 </structure>
             </list-property>
             <property name="theme">ThemesReportItems3.Modern</property>
-            <property name="linkedDataModel">NewDataMartDataSource1::Data Model</property>
+            <property name="linkedDataModel">NewDataMartDataSource2::Data Model</property>
             <list-property name="userProperties">
                 <structure>
                     <property name="name">copyHyperlink</property>
@@ -1309,47 +1117,51 @@
         <extended-item extensionName="Crosstab" extensionVersion="3.7.0" name="Sales Analysis_8525c12e-f9fc-448d-bfef-71b79d80f4a7"
  id="63">
             <property name="measures">
-                <extended-item extensionName="ComputedMeasureView" name="Amt(SUM)" id="119">
+                <extended-item extensionName="ComputedMeasureView" name="Amt(SUM)" id="188">
                     <property name="measureName">Amt(SUM)</property>
                     <property name="detail">
-                        <extended-item extensionName="AggregationCell" id="120">
+                        <extended-item extensionName="AggregationCell" id="189">
                             <property name="aggregationOnRow">Line/Line</property>
-                            <property name="aggregationOnColumn">Channel/Channel</property>
+                            <property name="aggregationOnColumn">Date/Year</property>
                             <property name="content">
-                                <data id="124">
+                                <data id="192">
                                     <structure name="numberFormat">
                                         <property name="category">Currency</property>
                                         <property name="pattern">$#,##0</property>
                                     </structure>
-                                    <property name="resultSetColumn">Amt(SUM)_Line/Line_Channel/Channel</property>
+                                    <property name="resultSetColumn">Amt(SUM)_Line/Line_Date/Year</property>
                                 </data>
                             </property>
                         </extended-item>
                     </property>
                     <property name="aggregations">
-                        <extended-item extensionName="AggregationCell" id="127">
-                            <property name="aggregationOnColumn">Channel/Channel</property>
-                            <property name="fontWeight">bold</property>
-                            <property name="backgroundColor">#F1F1F1</property>
-                            <property name="textAlign">right</property>
+                        <extended-item extensionName="AggregationCell" id="194">
+                            <property name="aggregationOnColumn">Date/Year</property>
                             <property name="content">
-                                <data id="128">
-                                    <property name="backgroundColor">#F1F1F1</property>
-                                    <property name="fontWeight">bold</property>
+                                <data id="195">
                                     <structure name="numberFormat">
                                         <property name="category">Currency</property>
                                         <property name="pattern">$#,##0</property>
                                     </structure>
-                                    <property name="textAlign">right</property>
-                                    <property name="resultSetColumn">Amt(SUM)_Channel/Channel</property>
+                                    <property name="resultSetColumn">Amt(SUM)_Date/Year</property>
                                 </data>
                             </property>
                         </extended-item>
-                        <extended-item extensionName="AggregationCell" id="131">
-                            <property name="aggregationOnRow">Line/Line</property>
-                            <property name="fontStyle">normal</property>
+                        <extended-item extensionName="AggregationCell" id="200">
                             <property name="content">
-                                <data id="132">
+                                <data id="201">
+                                    <structure name="numberFormat">
+                                        <property name="category">Currency</property>
+                                        <property name="pattern">$#,##0</property>
+                                    </structure>
+                                    <property name="resultSetColumn">Amt(SUM)</property>
+                                </data>
+                            </property>
+                        </extended-item>
+                        <extended-item extensionName="AggregationCell" id="215">
+                            <property name="aggregationOnRow">Line/Line</property>
+                            <property name="content">
+                                <data id="216">
                                     <structure name="numberFormat">
                                         <property name="category">Currency</property>
                                         <property name="pattern">$#,##0</property>
@@ -1358,37 +1170,18 @@
                                 </data>
                             </property>
                         </extended-item>
-                        <extended-item extensionName="AggregationCell" id="133">
-                            <property name="fontStyle">italic</property>
-                            <property name="fontWeight">bold</property>
-                            <property name="backgroundColor">#F1F1F1</property>
-                            <property name="textAlign">right</property>
-                            <property name="content">
-                                <data id="134">
-                                    <property name="backgroundColor">#F1F1F1</property>
-                                    <property name="fontWeight">bold</property>
-                                    <property name="fontStyle">italic</property>
-                                    <structure name="numberFormat">
-                                        <property name="category">Currency</property>
-                                        <property name="pattern">$#,##0</property>
-                                    </structure>
-                                    <property name="textAlign">right</property>
-                                    <property name="resultSetColumn">Amt(SUM)</property>
-                                </data>
-                            </property>
-                        </extended-item>
                     </property>
                     <property name="header">
-                        <extended-item extensionName="CrosstabCell" id="121">
+                        <extended-item extensionName="CrosstabCell" id="190">
                             <property name="content">
-                                <label id="122">
+                                <label id="191">
                                     <text-property name="text">Amt(SUM)</text-property>
                                 </label>
                             </property>
                         </extended-item>
-                        <extended-item extensionName="CrosstabCell" id="135">
+                        <extended-item extensionName="CrosstabCell" id="202">
                             <property name="content">
-                                <label id="136">
+                                <label id="203">
                                     <text-property name="text">Amt(SUM)</text-property>
                                 </label>
                             </property>
@@ -1397,26 +1190,26 @@
                 </extended-item>
             </property>
             <property name="rows">
-                <extended-item extensionName="CrosstabView" id="106">
+                <extended-item extensionName="CrosstabView" id="142">
                     <property name="grandTotal">
-                        <extended-item extensionName="CrosstabCell" id="126">
+                        <extended-item extensionName="CrosstabCell" id="193">
                             <property name="content">
-                                <label id="129">
+                                <label id="196">
                                     <text-property name="text">Grand Total</text-property>
                                 </label>
                             </property>
                         </extended-item>
                     </property>
                     <property name="views">
-                        <extended-item extensionName="DimensionView" id="108">
+                        <extended-item extensionName="DimensionView" id="155">
                             <property name="dimension">Line</property>
                             <property name="levels">
-                                <extended-item extensionName="LevelView" name="NewLevel View" id="109">
+                                <extended-item extensionName="LevelView" name="NewLevel View1" id="156">
                                     <property name="level">Line/Line</property>
                                     <property name="member">
-                                        <extended-item extensionName="CrosstabCell" id="110">
+                                        <extended-item extensionName="CrosstabCell" id="157">
                                             <property name="content">
-                                                <data name="Line" id="111">
+                                                <data name="Line" id="159">
                                                     <property name="resultSetColumn">Line</property>
                                                 </data>
                                             </property>
@@ -1429,27 +1222,27 @@
                 </extended-item>
             </property>
             <property name="columns">
-                <extended-item extensionName="CrosstabView" id="107">
+                <extended-item extensionName="CrosstabView" id="143">
                     <property name="grandTotal">
-                        <extended-item extensionName="CrosstabCell" id="130">
+                        <extended-item extensionName="CrosstabCell" id="197">
                             <property name="content">
-                                <label id="137">
+                                <label id="204">
                                     <text-property name="text">Grand Total</text-property>
                                 </label>
                             </property>
                         </extended-item>
                     </property>
                     <property name="views">
-                        <extended-item extensionName="DimensionView" id="113">
-                            <property name="dimension">Channel</property>
+                        <extended-item extensionName="DimensionView" id="144">
+                            <property name="dimension">Date</property>
                             <property name="levels">
-                                <extended-item extensionName="LevelView" name="NewLevel View1" id="114">
-                                    <property name="level">Channel/Channel</property>
+                                <extended-item extensionName="LevelView" name="NewLevel View" id="145">
+                                    <property name="level">Date/Year</property>
                                     <property name="member">
-                                        <extended-item extensionName="CrosstabCell" id="115">
+                                        <extended-item extensionName="CrosstabCell" id="146">
                                             <property name="content">
-                                                <data name="Channel" id="116">
-                                                    <property name="resultSetColumn">Channel</property>
+                                                <data name="Year" id="147">
+                                                    <property name="resultSetColumn">Date-Year</property>
                                                 </data>
                                             </property>
                                         </extended-item>
@@ -1461,14 +1254,14 @@
                 </extended-item>
             </property>
             <property name="header">
-                <extended-item extensionName="CrosstabCell" id="123"/>
-                <extended-item extensionName="CrosstabCell" id="105">
+                <extended-item extensionName="CrosstabCell" id="141">
                     <property name="content">
-                        <label id="118">
+                        <label id="160">
                             <text-property name="text">Line</text-property>
                         </label>
                     </property>
                 </extended-item>
+                <extended-item extensionName="CrosstabCell" id="213"/>
             </property>
             <property name="filter">
                 <filter-condition-element>
@@ -1486,32 +1279,32 @@
             <property name="columnPageBreakInterval">10</property>
             <list-property name="boundDataColumns">
                 <structure>
+                    <property name="name">Date-Year</property>
+                    <expression name="expression">dataSetRow["Date"]["Year"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
                     <property name="name">Line</property>
                     <expression name="expression">dataSetRow["Line"]</expression>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="name">Channel</property>
-                    <expression name="expression">dataSetRow["Channel"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">Amt(SUM)_Line/Line_Channel/Channel</property>
+                    <property name="name">Amt(SUM)_Line/Line_Date/Year</property>
                     <text-property name="displayName">Amt(SUM)</text-property>
                     <expression name="expression" type="javascript">dataSetRow["Amt"]</expression>
-                    <property name="dataType">decimal</property>
+                    <property name="dataType">float</property>
                     <simple-property-list name="aggregateOn">
                         <value>Line/Line</value>
-                        <value>Channel/Channel</value>
+                        <value>Date/Year</value>
                     </simple-property-list>
                     <property name="aggregateFunction">SUM</property>
                 </structure>
                 <structure>
-                    <property name="name">Amt(SUM)_Channel/Channel</property>
+                    <property name="name">Amt(SUM)_Date/Year</property>
                     <expression name="expression">dataSetRow["Amt"]</expression>
                     <property name="dataType">float</property>
                     <simple-property-list name="aggregateOn">
-                        <value>Channel/Channel</value>
+                        <value>Date/Year</value>
                     </simple-property-list>
                     <property name="aggregateFunction">SUM</property>
                 </structure>
@@ -1532,7 +1325,7 @@
                 </structure>
             </list-property>
             <property name="theme">ThemesReportItems3.modern-crosstab</property>
-            <property name="linkedDataModel">NewDataMartDataSource1::Data Model</property>
+            <property name="linkedDataModel">NewDataMartDataSource2::Data Model</property>
             <list-property name="userProperties">
                 <structure>
                     <property name="name">__DA_USE_DEFAULT_HYPERLINK</property>
@@ -1581,7 +1374,7 @@
                             </property>
                             <property name="content">
                                 <slider-data-selector id="12">
-                                    <property name="linkedDataModel">NewDataMartDataSource1::Data Model</property>
+                                    <property name="linkedDataModel">NewDataMartDataSource2::Data Model</property>
                                     <property name="operator">between</property>
                                     <simple-property-list name="columnNames">
                                         <value>Date/Year</value>
@@ -1612,11 +1405,11 @@
                                             <property name="dirty">false</property>
                                         </event-object>
                                         <event-object>
-                                            <property name="gadget">Gadget_ce74bc1d-5729-4c73-8b5f-63cf750e4d48</property>
+                                            <property name="gadget">Gadget_6ce545a7-b6fb-4b58-9b28-5c46da75f7e0</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                         <event-object>
-                                            <property name="gadget">Gadget_0c51b675-a208-47e7-9866-ac285b6cbe70</property>
+                                            <property name="gadget">Gadget_ce74bc1d-5729-4c73-8b5f-63cf750e4d48</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                         <event-object>
@@ -1624,11 +1417,11 @@
                                             <property name="dirty">false</property>
                                         </event-object>
                                         <event-object>
-                                            <property name="gadget">Gadget_6ce545a7-b6fb-4b58-9b28-5c46da75f7e0</property>
+                                            <property name="gadget">Gadget_5342d1b2-9d1c-49a5-bff5-081808c4b5b0</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                         <event-object>
-                                            <property name="gadget">Gadget_5342d1b2-9d1c-49a5-bff5-081808c4b5b0</property>
+                                            <property name="gadget">Gadget_0c51b675-a208-47e7-9866-ac285b6cbe70</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                         <event-object>
@@ -1734,7 +1527,7 @@
                             </property>
                             <property name="content">
                                 <list-data-selector id="42">
-                                    <property name="linkedDataModel">NewDataMartDataSource1::Data Model</property>
+                                    <property name="linkedDataModel">NewDataMartDataSource2::Data Model</property>
                                     <property name="sortDirection">asc</property>
                                     <property name="operator">in</property>
                                     <simple-property-list name="columnNames">
@@ -1831,7 +1624,7 @@
                             </property>
                             <property name="content">
                                 <list-data-selector id="45">
-                                    <property name="linkedDataModel">NewDataMartDataSource1::Data Model</property>
+                                    <property name="linkedDataModel">NewDataMartDataSource2::Data Model</property>
                                     <property name="sortDirection">asc</property>
                                     <property name="operator">in</property>
                                     <simple-property-list name="columnNames">
@@ -1928,7 +1721,7 @@
                             </property>
                             <property name="content">
                                 <list-data-selector id="48">
-                                    <property name="linkedDataModel">NewDataMartDataSource1::Data Model</property>
+                                    <property name="linkedDataModel">NewDataMartDataSource2::Data Model</property>
                                     <property name="sortDirection">asc</property>
                                     <property name="operator">in</property>
                                     <simple-property-list name="columnNames">

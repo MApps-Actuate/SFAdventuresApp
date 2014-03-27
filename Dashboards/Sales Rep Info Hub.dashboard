@@ -3392,6 +3392,18 @@
             <property name="dataSource">NewDataMartDataSource1</property>
             <property name="dataObject">leads</property>
         </data-mart-data-set>
+        <data-mart-data-set name="NewDataMartDataSource::Commits" id="1365">
+            <property name="dataSource">NewDataMartDataSource</property>
+            <property name="dataObject">Commits</property>
+        </data-mart-data-set>
+        <data-mart-data-set name="NewDataMartDataSource::Pipelline" id="1372">
+            <property name="dataSource">NewDataMartDataSource</property>
+            <property name="dataObject">Pipelline</property>
+        </data-mart-data-set>
+        <data-mart-data-set name="NewDataMartDataSource::Customer Orders" id="1431">
+            <property name="dataSource">NewDataMartDataSource</property>
+            <property name="dataObject">Customer Orders</property>
+        </data-mart-data-set>
         <data-mart-data-set name="Gauge" id="1348">
             <list-property name="columnHints">
                 <structure>
@@ -3500,18 +3512,6 @@
                     <property name="dataType">float</property>
                 </structure>
             </list-property>
-        </data-mart-data-set>
-        <data-mart-data-set name="NewDataMartDataSource::Commits" id="1365">
-            <property name="dataSource">NewDataMartDataSource</property>
-            <property name="dataObject">Commits</property>
-        </data-mart-data-set>
-        <data-mart-data-set name="NewDataMartDataSource::Pipelline" id="1372">
-            <property name="dataSource">NewDataMartDataSource</property>
-            <property name="dataObject">Pipelline</property>
-        </data-mart-data-set>
-        <data-mart-data-set name="NewDataMartDataSource::Customer Orders" id="1431">
-            <property name="dataSource">NewDataMartDataSource</property>
-            <property name="dataObject">Customer Orders</property>
         </data-mart-data-set>
     </data-sets>
     <themes>
@@ -4360,121 +4360,6 @@
         <text name="524f4372-148e-4050-bc23-d8bd21b09673" id="27">
             <text-property name="content"><![CDATA[https://www.google.com/calendar/embed?src=mappsteam%40gmail.com]]></text-property>
         </text>
-        <extended-item extensionName="FlashGadgets" name="My Goal Progress" id="1349">
-            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="1.0">
- <Gadget backgroundColor="FEFEFE" borderColor="000000" borderThickness="2" borderTransparency="255" colorScheme="1" prefix="" showBorder="false" showGaugeLabels="false" showGlassStyle="false" showShadow="false" showValueAboveNeedle="false" subType="HBullet" suffix="" title="" turnOffAnimation="false" turnOffDefaultAnimination="false" type="Bullet" version="1.0.0" zOrderPosition="2">
-  <gadgetPartsSupportingEffects _body="background"/>
-  <gadgetPartsSupportingEffects _body="caption"/>
-  <gadgetPartsSupportingEffects _body="subcaption"/>
-  <gadgetPartsSupportingEffects _body="plot"/>
-  <gadgetPartsSupportingEffects _body="tickmarks"/>
-  <gadgetPartsSupportingEffects _body="tickvalues"/>
-  <gadgetPartsSupportingEffects _body="limitvalues"/>
-  <gadgetPartsSupportingEffects _body="colorrange"/>
-  <gadgetPartsSupportingEffects _body="target"/>
-  <gadgetPartsSupportingEffects _body="tooltip"/>
-  <scale autoAdjustMajorTickMarks="true" majorTickMarksCount="5" max="100" min="0" minorTickMarksCount="4"/>
-  <region color="de5843" endValue="400000.0" label="A" startValue="0.0" transparency="255"/>
-  <region color="f5db70" endValue="800000.0" label="B" startValue="400000.0" transparency="255"/>
-  <region color="a7d15e" endValue="1500000.0" label="C" startValue="800000.0" transparency="255"/>
-  <thresholds color="3366ff" isDashed="false" isTrendZone="false" length="90" lineWidth="3" markerRadius="4" showMarker="false" showThreshold="true" showValueOnTop="true" startValue="1250000.0" transparency="255"/>
-  <ticks maxLabel="" minLabel="" placeTicksInside="false" placeValuesInside="false" showLimits="true" showTickMarks="true" showTickValues="true" ticksBelowGauge="true" ticksOnRight="false">
-   <major color="b7b7b7" height="8" width="1"/>
-   <minor color="b7b7b7" height="3" width="1"/>
-  </ticks>
-  <toolTip showToolTip="true"/>
-  <addOns _type="TextAddOn" addOnType="5" name="AddOn0" showAddOn="true" x="85.0" y="17.0" fontColor="575757" fontFamily="Tahoma" horizontalAlignment="0" label="Goal" verticalAlignment="1" wrapMaxHeight="50.0" wrapMaxWidth="30.0"/>
-  <addOns _type="TextAddOn" addOnType="5" name="AddOn1" showAddOn="true" x="30.0" y="17.0" fontColor="575757" fontFamily="Tahoma" horizontalAlignment="0" label="Rev to Date" verticalAlignment="1" wrapMaxHeight="50.0" wrapMaxWidth="30.0"/>
-  <valueDefinition query="row[&quot;revtodate&quot;]"/>
-  <linearGauge showNeedleAbove="false" showNeedleValue="true" showRoundCorners="true">
-   <needle borderColor="999999" borderTransparency="255" borderWidth="1" fillColor="000000" fillTransparency="255" shape="0" size="10" tooltipShowValue="true"/>
-  </linearGauge>
-  <bullet showRoundCorners="true">
-   <valueIndicator borderTransparency="255" borderWidth="1" color="4e91c6" showBorder="true" transparency="255" width="40"/>
-   <bulletPlot borderTransparency="255" borderWidth="2" showAsDot="false" showBorder="false" showShadow="false" showValueLabel="false"/>
-  </bullet>
-  <font color="555555" font="Tahoma" size="10"/>
- </Gadget>
-</ActuateChart>
-]]></xml-property>
-            <property name="inheritColumns">false</property>
-            <property name="outputFormat">JS</property>
-            <property name="height">85pt</property>
-            <property name="width">363pt</property>
-            <property name="dataSet">Gauge</property>
-            <list-property name="boundDataColumns">
-                <structure>
-                    <property name="name">revtodate</property>
-                    <expression name="expression" type="javascript">dataSetRow["revtodate"]</expression>
-                    <property name="dataType">float</property>
-                </structure>
-                <structure>
-                    <property name="name">commish</property>
-                    <expression name="expression" type="javascript">dataSetRow["commish"]</expression>
-                    <property name="dataType">float</property>
-                </structure>
-                <structure>
-                    <property name="name">MyGoal</property>
-                    <expression name="expression" type="javascript">dataSetRow["MyGoal"]</expression>
-                    <property name="dataType">float</property>
-                </structure>
-            </list-property>
-        </extended-item>
-        <extended-item extensionName="FlashGadgets" name="Regional Rev to Goal" id="1351">
-            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="1.0">
- <Gadget backgroundColor="FEFEFE" borderColor="000000" borderThickness="2" borderTransparency="255" colorScheme="1" prefix="" showBorder="false" showGaugeLabels="false" showGlassStyle="false" showShadow="false" showValueAboveNeedle="false" subType="HBullet" suffix="" title="" turnOffAnimation="false" turnOffDefaultAnimination="false" type="Bullet" version="1.0.0" zOrderPosition="2">
-  <gadgetPartsSupportingEffects _body="background"/>
-  <gadgetPartsSupportingEffects _body="caption"/>
-  <gadgetPartsSupportingEffects _body="subcaption"/>
-  <gadgetPartsSupportingEffects _body="plot"/>
-  <gadgetPartsSupportingEffects _body="tickmarks"/>
-  <gadgetPartsSupportingEffects _body="tickvalues"/>
-  <gadgetPartsSupportingEffects _body="limitvalues"/>
-  <gadgetPartsSupportingEffects _body="colorrange"/>
-  <gadgetPartsSupportingEffects _body="target"/>
-  <gadgetPartsSupportingEffects _body="tooltip"/>
-  <scale autoAdjustMajorTickMarks="true" majorTickMarksCount="5" max="100" min="0" minorTickMarksCount="4"/>
-  <region color="de5843" endValue="2500000.0" label="A" startValue="0.0" transparency="255"/>
-  <region color="f5db70" endValue="6000000.0" label="B" startValue="2500000.0" transparency="255"/>
-  <region color="a7d15e" endValue="1.1E7" label="C" startValue="6000000.0" transparency="255"/>
-  <thresholds color="3366ff" isDashed="false" isTrendZone="false" length="90" lineWidth="3" markerRadius="4" showMarker="false" showThreshold="true" showValueOnTop="true" startValue="8000000.0" transparency="255"/>
-  <ticks maxLabel="" minLabel="" placeTicksInside="false" placeValuesInside="false" showLimits="true" showTickMarks="true" showTickValues="true" ticksBelowGauge="true" ticksOnRight="false">
-   <major color="b7b7b7" height="8" width="1"/>
-   <minor color="b7b7b7" height="3" width="1"/>
-  </ticks>
-  <toolTip showToolTip="true"/>
-  <addOns _type="TextAddOn" addOnType="5" name="AddOn0" showAddOn="true" x="75.0" y="17.0" fontColor="575757" fontFamily="Tahoma" horizontalAlignment="0" label="Goal" verticalAlignment="1" wrapMaxHeight="50.0" wrapMaxWidth="30.0"/>
-  <addOns _type="TextAddOn" addOnType="5" name="AddOn1" showAddOn="true" x="30.0" y="17.0" fontColor="575757" fontFamily="Tahoma" horizontalAlignment="0" label="Rev to Date" verticalAlignment="1" wrapMaxHeight="50.0" wrapMaxWidth="30.0"/>
-  <valueDefinition query="row[&quot;Rev To Date&quot;]"/>
-  <linearGauge showNeedleAbove="false" showNeedleValue="true" showRoundCorners="true">
-   <needle borderColor="999999" borderTransparency="255" borderWidth="1" fillColor="000000" fillTransparency="255" shape="0" size="10" tooltipShowValue="true"/>
-  </linearGauge>
-  <bullet showRoundCorners="true">
-   <valueIndicator borderTransparency="255" borderWidth="1" color="4e91c6" showBorder="true" transparency="255" width="40"/>
-   <bulletPlot borderTransparency="255" borderWidth="2" showAsDot="false" showBorder="false" showShadow="false" showValueLabel="false"/>
-  </bullet>
-  <font color="555555" font="Tahoma" size="10"/>
- </Gadget>
-</ActuateChart>
-]]></xml-property>
-            <property name="inheritColumns">false</property>
-            <property name="outputFormat">JS</property>
-            <property name="height">85pt</property>
-            <property name="width">363pt</property>
-            <property name="dataSet">RegionGage</property>
-            <list-property name="boundDataColumns">
-                <structure>
-                    <property name="name">Rev To Date</property>
-                    <expression name="expression" type="javascript">dataSetRow["Rev To Date"]</expression>
-                    <property name="dataType">float</property>
-                </structure>
-                <structure>
-                    <property name="name">Region Goal</property>
-                    <expression name="expression" type="javascript">dataSetRow["Region Goal"]</expression>
-                    <property name="dataType">float</property>
-                </structure>
-            </list-property>
-        </extended-item>
         <extended-item extensionName="Chart" name="Commit This Quarter_e7be8c49-5a5a-4bbd-81f5-02510bacb8db" id="1368">
             <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
  <ChartWithAxes version="2.6.1" type="Bar Chart" subType="SideBySide" orientation="0">
@@ -4910,6 +4795,16 @@
         <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
        </action>
       </triggers>
+      <triggers condition="2">
+       <action type="0">
+        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+       </action>
+      </triggers>
+      <triggers condition="2">
+       <action type="0">
+        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+       </action>
+      </triggers>
       <curveFitting _nil="1"/>
      </series>
     </seriesDefinitions>
@@ -4956,6 +4851,16 @@
       </outline>
      </label>
      <dataDefinition definition="row[&quot;CUSTOMERNAME&quot;]"/>
+     <triggers condition="2">
+      <action type="0">
+       <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+      </action>
+     </triggers>
+     <triggers condition="2">
+      <action type="0">
+       <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
+      </action>
+     </triggers>
      <triggers condition="2">
       <action type="0">
        <value _type="URLValue" baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;../Report Designs/Pipeline.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;pCustomer&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;CUSTOMERNAME&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" target="" baseParameterName="" valueParameterName="" seriesParameterName=""/>
@@ -5291,6 +5196,122 @@
             </list-property>
             <property name="copyHyperlink">true</property>
         </extended-item>
+        <extended-item extensionName="FlashGadgets" name="My Goal Progress" id="1349">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="1.0">
+ <Gadget backgroundColor="FEFEFE" borderColor="000000" borderThickness="2" borderTransparency="255" colorScheme="1" prefix="" showBorder="false" showGaugeLabels="false" showGlassStyle="false" showShadow="false" showValueAboveNeedle="false" subType="HBullet" suffix="" title="" turnOffAnimation="false" turnOffDefaultAnimination="false" type="Bullet" version="1.0.0" zOrderPosition="3">
+  <gadgetPartsSupportingEffects _body="background"/>
+  <gadgetPartsSupportingEffects _body="caption"/>
+  <gadgetPartsSupportingEffects _body="subcaption"/>
+  <gadgetPartsSupportingEffects _body="plot"/>
+  <gadgetPartsSupportingEffects _body="tickmarks"/>
+  <gadgetPartsSupportingEffects _body="tickvalues"/>
+  <gadgetPartsSupportingEffects _body="limitvalues"/>
+  <gadgetPartsSupportingEffects _body="colorrange"/>
+  <gadgetPartsSupportingEffects _body="target"/>
+  <gadgetPartsSupportingEffects _body="tooltip"/>
+  <scale autoAdjustMajorTickMarks="true" majorTickMarksCount="5" max="100" min="0" minorTickMarksCount="4"/>
+  <region color="de5843" endValue="400000.0" label="A" startValue="0.0" transparency="255"/>
+  <region color="f5db70" endValue="800000.0" label="B" startValue="400000.0" transparency="255"/>
+  <region color="a7d15e" endValue="1500000.0" label="C" startValue="800000.0" transparency="255"/>
+  <thresholds color="3366ff" isDashed="false" isTrendZone="false" length="90" lineWidth="3" markerRadius="4" showMarker="false" showThreshold="true" showValueOnTop="true" startValue="1250000.0" transparency="255"/>
+  <ticks maxLabel="" minLabel="" placeTicksInside="false" placeValuesInside="false" showLimits="true" showTickMarks="true" showTickValues="true" ticksBelowGauge="true" ticksOnRight="false">
+   <major color="b7b7b7" height="8" width="1"/>
+   <minor color="b7b7b7" height="3" width="1"/>
+  </ticks>
+  <toolTip showToolTip="true"/>
+  <addOns _type="TextAddOn" addOnType="5" name="AddOn0" showAddOn="true" x="85.0" y="17.0" fontColor="575757" fontFamily="Verdana" horizontalAlignment="0" label="Goal" verticalAlignment="1" wrapMaxHeight="50.0" wrapMaxWidth="30.0"/>
+  <addOns _type="TextAddOn" addOnType="5" name="AddOn1" showAddOn="true" x="35.0" y="17.0" fontColor="575757" fontFamily="Verdana" horizontalAlignment="0" label="Rev to Date" verticalAlignment="1" wrapMaxHeight="50.0" wrapMaxWidth="30.0"/>
+  <addOns _type="TextAddOn" addOnType="5" name="AddOn2" showAddOn="true" x="2.0" y="60.0" fontFamily="Verdana" fontSize="10" horizontalAlignment="0" label="Commisions paid to date - $35,000" verticalAlignment="0" wrapMaxHeight="50.0" wrapMaxWidth="30.0"/>
+  <valueDefinition query="row[&quot;revtodate&quot;]"/>
+  <linearGauge showNeedleAbove="false" showNeedleValue="true" showRoundCorners="true">
+   <needle borderColor="999999" borderTransparency="255" borderWidth="1" fillColor="000000" fillTransparency="255" shape="0" size="10" tooltipShowValue="true"/>
+  </linearGauge>
+  <bullet showRoundCorners="true">
+   <valueIndicator borderTransparency="255" borderWidth="1" color="4e91c6" showBorder="true" transparency="255" width="40"/>
+   <bulletPlot borderTransparency="255" borderWidth="2" showAsDot="false" showBorder="false" showShadow="false" showValueLabel="false"/>
+  </bullet>
+  <font color="555555" font="Tahoma" size="10"/>
+ </Gadget>
+</ActuateChart>
+]]></xml-property>
+            <property name="inheritColumns">false</property>
+            <property name="outputFormat">JS</property>
+            <property name="height">85px</property>
+            <property name="width">501px</property>
+            <property name="dataSet">Gauge</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">revtodate</property>
+                    <expression name="expression" type="javascript">dataSetRow["revtodate"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">commish</property>
+                    <expression name="expression" type="javascript">dataSetRow["commish"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">MyGoal</property>
+                    <expression name="expression" type="javascript">dataSetRow["MyGoal"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+            </list-property>
+        </extended-item>
+        <extended-item extensionName="FlashGadgets" name="Regional Revenue to Goal" id="1351">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="1.0">
+ <Gadget backgroundColor="FEFEFE" borderColor="000000" borderThickness="2" borderTransparency="255" colorScheme="1" prefix="" showBorder="false" showGaugeLabels="false" showGlassStyle="false" showShadow="false" showValueAboveNeedle="false" subType="HBullet" suffix="" title="" turnOffAnimation="false" turnOffDefaultAnimination="false" type="Bullet" version="1.0.0" zOrderPosition="2">
+  <gadgetPartsSupportingEffects _body="background"/>
+  <gadgetPartsSupportingEffects _body="caption"/>
+  <gadgetPartsSupportingEffects _body="subcaption"/>
+  <gadgetPartsSupportingEffects _body="plot"/>
+  <gadgetPartsSupportingEffects _body="tickmarks"/>
+  <gadgetPartsSupportingEffects _body="tickvalues"/>
+  <gadgetPartsSupportingEffects _body="limitvalues"/>
+  <gadgetPartsSupportingEffects _body="colorrange"/>
+  <gadgetPartsSupportingEffects _body="target"/>
+  <gadgetPartsSupportingEffects _body="tooltip"/>
+  <scale autoAdjustMajorTickMarks="true" majorTickMarksCount="5" max="100" min="0" minorTickMarksCount="4"/>
+  <region color="de5843" endValue="2500000.0" label="A" startValue="0.0" transparency="255"/>
+  <region color="f5db70" endValue="6000000.0" label="B" startValue="2500000.0" transparency="255"/>
+  <region color="a7d15e" endValue="1.1E7" label="C" startValue="6000000.0" transparency="255"/>
+  <thresholds color="3366ff" isDashed="false" isTrendZone="false" length="90" lineWidth="3" markerRadius="4" showMarker="false" showThreshold="true" showValueOnTop="true" startValue="8000000.0" transparency="255"/>
+  <ticks maxLabel="" minLabel="" placeTicksInside="false" placeValuesInside="false" showLimits="true" showTickMarks="true" showTickValues="true" ticksBelowGauge="true" ticksOnRight="false">
+   <major color="b7b7b7" height="8" width="1"/>
+   <minor color="b7b7b7" height="3" width="1"/>
+  </ticks>
+  <toolTip showToolTip="true"/>
+  <addOns _type="TextAddOn" addOnType="5" name="AddOn0" showAddOn="true" x="75.0" y="17.0" fontColor="575757" fontFamily="Tahoma" horizontalAlignment="0" label="Goal" verticalAlignment="1" wrapMaxHeight="50.0" wrapMaxWidth="30.0"/>
+  <addOns _type="TextAddOn" addOnType="5" name="AddOn1" showAddOn="true" x="30.0" y="17.0" fontColor="575757" fontFamily="Tahoma" horizontalAlignment="0" label="Rev to Date" verticalAlignment="1" wrapMaxHeight="50.0" wrapMaxWidth="30.0"/>
+  <valueDefinition query="row[&quot;Rev To Date&quot;]"/>
+  <linearGauge showNeedleAbove="false" showNeedleValue="true" showRoundCorners="true">
+   <needle borderColor="999999" borderTransparency="255" borderWidth="1" fillColor="000000" fillTransparency="255" shape="0" size="10" tooltipShowValue="true"/>
+  </linearGauge>
+  <bullet showRoundCorners="true">
+   <valueIndicator borderTransparency="255" borderWidth="1" color="4e91c6" showBorder="true" transparency="255" width="40"/>
+   <bulletPlot borderTransparency="255" borderWidth="2" showAsDot="false" showBorder="false" showShadow="false" showValueLabel="false"/>
+  </bullet>
+  <font color="555555" font="Tahoma" size="10"/>
+ </Gadget>
+</ActuateChart>
+]]></xml-property>
+            <property name="inheritColumns">false</property>
+            <property name="outputFormat">JS</property>
+            <property name="height">85px</property>
+            <property name="width">501px</property>
+            <property name="dataSet">RegionGage</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Rev To Date</property>
+                    <expression name="expression" type="javascript">dataSetRow["Rev To Date"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">Region Goal</property>
+                    <expression name="expression" type="javascript">dataSetRow["Region Goal"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+            </list-property>
+        </extended-item>
     </body>
     <property name="dashboardView">
         <dashboard id="2">
@@ -5385,82 +5406,6 @@
                                 </data-view>
                             </property>
                         </gadget>
-                        <gadget name="Gadget_c5cc1938-c7c7-4069-a664-67afc257ff3f" id="1359">
-                            <property name="x">864px</property>
-                            <property name="y">468px</property>
-                            <property name="height">85px</property>
-                            <property name="width">501px</property>
-                            <property name="title">My Goal Progress</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">true</property>
-                            <property name="zIndex">7</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">85px</property>
-                            <property name="width">501px</property>
-                            <property name="caption">
-                                <gadget-caption id="1360">
-                                    <property name="showCaption">true</property>
-                                    <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Source Sans Pro"</property>
-                                    <property name="fontSize">18pt</property>
-                                    <property name="fontWeight">normal</property>
-                                    <property name="fontStyle">normal</property>
-                                    <property name="color">#505050</property>
-                                    <property name="textUnderline">none</property>
-                                </gadget-caption>
-                            </property>
-                            <property name="content">
-                                <data-view id="1361">
-                                    <list-property name="userProperties">
-                                        <structure>
-                                            <property name="name">reportlibrary</property>
-                                            <property name="type">string</property>
-                                        </structure>
-                                    </list-property>
-                                    <property name="reportlibrary">{"reportLibrary":"/Report Libraries/SFAdventures.rptlibrary","reportItem":"My Goal Progress"}</property>
-                                    <property name="gadgetType">viewer</property>
-                                    <property name="internalReportLetRef">My Goal Progress</property>
-                                </data-view>
-                            </property>
-                        </gadget>
-                        <gadget name="Gadget_e14b52fc-85e0-42ca-8ff5-4d04b64197d1" id="1362">
-                            <property name="x">864px</property>
-                            <property name="y">612px</property>
-                            <property name="height">85px</property>
-                            <property name="width">501px</property>
-                            <property name="title">Regional Rev to Goal</property>
-                            <property name="showTitle">false</property>
-                            <property name="showBorder">true</property>
-                            <property name="zIndex">8</property>
-                            <property name="showScrollBar">false</property>
-                            <property name="height">85px</property>
-                            <property name="width">501px</property>
-                            <property name="caption">
-                                <gadget-caption id="1363">
-                                    <property name="showCaption">true</property>
-                                    <property name="horizontalAlignment">left</property>
-                                    <property name="fontFamily">"Source Sans Pro"</property>
-                                    <property name="fontSize">18pt</property>
-                                    <property name="fontWeight">normal</property>
-                                    <property name="fontStyle">normal</property>
-                                    <property name="color">#505050</property>
-                                    <property name="textUnderline">none</property>
-                                </gadget-caption>
-                            </property>
-                            <property name="content">
-                                <data-view id="1364">
-                                    <list-property name="userProperties">
-                                        <structure>
-                                            <property name="name">reportlibrary</property>
-                                            <property name="type">string</property>
-                                        </structure>
-                                    </list-property>
-                                    <property name="reportlibrary">{"reportLibrary":"/Report Libraries/SFAdventures.rptlibrary","reportItem":"Regional Rev to Goal"}</property>
-                                    <property name="gadgetType">viewer</property>
-                                    <property name="internalReportLetRef">Regional Rev to Goal</property>
-                                </data-view>
-                            </property>
-                        </gadget>
                         <gadget name="Gadget_7783c4eb-1188-4b2b-9aa5-ccd56ff43c42" id="1366">
                             <property name="x">18px</property>
                             <property name="y">18px</property>
@@ -5497,7 +5442,7 @@
                             <property name="y">18px</property>
                             <property name="height">227px</property>
                             <property name="width">320px</property>
-                            <property name="title">Next Qtr Pipeline</property>
+                            <property name="title">Pipeline</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">10</property>
@@ -5595,6 +5540,82 @@
                                 <data-view id="1430">
                                     <property name="gadgetType">viewer</property>
                                     <property name="internalReportLetRef">Doughnut Chart - Sales Data_7953509f-a829-4a37-9dea-a9c5083cebe3</property>
+                                </data-view>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_23a12db1-a2ba-47ea-8cc5-834968854789" id="1432">
+                            <property name="x">864px</property>
+                            <property name="y">468px</property>
+                            <property name="height">85px</property>
+                            <property name="width">501px</property>
+                            <property name="title">My Goal Progress</property>
+                            <property name="showTitle">false</property>
+                            <property name="showBorder">true</property>
+                            <property name="zIndex">13</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">85px</property>
+                            <property name="width">501px</property>
+                            <property name="caption">
+                                <gadget-caption id="1433">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="1434">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">reportlibrary</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="reportlibrary">{"reportLibrary":"/SFAdventures.rptlibrary","reportItem":"My Goal Progress"}</property>
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="internalReportLetRef">My Goal Progress</property>
+                                </data-view>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_6528d846-6923-4805-bbad-7122a20a00cb" id="1435">
+                            <property name="x">864px</property>
+                            <property name="y">612px</property>
+                            <property name="height">85px</property>
+                            <property name="width">501px</property>
+                            <property name="title">Regional Revenue to Goal</property>
+                            <property name="showTitle">false</property>
+                            <property name="showBorder">true</property>
+                            <property name="zIndex">14</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">85px</property>
+                            <property name="width">501px</property>
+                            <property name="caption">
+                                <gadget-caption id="1436">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="1437">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">reportlibrary</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="reportlibrary">{"reportLibrary":"/SFAdventures.rptlibrary","reportItem":"Regional Revenue to Goal"}</property>
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="internalReportLetRef">Regional Revenue to Goal</property>
                                 </data-view>
                             </property>
                         </gadget>

@@ -1,0 +1,244 @@
+Date,Line,Total Product Cost,Amt,Channel,Promotion,Margin
+6/30/2008,Mountain,13056,13076,Specialty Bike Shop,Non Discount Promotion,20
+6/30/2008,Road,37403,37470,Specialty Bike Shop,Seasonal Discount,67
+7/31/2008,Mountain,46819,47352,Specialty Bike Shop,Non Discount Promotion,533
+7/31/2008,Road,19704,20188,Value Added Reseller,New Product Launch,484
+8/31/2008,Mountain,57272,58710,Value Added Reseller,New Product Launch,1438
+8/31/2008,Road,19097,19205,Specialty Bike Shop,Non Discount Promotion,108
+9/30/2008,Mountain,45848,47266,Warehouse,Seasonal Discount,1418
+9/30/2008,Road,52166,51787,Value Added Reseller,New Product Launch,-379
+10/31/2008,Mountain,47861,47998,Specialty Bike Shop,Non Discount Promotion,137
+10/31/2008,Road,38992,39042,Warehouse,New Product Launch,50
+11/30/2008,Mountain,73349,74565,Warehouse,New Product Launch,1216
+11/30/2008,Road,41118,42194,Specialty Bike Shop,New Product Launch,1076
+12/31/2008,Mountain,21682,22873,Warehouse,Seasonal Discount,1191
+12/31/2008,Road,35801,36230,Value Added Reseller,Seasonal Discount,429
+1/31/2009,Mountain,34147,34690,Value Added Reseller,Non Discount Promotion,543
+1/31/2009,Road,32573,33076,Warehouse,Seasonal Discount,503
+2/28/2009,Mountain,82305,83353,Warehouse,Non Discount Promotion,1048
+2/28/2009,Road,34153,34601,Warehouse,Seasonal Discount,448
+3/31/2009,Mountain,26078,27303,Specialty Bike Shop,Non Discount Promotion,1225
+3/31/2009,Road,61464,60520,Value Added Reseller,Non Discount Promotion,-944
+4/30/2009,Mountain,45527,46252,Specialty Bike Shop,Seasonal Discount,725
+4/30/2009,Road,37974,39713,Specialty Bike Shop,Non Discount Promotion,1739
+5/31/2009,Mountain,8913,9291,Value Added Reseller,New Product Launch,378
+5/31/2009,Road,31536,32530,Warehouse,Non Discount Promotion,994
+6/30/2009,Mountain,229172,230680,Warehouse,Non Discount Promotion,1508
+6/30/2009,Road,129477,130331,Warehouse,Seasonal Discount,854
+7/31/2009,Mountain,135611,136911,Specialty Bike Shop,New Product Launch,1300
+7/31/2009,Road,123223,123467,Value Added Reseller,Seasonal Discount,244
+8/31/2009,Mountain,206591,208229,Warehouse,Seasonal Discount,1638
+8/31/2009,Road,114857,115037,Specialty Bike Shop,New Product Launch,180
+9/30/2009,Mountain,154851,155826,Warehouse,New Product Launch,975
+9/30/2009,Road,87084,88091,Specialty Bike Shop,Non Discount Promotion,1007
+10/31/2009,Mountain,96833,98633,Specialty Bike Shop,New Product Launch,1800
+10/31/2009,Road,126733,125716,Value Added Reseller,New Product Launch,-1017
+11/30/2009,Mountain,182594,184286,Specialty Bike Shop,Seasonal Discount,1692
+11/30/2009,Road,106735,106139,Value Added Reseller,Seasonal Discount,-596
+12/31/2009,Mountain,108103,109834,Specialty Bike Shop,Non Discount Promotion,1731
+12/31/2009,Road,60300,61445,Specialty Bike Shop,Non Discount Promotion,1145
+1/31/2010,Mountain,75925,76018,Value Added Reseller,Seasonal Discount,93
+1/31/2010,Road,110252,109940,Value Added Reseller,Seasonal Discount,-312
+2/28/2010,Mountain,150479,151051,Specialty Bike Shop,Non Discount Promotion,572
+2/28/2010,Road,99818,100987,Warehouse,Seasonal Discount,1169
+3/31/2010,Mountain,178283,179750,Value Added Reseller,New Product Launch,1467
+3/31/2010,Road,105264,106445,Warehouse,Seasonal Discount,1181
+4/30/2010,Mountain,69206,70536,Warehouse,Non Discount Promotion,1330
+4/30/2010,Road,133118,132976,Value Added Reseller,New Product Launch,-142
+5/31/2010,Mountain,169966,170221,Specialty Bike Shop,Non Discount Promotion,255
+5/31/2010,Road,123633,123037,Value Added Reseller,New Product Launch,-596
+6/30/2010,Mountain,134061,134185,Specialty Bike Shop,Seasonal Discount,124
+6/30/2010,Road,42117,41490,Value Added Reseller,Seasonal Discount,-627
+6/30/2010,Touring,86042,86633,Value Added Reseller,Seasonal Discount,591
+7/31/2010,Mountain,112271,113576,Value Added Reseller,Seasonal Discount,1305
+7/31/2010,Road,23151,23346,Specialty Bike Shop,New Product Launch,195
+7/31/2010,Touring,231261,231473,Value Added Reseller,Seasonal Discount,212
+8/31/2010,Mountain,191835,193628,Specialty Bike Shop,Seasonal Discount,1793
+8/31/2010,Road,11553,11763,Value Added Reseller,Non Discount Promotion,210
+8/31/2010,Touring,223707,223763,Specialty Bike Shop,Seasonal Discount,56
+9/30/2010,Mountain,144068,145732,Value Added Reseller,Seasonal Discount,1664
+9/30/2010,Road,14997,15599,Specialty Bike Shop,New Product Launch,602
+9/30/2010,Touring,106191,107049,Warehouse,New Product Launch,858
+10/31/2010,Mountain,73446,73969,Warehouse,Non Discount Promotion,523
+10/31/2010,Road,5410,5852,Warehouse,Seasonal Discount,442
+10/31/2010,Touring,196834,198263,Warehouse,Seasonal Discount,1429
+11/30/2010,Mountain,186378,187210,Warehouse,Seasonal Discount,832
+11/30/2010,Road,8168,9833,Warehouse,Seasonal Discount,1665
+11/30/2010,Touring,282119,282126,Specialty Bike Shop,Seasonal Discount,7
+12/31/2010,Mountain,73996,74049,Warehouse,Seasonal Discount,53
+12/31/2010,Road,2635,2726,Specialty Bike Shop,New Product Launch,91
+12/31/2010,Touring,55812,55982,Warehouse,Seasonal Discount,170
+1/31/2011,Mountain,58776,60117,Warehouse,Non Discount Promotion,1341
+1/31/2011,Road,2525,2591,Warehouse,Seasonal Discount,66
+1/31/2011,Touring,166046,166493,Warehouse,New Product Launch,447
+2/28/2011,Mountain,133382,134212,Warehouse,New Product Launch,830
+2/28/2011,Road,29,814,Specialty Bike Shop,Seasonal Discount,785
+2/28/2011,Touring,193838,195404,Warehouse,Non Discount Promotion,1566
+3/31/2011,Mountain,135059,136046,Warehouse,Seasonal Discount,987
+3/31/2011,Road,13310,13660,Value Added Reseller,Seasonal Discount,350
+3/31/2011,Touring,88011,88946,Specialty Bike Shop,Non Discount Promotion,935
+4/30/2011,Mountain,76841,78283,Specialty Bike Shop,New Product Launch,1442
+4/30/2011,Road,5918,6427,Value Added Reseller,Non Discount Promotion,509
+4/30/2011,Touring,227627,228385,Specialty Bike Shop,Non Discount Promotion,758
+5/31/2011,Mountain,168767,170283,Warehouse,New Product Launch,1516
+5/31/2011,Road,8828,9952,Specialty Bike Shop,Seasonal Discount,1124
+5/31/2011,Touring,223531,225265,Specialty Bike Shop,Seasonal Discount,1734
+6/30/2011,Mountain,44863,44936,Warehouse,New Product Launch,73
+6/30/2011,Road,25104,24702,Value Added Reseller,New Product Launch,-402
+6/30/2011,Touring,17872,16867,Value Added Reseller,New Product Launch,-1005
+7/31/2011,Mountain,16372,16990,Warehouse,Non Discount Promotion,618
+7/31/2011,Road,57059,58248,Specialty Bike Shop,Non Discount Promotion,1189
+7/31/2011,Touring,56837,58043,Specialty Bike Shop,Seasonal Discount,1206
+8/31/2011,Mountain,6721,7525,Warehouse,Seasonal Discount,804
+8/31/2011,Road,58120,59081,Specialty Bike Shop,New Product Launch,961
+8/31/2011,Touring,28164,27974,Value Added Reseller,Seasonal Discount,-190
+9/30/2011,Mountain,32738,33336,Specialty Bike Shop,Seasonal Discount,598
+9/30/2011,Road,32551,33290,Specialty Bike Shop,Non Discount Promotion,739
+9/30/2011,Touring,57980,59750,Warehouse,Non Discount Promotion,1770
+10/31/2011,Mountain,16328,16986,Warehouse,Seasonal Discount,658
+10/31/2011,Road,52851,52099,Value Added Reseller,New Product Launch,-752
+10/31/2011,Touring,151919,152625,Value Added Reseller,New Product Launch,706
+11/30/2011,Mountain,24438,25618,Warehouse,Seasonal Discount,1180
+11/30/2011,Road,14456,15720,Specialty Bike Shop,New Product Launch,1264
+11/30/2011,Touring,126371,127716,Warehouse,Non Discount Promotion,1345
+12/31/2011,Mountain,59182,59515,Value Added Reseller,Non Discount Promotion,333
+12/31/2011,Road,53374,52342,Value Added Reseller,Seasonal Discount,-1032
+12/31/2011,Touring,55647,56665,Warehouse,New Product Launch,1018
+1/31/2012,Mountain,25077,25795,Value Added Reseller,Non Discount Promotion,718
+1/31/2012,Road,227674,229101,Warehouse,New Product Launch,1427
+1/31/2012,Touring,249646,251415,Warehouse,Non Discount Promotion,1769
+1/31/2012,Mountain,29911,29943,Warehouse,Non Discount Promotion,32
+1/31/2012,Road,10648,11513,Specialty Bike Shop,Seasonal Discount,865
+1/31/2012,Touring,37310,36116,Value Added Reseller,New Product Launch,-1194
+2/28/2012,Mountain,49737,51340,Specialty Bike Shop,Non Discount Promotion,1603
+2/28/2012,Road,340566,339779,Value Added Reseller,New Product Launch,-787
+2/28/2012,Touring,40813,41537,Value Added Reseller,New Product Launch,724
+2/28/2012,Mountain,34681,36156,Value Added Reseller,New Product Launch,1475
+2/28/2012,Road,11010,12357,Warehouse,New Product Launch,1347
+2/28/2012,Touring,34315,34868,Value Added Reseller,Seasonal Discount,553
+3/31/2012,Mountain,34244,34572,Warehouse,Seasonal Discount,328
+3/31/2012,Road,349489,350100,Specialty Bike Shop,Seasonal Discount,611
+3/31/2012,Touring,48304,49418,Specialty Bike Shop,New Product Launch,1114
+3/31/2012,Mountain,260447,261514,Specialty Bike Shop,Seasonal Discount,1067
+3/31/2012,Road,50867,51880,Specialty Bike Shop,Non Discount Promotion,1013
+3/31/2012,Touring,18427,19261,Value Added Reseller,Non Discount Promotion,834
+4/30/2012,Mountain,47217,48868,Warehouse,Non Discount Promotion,1651
+4/30/2012,Road,161691,161516,Value Added Reseller,Non Discount Promotion,-175
+4/30/2012,Touring,35812,34751,Value Added Reseller,Non Discount Promotion,-1061
+4/30/2012,Mountain,34411,35034,Value Added Reseller,Non Discount Promotion,623
+4/30/2012,Road,28651,29131,Specialty Bike Shop,Non Discount Promotion,480
+4/30/2012,Touring,39547,41193,Specialty Bike Shop,Non Discount Promotion,1646
+5/31/2012,Mountain,47637,48986,Warehouse,Seasonal Discount,1349
+5/31/2012,Road,148561,148690,Value Added Reseller,Non Discount Promotion,129
+5/31/2012,Touring,35609,34613,Value Added Reseller,Non Discount Promotion,-996
+5/31/2012,Mountain,17083,18476,Warehouse,Seasonal Discount,1393
+5/31/2012,Road,31735,32746,Warehouse,Non Discount Promotion,1011
+5/31/2012,Touring,21982,22398,Value Added Reseller,Non Discount Promotion,416
+6/30/2012,Mountain,46388,46777,Warehouse,New Product Launch,389
+6/30/2012,Road,241330,241516,Value Added Reseller,Non Discount Promotion,186
+6/30/2012,Touring,44155,43163,Value Added Reseller,Seasonal Discount,-992
+6/30/2012,Mountain,27094,27367,Specialty Bike Shop,New Product Launch,273
+6/30/2012,Road,161898,162516,Warehouse,Non Discount Promotion,618
+6/30/2012,Touring,12149,13751,Warehouse,New Product Launch,1602
+7/31/2012,Mountain,30494,30648,Warehouse,Seasonal Discount,154
+7/31/2012,Road,220915,221054,Warehouse,New Product Launch,139
+7/31/2012,Touring,256841,258132,Specialty Bike Shop,Seasonal Discount,1291
+7/31/2012,Mountain,48863,50349,Warehouse,Seasonal Discount,1486
+7/31/2012,Road,22583,22662,Warehouse,New Product Launch,79
+7/31/2012,Touring,44564,45102,Warehouse,New Product Launch,538
+8/31/2012,Mountain,38255,38479,Value Added Reseller,Non Discount Promotion,224
+8/31/2012,Road,241975,241516,Value Added Reseller,Seasonal Discount,-459
+8/31/2012,Touring,46394,47910,Specialty Bike Shop,Seasonal Discount,1516
+8/31/2012,Mountain,42822,44261,Value Added Reseller,Non Discount Promotion,1439
+8/31/2012,Road,17198,18840,Specialty Bike Shop,Seasonal Discount,1642
+8/31/2012,Touring,150798,151625,Warehouse,New Product Launch,827
+9/30/2012,Mountain,51444,53231,Value Added Reseller,Non Discount Promotion,1787
+9/30/2012,Road,35963,37657,Specialty Bike Shop,Non Discount Promotion,1694
+9/30/2012,Touring,445193,445249,Warehouse,Non Discount Promotion,56
+9/30/2012,Mountain,8250,9919,Warehouse,Seasonal Discount,1669
+9/30/2012,Road,31720,32164,Value Added Reseller,Non Discount Promotion,444
+9/30/2012,Touring,34278,35055,Specialty Bike Shop,Seasonal Discount,777
+10/31/2012,Mountain,50549,51627,Warehouse,Non Discount Promotion,1078
+10/31/2012,Road,441147,441927,Warehouse,New Product Launch,780
+10/31/2012,Touring,46437,46754,Warehouse,Non Discount Promotion,317
+10/31/2012,Mountain,41560,42365,Specialty Bike Shop,Non Discount Promotion,805
+10/31/2012,Road,54437,54549,Specialty Bike Shop,New Product Launch,112
+10/31/2012,Touring,43158,44723,Warehouse,Non Discount Promotion,1565
+11/30/2012,Mountain,25457,26517,Warehouse,Seasonal Discount,1060
+11/30/2012,Road,431576,431485,Value Added Reseller,New Product Launch,-91
+11/30/2012,Touring,52934,54089,Specialty Bike Shop,Non Discount Promotion,1155
+11/30/2012,Mountain,47426,49094,Warehouse,Non Discount Promotion,1668
+11/30/2012,Road,5898,7658,Warehouse,Seasonal Discount,1760
+11/30/2012,Touring,36919,38518,Warehouse,Seasonal Discount,1599
+12/31/2012,Mountain,4746,6180,Specialty Bike Shop,New Product Launch,1434
+12/31/2012,Road,336257,337825,Warehouse,New Product Launch,1568
+12/31/2012,Touring,332820,334217,Warehouse,Non Discount Promotion,1397
+12/31/2012,Mountain,40168,41364,Specialty Bike Shop,Non Discount Promotion,1196
+12/31/2012,Road,45122,46683,Specialty Bike Shop,Non Discount Promotion,1561
+12/31/2012,Touring,35949,36562,Specialty Bike Shop,Seasonal Discount,613
+1/31/2013,Mountain,7051,8841,Specialty Bike Shop,New Product Launch,1790
+1/31/2013,Road,446877,446241,Value Added Reseller,Non Discount Promotion,-636
+1/31/2013,Touring,430575,431415,Value Added Reseller,Seasonal Discount,840
+1/31/2013,Mountain,240643,241516,Warehouse,New Product Launch,873
+1/31/2013,Road,11747,11777,Warehouse,New Product Launch,30
+1/31/2013,Touring,10743,10772,Warehouse,Non Discount Promotion,29
+2/28/2013,Mountain,48488,49963,Specialty Bike Shop,New Product Launch,1475
+2/28/2013,Road,33227,33423,Specialty Bike Shop,Seasonal Discount,196
+2/28/2013,Touring,35084,35362,Specialty Bike Shop,Seasonal Discount,278
+2/28/2013,Mountain,53833,55237,Value Added Reseller,Non Discount Promotion,1404
+2/28/2013,Road,320440,319450,Value Added Reseller,Seasonal Discount,-990
+2/28/2013,Touring,15788,16036,Specialty Bike Shop,Seasonal Discount,248
+3/31/2013,Mountain,160408,161729,Warehouse,Non Discount Promotion,1321
+3/31/2013,Road,12577,13212,Warehouse,Non Discount Promotion,635
+3/31/2013,Touring,426747,428497,Specialty Bike Shop,New Product Launch,1750
+3/31/2013,Mountain,45560,46030,Specialty Bike Shop,New Product Launch,470
+3/31/2013,Road,230103,231415,Specialty Bike Shop,New Product Launch,1312
+3/31/2013,Touring,352756,352694,Value Added Reseller,New Product Launch,-62
+4/30/2013,Mountain,23875,25558,Value Added Reseller,Seasonal Discount,1683
+4/30/2013,Road,16182,16883,Specialty Bike Shop,New Product Launch,701
+4/30/2013,Touring,418820,419624,Value Added Reseller,New Product Launch,804
+4/30/2013,Mountain,57019,58037,Value Added Reseller,New Product Launch,1018
+4/30/2013,Road,413215,414734,Warehouse,New Product Launch,1519
+4/30/2013,Touring,36993,38746,Specialty Bike Shop,Seasonal Discount,1753
+5/31/2013,Mountain,10227,10712,Warehouse,Non Discount Promotion,485
+5/31/2013,Road,55102,55182,Warehouse,Non Discount Promotion,80
+5/31/2013,Touring,126612,126527,Value Added Reseller,Seasonal Discount,-85
+5/31/2013,Mountain,50926,51407,Warehouse,Seasonal Discount,481
+5/31/2013,Road,350085,351617,Warehouse,Non Discount Promotion,1532
+5/31/2013,Touring,357319,358653,Specialty Bike Shop,Non Discount Promotion,1334
+6/30/2013,Mountain,170942,171829,Value Added Reseller,Seasonal Discount,887
+6/30/2013,Road,48708,49947,Warehouse,New Product Launch,1239
+6/30/2013,Touring,345676,346653,Specialty Bike Shop,Seasonal Discount,977
+6/30/2013,Mountain,36362,37061,Specialty Bike Shop,New Product Launch,699
+6/30/2013,Road,33425,35190,Specialty Bike Shop,New Product Launch,1765
+6/30/2013,Touring,426022,426858,Value Added Reseller,Non Discount Promotion,836
+7/31/2013,Mountain,9425,9719,Warehouse,New Product Launch,294
+7/31/2013,Road,58374,59460,Warehouse,Seasonal Discount,1086
+7/31/2013,Touring,30414,30899,Warehouse,New Product Launch,485
+7/31/2013,Mountain,43726,44461,Specialty Bike Shop,Seasonal Discount,735
+7/31/2013,Road,413913,415617,Specialty Bike Shop,New Product Launch,1704
+7/31/2013,Touring,16279,17676,Specialty Bike Shop,Non Discount Promotion,1397
+8/31/2013,Mountain,4889,6388,Value Added Reseller,Seasonal Discount,1499
+8/31/2013,Road,412817,412321,Value Added Reseller,New Product Launch,-496
+8/31/2013,Touring,39125,40910,Warehouse,New Product Launch,1785
+8/31/2013,Mountain,22612,24181,Warehouse,New Product Launch,1569
+8/31/2013,Road,438249,439930,Specialty Bike Shop,Seasonal Discount,1681
+8/31/2013,Touring,49075,50863,Warehouse,Seasonal Discount,1788
+9/30/2013,Mountain,7723,8483,Specialty Bike Shop,New Product Launch,760
+9/30/2013,Road,1238060,1239393,Specialty Bike Shop,Seasonal Discount,1333
+9/30/2013,Touring,448062,448190,Value Added Reseller,Non Discount Promotion,128
+9/30/2013,Mountain,8342,8581,Warehouse,Seasonal Discount,239
+9/30/2013,Road,456650,457015,Specialty Bike Shop,Non Discount Promotion,365
+9/30/2013,Touring,43719,44233,Warehouse,Non Discount Promotion,514
+10/31/2013,Mountain,5434,5435,Warehouse,New Product Launch,1
+10/31/2013,Road,1030833,1031140,Value Added Reseller,New Product Launch,307
+10/31/2013,Touring,55426,54540,Value Added Reseller,New Product Launch,-886
+10/31/2013,Mountain,25206,26502,Warehouse,Non Discount Promotion,1296
+10/31/2013,Road,32785,31801,Value Added Reseller,New Product Launch,-984
+10/31/2013,Touring,417456,417592,Value Added Reseller,Non Discount Promotion,136
+11/30/2013,Mountain,160294,161526,Value Added Reseller,Seasonal Discount,1232
+11/30/2013,Road,38299,39318,Specialty Bike Shop,Seasonal Discount,1019
+11/30/2013,Touring,453630,454432,Warehouse,Non Discount Promotion,802
+12/31/2013,Mountain,15482,15595,Specialty Bike Shop,Non Discount Promotion,113
+12/31/2013,Road,40452,40387,Value Added Reseller,New Product Launch,-65
+12/31/2013,Touring,6292,6773,Specialty Bike Shop,Non Discount Promotion,481
