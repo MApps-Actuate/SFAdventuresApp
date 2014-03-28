@@ -1797,7 +1797,7 @@
                             <property name="y">18px</property>
                             <property name="height">236px</property>
                             <property name="width">651px</property>
-                            <property name="title">Sales Revenue by Year, by Channel</property>
+                            <property name="title">Annual Sales Revenue by Channel</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">6</property>
@@ -1851,7 +1851,7 @@
                             <property name="y">324px</property>
                             <property name="height">236px</property>
                             <property name="width">640px</property>
-                            <property name="title">Sales Revenue by Year, by Product Line</property>
+                            <property name="title">Annual Sales Revenue  by Product Line</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">7</property>
@@ -1905,7 +1905,7 @@
                             <property name="y">324px</property>
                             <property name="height">236px</property>
                             <property name="width">651px</property>
-                            <property name="title">Sales Revenue by Year, by Promotion</property>
+                            <property name="title">Annual Sales Revenue  by Promotion</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">true</property>
                             <property name="zIndex">8</property>

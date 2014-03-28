@@ -1,7 +1,9 @@
 SFAdventuresApp
 ===============
 
-This is Actuate's SFAdventures Demo App
+This is Actuate's SFAdventures Demo App.
+
+This demo should be run at 1440x900 resolution for the optimal gadget layout.
 
 You must be connected to the internet for the google calendar on the Sales Rep Info Hub dashboard and the Twitter dashboard to work.
 
