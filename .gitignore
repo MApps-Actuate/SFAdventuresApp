@@ -10,6 +10,8 @@ tmp/
 *.bak
 *.swp
 *~.nib
+*.model
+*.model_diagram
 local.properties
 .classpath
 .settings/
