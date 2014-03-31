@@ -6125,7 +6125,7 @@ group by terr, yr, mnth]]></xml-property>
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/Applications/SFAdventuresTest/Report Designs/SalesRepsMetrics.rptdocument</property>
+                                            <property name="sourceFile">^/Report Designs/SalesRepsMetrics.rptdocument</property>
                                             <property name="targetBookmark">SalesRepTable</property>
                                         </external-element-ref>
                                     </property>
@@ -6169,7 +6169,7 @@ group by terr, yr, mnth]]></xml-property>
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/Applications/SFAdventuresTest/Report Designs/Top10Opportunities.rptdesign</property>
+                                            <property name="sourceFile">^/Report Designs/Top10Opportunities.rptdesign</property>
                                             <property name="targetBookmark">Top 10 Opportunities</property>
                                         </external-element-ref>
                                     </property>
@@ -6213,7 +6213,7 @@ group by terr, yr, mnth]]></xml-property>
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/Applications/SFAdventuresTest/Report Designs/WorldSales.rptdocument</property>
+                                            <property name="sourceFile">^/Report Designs/WorldSales.rptdocument</property>
                                         </external-element-ref>
                                     </property>
                                 </data-view>
