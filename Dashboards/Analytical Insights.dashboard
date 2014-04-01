@@ -3,7 +3,7 @@
     <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
     <xml-property name="externalMetadata">
         <external-datamarts>
-            <datamart-node location="file:/C:/Users/ActuateUser/git/SFAdventuresTest/Data%20Objects/SalesAnalysis.data">
+            <datamart-node location="file:/C:/Users/ActuateUser/git/SFAdventuresApp/Data%20Objects/SalesAnalysis.data">
                 <reference-elements>NewDataMartDataSource2;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
                     <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
@@ -28,11 +28,9 @@
                                     <property name="compressed">false</property>
                                 </structure>
                                 <structure>
-                                    <property name="columnName">Line</property>
+                                    <property name="columnName">ProductLine</property>
                                     <property name="analysis">dimension</property>
-                                    <text-property name="heading">Line</text-property>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
+                                    <text-property name="heading">ProductLine</text-property>
                                 </structure>
                                 <structure>
                                     <property name="columnName">Product Cost</property>
@@ -47,16 +45,9 @@
                                     <property name="compressed">false</property>
                                 </structure>
                                 <structure>
-                                    <property name="columnName">Amt</property>
+                                    <property name="columnName">Sales</property>
                                     <property name="analysis">measure</property>
-                                    <text-property name="heading">Amt</text-property>
-                                    <property name="horizontalAlign">right</property>
-                                    <structure name="valueFormat">
-                                        <property name="category">Currency</property>
-                                        <property name="pattern">$#,##0.00{RoundingMode=HALF_UP}</property>
-                                    </structure>
-                                    <property name="indexColumn">false</property>
-                                    <property name="compressed">false</property>
+                                    <text-property name="heading">Sales</text-property>
                                 </structure>
                                 <structure>
                                     <property name="columnName">Channel</property>
@@ -101,7 +92,7 @@
                                     </structure>
                                     <structure>
                                         <property name="position">2</property>
-                                        <property name="name">Line</property>
+                                        <property name="name">ProductLine</property>
                                         <property name="dataType">string</property>
                                     </structure>
                                     <structure>
@@ -111,7 +102,7 @@
                                     </structure>
                                     <structure>
                                         <property name="position">4</property>
-                                        <property name="name">Amt</property>
+                                        <property name="name">Sales</property>
                                         <property name="dataType">float</property>
                                     </structure>
                                     <structure>
@@ -142,8 +133,8 @@
                                 </structure>
                                 <structure>
                                     <property name="position">2</property>
-                                    <property name="name">Line</property>
-                                    <property name="nativeName">Line</property>
+                                    <property name="name">ProductLine</property>
+                                    <property name="nativeName">ProductLine</property>
                                     <property name="dataType">string</property>
                                     <property name="nativeDataType">12</property>
                                 </structure>
@@ -156,8 +147,8 @@
                                 </structure>
                                 <structure>
                                     <property name="position">4</property>
-                                    <property name="name">Amt</property>
-                                    <property name="nativeName">Amt</property>
+                                    <property name="name">Sales</property>
+                                    <property name="nativeName">Sales</property>
                                     <property name="dataType">float</property>
                                     <property name="nativeDataType">8</property>
                                 </structure>
@@ -183,7 +174,7 @@
                                     <property name="nativeDataType">8</property>
                                 </structure>
                             </list-property>
-                            <xml-property name="queryText"><![CDATA[select "Date", "Line", "Total Product Cost", "Amt", "Channel", "Promotion", "Margin" from "SalesAnalysis.csv" : {"Date","Date",DATE;"Line","Line",STRING;"Product Cost","Total Product Cost",DOUBLE;"Amt","Amt",DOUBLE;"Channel","Channel",STRING;"Promotion","Promotion",STRING;"Margin","Margin",DOUBLE}]]></xml-property>
+                            <xml-property name="queryText"><![CDATA[select "Date", "Line", "Total Product Cost", "Amt", "Channel", "Promotion", "Margin" from "SalesAnalysis.csv" : {"Date","Date",DATE;"ProductLine","Line",STRING;"Product Cost","Total Product Cost",DOUBLE;"Sales","Amt",DOUBLE;"Channel","Channel",STRING;"Promotion","Promotion",STRING;"Margin","Margin",DOUBLE}]]></xml-property>
                             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
@@ -310,40 +301,50 @@
                         </oda-data-set>
                     </data-sets>
                     <property name="linkedDataModels">
-                        <linked-data-model name="Data Model" id="27">
+                        <linked-data-model name="Data Model" id="37">
                             <property name="aliasDataSets">
-                                <alias-data-set name="SalesAnalysis" id="36">
+                                <alias-data-set name="SalesAnalysis" id="46">
                                     <property name="originDataSet">SalesAnalysis</property>
                                 </alias-data-set>
                             </property>
+                            <property name="drillPaths">
+                                <drill-path id="66">
+                                    <text-property name="displayName">Date</text-property>
+                                    <simple-property-list name="drillPathColumns">
+                                        <value>dataSetRow["Date"]["Year"]</value>
+                                        <value>dataSetRow["Date"]["Quarter"]</value>
+                                        <value>dataSetRow["Date"]["Month"]</value>
+                                    </simple-property-list>
+                                </drill-path>
+                            </property>
                             <property name="categories">
-                                <category name="SalesAnalysis" id="28">
+                                <category name="SalesAnalysis" id="38">
                                     <property name="categoryColumns">
-                                        <category-column name="Date" id="29">
+                                        <category-column name="Date" id="39">
                                             <property name="aliasDataSet">Data Model/SalesAnalysis</property>
                                             <property name="resultSetColumnName">Date</property>
                                         </category-column>
-                                        <category-column name="Line" id="30">
+                                        <category-column name="ProductLine" id="40">
                                             <property name="aliasDataSet">Data Model/SalesAnalysis</property>
-                                            <property name="resultSetColumnName">Line</property>
+                                            <property name="resultSetColumnName">ProductLine</property>
                                         </category-column>
-                                        <category-column name="Product Cost" id="31">
+                                        <category-column name="Product Cost" id="41">
                                             <property name="aliasDataSet">Data Model/SalesAnalysis</property>
                                             <property name="resultSetColumnName">Product Cost</property>
                                         </category-column>
-                                        <category-column name="Amt" id="32">
+                                        <category-column name="Sales" id="42">
                                             <property name="aliasDataSet">Data Model/SalesAnalysis</property>
-                                            <property name="resultSetColumnName">Amt</property>
+                                            <property name="resultSetColumnName">Sales</property>
                                         </category-column>
-                                        <category-column name="Channel" id="33">
+                                        <category-column name="Channel" id="43">
                                             <property name="aliasDataSet">Data Model/SalesAnalysis</property>
                                             <property name="resultSetColumnName">Channel</property>
                                         </category-column>
-                                        <category-column name="Promotion" id="34">
+                                        <category-column name="Promotion" id="44">
                                             <property name="aliasDataSet">Data Model/SalesAnalysis</property>
                                             <property name="resultSetColumnName">Promotion</property>
                                         </category-column>
-                                        <category-column name="Margin" id="35">
+                                        <category-column name="Margin" id="45">
                                             <property name="aliasDataSet">Data Model/SalesAnalysis</property>
                                             <property name="resultSetColumnName">Margin</property>
                                         </category-column>
@@ -473,14 +474,14 @@
     </title>
     <seriesDefinitions sorting="0">
      <query definition="row[&quot;Channel&quot;]"/>
-     <series _type="LineSeries" seriesIdentifier="Amt" stacked="false" paletteLineColor="true">
+     <series _type="LineSeries" seriesIdentifier="Sales" stacked="false" paletteLineColor="true">
       <label>
        <background _nil="1"/>
        <outline>
         <color _nil="1"/>
        </outline>
       </label>
-      <dataDefinition definition="row[&quot;Amt&quot;]">
+      <dataDefinition definition="row[&quot;Sales&quot;]">
        <grouping enabled="true"/>
       </dataDefinition>
       <triggers condition="6">
@@ -607,8 +608,8 @@
                     <property name="dataType">integer</property>
                 </structure>
                 <structure>
-                    <property name="name">Amt</property>
-                    <expression name="expression">dataSetRow["Amt"]</expression>
+                    <property name="name">Sales</property>
+                    <expression name="expression">dataSetRow["Sales"]</expression>
                     <property name="dataType">float</property>
                 </structure>
                 <structure>
@@ -687,6 +688,8 @@
   <extendedProperties name="keep.hierarchy.category" value="true"/>
   <extendedProperties name="keep.hierarchy.series" value="true"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="drilled.filters_" value="_@,_"/>
+  <extendedProperties name="enable.drill.proc_" value="true"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="QWER"/>
@@ -721,15 +724,15 @@
      </outline>
     </title>
     <seriesDefinitions sorting="0">
-     <query definition="row[&quot;Line&quot;]"/>
-     <series _type="LineSeries" seriesIdentifier="Amt" stacked="false" paletteLineColor="true">
+     <query definition="row[&quot;ProductLine&quot;]"/>
+     <series _type="LineSeries" seriesIdentifier="Sales" stacked="false" paletteLineColor="true">
       <label>
        <background _nil="1"/>
        <outline>
         <color _nil="1"/>
        </outline>
       </label>
-      <dataDefinition definition="row[&quot;Amt&quot;]">
+      <dataDefinition definition="row[&quot;Sales&quot;]">
        <grouping enabled="true"/>
       </dataDefinition>
       <triggers condition="6">
@@ -853,13 +856,13 @@
                     <property name="dataType">date</property>
                 </structure>
                 <structure>
-                    <property name="name">Amt</property>
-                    <expression name="expression">dataSetRow["Amt"]</expression>
+                    <property name="name">Sales</property>
+                    <expression name="expression">dataSetRow["Sales"]</expression>
                     <property name="dataType">float</property>
                 </structure>
                 <structure>
-                    <property name="name">Line</property>
-                    <expression name="expression">dataSetRow["Line"]</expression>
+                    <property name="name">ProductLine</property>
+                    <expression name="expression">dataSetRow["ProductLine"]</expression>
                     <property name="dataType">string</property>
                 </structure>
             </list-property>
@@ -934,6 +937,8 @@
   <extendedProperties name="keep.hierarchy.series" value="true"/>
   <extendedProperties name="jschart.glass.style" value="false"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="drilled.filters_" value="_@,_"/>
+  <extendedProperties name="enable.drill.proc_" value="true"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="QWER"/>
@@ -969,14 +974,14 @@
     </title>
     <seriesDefinitions sorting="0">
      <query definition="row[&quot;Promotion&quot;]"/>
-     <series _type="BarSeries" seriesIdentifier="Amt" stacked="false">
+     <series _type="BarSeries" seriesIdentifier="Sales" stacked="false">
       <label>
        <background _nil="1"/>
        <outline>
         <color _nil="1"/>
        </outline>
       </label>
-      <dataDefinition definition="row[&quot;Amt&quot;]">
+      <dataDefinition definition="row[&quot;Sales&quot;]">
        <grouping enabled="true"/>
       </dataDefinition>
       <triggers condition="6">
@@ -1094,8 +1099,8 @@
                     <property name="dataType">date</property>
                 </structure>
                 <structure>
-                    <property name="name">Amt</property>
-                    <expression name="expression">dataSetRow["Amt"]</expression>
+                    <property name="name">Sales</property>
+                    <expression name="expression">dataSetRow["Sales"]</expression>
                     <property name="dataType">float</property>
                 </structure>
                 <structure>
@@ -1117,72 +1122,72 @@
         <extended-item extensionName="Crosstab" extensionVersion="3.7.0" name="Sales Analysis_8525c12e-f9fc-448d-bfef-71b79d80f4a7"
  id="63">
             <property name="measures">
-                <extended-item extensionName="ComputedMeasureView" name="Amt(SUM)" id="188">
-                    <property name="measureName">Amt(SUM)</property>
+                <extended-item extensionName="ComputedMeasureView" name="Sales(SUM)" id="279">
+                    <property name="measureName">Sales(SUM)</property>
                     <property name="detail">
-                        <extended-item extensionName="AggregationCell" id="189">
-                            <property name="aggregationOnRow">Line/Line</property>
+                        <extended-item extensionName="AggregationCell" id="280">
+                            <property name="aggregationOnRow">ProductLine/ProductLine</property>
                             <property name="aggregationOnColumn">Date/Year</property>
                             <property name="content">
-                                <data id="192">
+                                <data id="283">
                                     <structure name="numberFormat">
                                         <property name="category">Currency</property>
                                         <property name="pattern">$#,##0</property>
                                     </structure>
-                                    <property name="resultSetColumn">Amt(SUM)_Line/Line_Date/Year</property>
+                                    <property name="resultSetColumn">Sales(SUM)_ProductLine/ProductLine_Date/Year</property>
                                 </data>
                             </property>
                         </extended-item>
                     </property>
                     <property name="aggregations">
-                        <extended-item extensionName="AggregationCell" id="194">
+                        <extended-item extensionName="AggregationCell" id="285">
                             <property name="aggregationOnColumn">Date/Year</property>
                             <property name="content">
-                                <data id="195">
+                                <data id="286">
                                     <structure name="numberFormat">
                                         <property name="category">Currency</property>
                                         <property name="pattern">$#,##0</property>
                                     </structure>
-                                    <property name="resultSetColumn">Amt(SUM)_Date/Year</property>
+                                    <property name="resultSetColumn">Sales(SUM)_Date/Year</property>
                                 </data>
                             </property>
                         </extended-item>
-                        <extended-item extensionName="AggregationCell" id="200">
+                        <extended-item extensionName="AggregationCell" id="289">
+                            <property name="aggregationOnRow">ProductLine/ProductLine</property>
                             <property name="content">
-                                <data id="201">
+                                <data id="290">
                                     <structure name="numberFormat">
                                         <property name="category">Currency</property>
                                         <property name="pattern">$#,##0</property>
                                     </structure>
-                                    <property name="resultSetColumn">Amt(SUM)</property>
+                                    <property name="resultSetColumn">Sales(SUM)_ProductLine/ProductLine</property>
                                 </data>
                             </property>
                         </extended-item>
-                        <extended-item extensionName="AggregationCell" id="215">
-                            <property name="aggregationOnRow">Line/Line</property>
+                        <extended-item extensionName="AggregationCell" id="291">
                             <property name="content">
-                                <data id="216">
+                                <data id="292">
                                     <structure name="numberFormat">
                                         <property name="category">Currency</property>
                                         <property name="pattern">$#,##0</property>
                                     </structure>
-                                    <property name="resultSetColumn">Amt(SUM)_Line/Line</property>
+                                    <property name="resultSetColumn">Sales(SUM)</property>
                                 </data>
                             </property>
                         </extended-item>
                     </property>
                     <property name="header">
-                        <extended-item extensionName="CrosstabCell" id="190">
+                        <extended-item extensionName="CrosstabCell" id="281">
                             <property name="content">
-                                <label id="191">
-                                    <text-property name="text">Amt(SUM)</text-property>
+                                <label id="282">
+                                    <text-property name="text">Sales(SUM)</text-property>
                                 </label>
                             </property>
                         </extended-item>
-                        <extended-item extensionName="CrosstabCell" id="202">
+                        <extended-item extensionName="CrosstabCell" id="293">
                             <property name="content">
-                                <label id="203">
-                                    <text-property name="text">Amt(SUM)</text-property>
+                                <label id="294">
+                                    <text-property name="text">Sales(SUM)</text-property>
                                 </label>
                             </property>
                         </extended-item>
@@ -1192,25 +1197,25 @@
             <property name="rows">
                 <extended-item extensionName="CrosstabView" id="142">
                     <property name="grandTotal">
-                        <extended-item extensionName="CrosstabCell" id="193">
+                        <extended-item extensionName="CrosstabCell" id="284">
                             <property name="content">
-                                <label id="196">
+                                <label id="287">
                                     <text-property name="text">Grand Total</text-property>
                                 </label>
                             </property>
                         </extended-item>
                     </property>
                     <property name="views">
-                        <extended-item extensionName="DimensionView" id="155">
-                            <property name="dimension">Line</property>
+                        <extended-item extensionName="DimensionView" id="217">
+                            <property name="dimension">ProductLine</property>
                             <property name="levels">
-                                <extended-item extensionName="LevelView" name="NewLevel View1" id="156">
-                                    <property name="level">Line/Line</property>
+                                <extended-item extensionName="LevelView" name="NewLevel View2" id="218">
+                                    <property name="level">ProductLine/ProductLine</property>
                                     <property name="member">
-                                        <extended-item extensionName="CrosstabCell" id="157">
+                                        <extended-item extensionName="CrosstabCell" id="219">
                                             <property name="content">
-                                                <data name="Line" id="159">
-                                                    <property name="resultSetColumn">Line</property>
+                                                <data name="ProductLine" id="222">
+                                                    <property name="resultSetColumn">ProductLine</property>
                                                 </data>
                                             </property>
                                         </extended-item>
@@ -1224,9 +1229,9 @@
             <property name="columns">
                 <extended-item extensionName="CrosstabView" id="143">
                     <property name="grandTotal">
-                        <extended-item extensionName="CrosstabCell" id="197">
+                        <extended-item extensionName="CrosstabCell" id="288">
                             <property name="content">
-                                <label id="204">
+                                <label id="295">
                                     <text-property name="text">Grand Total</text-property>
                                 </label>
                             </property>
@@ -1247,21 +1252,38 @@
                                             </property>
                                         </extended-item>
                                     </property>
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">__DA_FILTER_ID_COUNTER</property>
+                                            <property name="type">integer</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="__DA_FILTER_ID_COUNTER">2</property>
                                 </extended-item>
                             </property>
                         </extended-item>
                     </property>
+                    <property name="members">
+                        <member-value>
+                            <property name="value">2009</property>
+                            <property name="level">Date/Year</property>
+                        </member-value>
+                        <member-value>
+                            <property name="value">2012</property>
+                            <property name="level">Date/Year</property>
+                        </member-value>
+                    </property>
                 </extended-item>
             </property>
             <property name="header">
-                <extended-item extensionName="CrosstabCell" id="141">
+                <extended-item extensionName="CrosstabCell" id="256">
                     <property name="content">
-                        <label id="160">
-                            <text-property name="text">Line</text-property>
+                        <label id="278">
+                            <text-property name="text">Date-Year</text-property>
                         </label>
                     </property>
                 </extended-item>
-                <extended-item extensionName="CrosstabCell" id="213"/>
+                <extended-item extensionName="CrosstabCell" id="220"/>
             </property>
             <property name="filter">
                 <filter-condition-element>
@@ -1284,42 +1306,42 @@
                     <property name="dataType">integer</property>
                 </structure>
                 <structure>
-                    <property name="name">Line</property>
-                    <expression name="expression">dataSetRow["Line"]</expression>
+                    <property name="name">ProductLine</property>
+                    <expression name="expression">dataSetRow["ProductLine"]</expression>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="name">Amt(SUM)_Line/Line_Date/Year</property>
-                    <text-property name="displayName">Amt(SUM)</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["Amt"]</expression>
+                    <property name="name">Sales(SUM)_ProductLine/ProductLine_Date/Year</property>
+                    <text-property name="displayName">Sales(SUM)</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Sales"]</expression>
                     <property name="dataType">float</property>
                     <simple-property-list name="aggregateOn">
-                        <value>Line/Line</value>
+                        <value>ProductLine/ProductLine</value>
+                        <value>Date/Year</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">sum</property>
+                </structure>
+                <structure>
+                    <property name="name">Sales(SUM)_Date/Year</property>
+                    <expression name="expression">data["Sales(SUM)_ProductLine/ProductLine_Date/Year"]</expression>
+                    <property name="dataType">float</property>
+                    <simple-property-list name="aggregateOn">
                         <value>Date/Year</value>
                     </simple-property-list>
                     <property name="aggregateFunction">SUM</property>
                 </structure>
                 <structure>
-                    <property name="name">Amt(SUM)_Date/Year</property>
-                    <expression name="expression">dataSetRow["Amt"]</expression>
+                    <property name="name">Sales(SUM)_ProductLine/ProductLine</property>
+                    <expression name="expression">data["Sales(SUM)_ProductLine/ProductLine_Date/Year"]</expression>
                     <property name="dataType">float</property>
                     <simple-property-list name="aggregateOn">
-                        <value>Date/Year</value>
+                        <value>ProductLine/ProductLine</value>
                     </simple-property-list>
                     <property name="aggregateFunction">SUM</property>
                 </structure>
                 <structure>
-                    <property name="name">Amt(SUM)_Line/Line</property>
-                    <expression name="expression">dataSetRow["Amt"]</expression>
-                    <property name="dataType">float</property>
-                    <simple-property-list name="aggregateOn">
-                        <value>Line/Line</value>
-                    </simple-property-list>
-                    <property name="aggregateFunction">SUM</property>
-                </structure>
-                <structure>
-                    <property name="name">Amt(SUM)</property>
-                    <expression name="expression">dataSetRow["Amt"]</expression>
+                    <property name="name">Sales(SUM)</property>
+                    <expression name="expression">data["Sales(SUM)_ProductLine/ProductLine_Date/Year"]</expression>
                     <property name="dataType">float</property>
                     <property name="aggregateFunction">SUM</property>
                 </structure>
@@ -1405,10 +1427,6 @@
                                             <property name="dirty">false</property>
                                         </event-object>
                                         <event-object>
-                                            <property name="gadget">Gadget_6ce545a7-b6fb-4b58-9b28-5c46da75f7e0</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                        <event-object>
                                             <property name="gadget">Gadget_ce74bc1d-5729-4c73-8b5f-63cf750e4d48</property>
                                             <property name="dirty">false</property>
                                         </event-object>
@@ -1430,6 +1448,10 @@
                                         </event-object>
                                         <event-object>
                                             <property name="gadget">Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_6ce545a7-b6fb-4b58-9b28-5c46da75f7e0</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                     </property>
@@ -1501,7 +1523,7 @@
                                 </event-subscriber>
                             </property>
                         </gadget>
-                        <gadget name="Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29" id="40">
+                        <gadget name="Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29" id="238">
                             <property name="x">18px</property>
                             <property name="y">162px</property>
                             <property name="height">91px</property>
@@ -1514,7 +1536,7 @@
                             <property name="height">91px</property>
                             <property name="width">190px</property>
                             <property name="caption">
-                                <gadget-caption id="41">
+                                <gadget-caption id="240">
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
                                     <property name="fontFamily">"Source Sans Pro"</property>
@@ -1526,7 +1548,7 @@
                                 </gadget-caption>
                             </property>
                             <property name="content">
-                                <list-data-selector id="42">
+                                <list-data-selector id="239">
                                     <property name="linkedDataModel">NewDataMartDataSource2::Data Model</property>
                                     <property name="sortDirection">asc</property>
                                     <property name="operator">in</property>
@@ -1564,15 +1586,15 @@
                                             <property name="dirty">false</property>
                                         </event-object>
                                         <event-object>
-                                            <property name="gadget">Gadget_6ce545a7-b6fb-4b58-9b28-5c46da75f7e0</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                        <event-object>
                                             <property name="gadget">Gadget_5262619a-366c-48bf-a6ad-f96328e2eb88</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                         <event-object>
                                             <property name="gadget">Gadget_0c51b675-a208-47e7-9866-ac285b6cbe70</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_6ce545a7-b6fb-4b58-9b28-5c46da75f7e0</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                     </property>
@@ -1598,7 +1620,7 @@
                                 </event-subscriber>
                             </property>
                         </gadget>
-                        <gadget name="Gadget_5342d1b2-9d1c-49a5-bff5-081808c4b5b0" id="43">
+                        <gadget name="Gadget_5342d1b2-9d1c-49a5-bff5-081808c4b5b0" id="241">
                             <property name="x">450px</property>
                             <property name="y">162px</property>
                             <property name="height">91px</property>
@@ -1611,7 +1633,7 @@
                             <property name="height">91px</property>
                             <property name="width">210px</property>
                             <property name="caption">
-                                <gadget-caption id="44">
+                                <gadget-caption id="243">
                                     <property name="showCaption">true</property>
                                     <property name="horizontalAlignment">left</property>
                                     <property name="fontFamily">"Source Sans Pro"</property>
@@ -1623,7 +1645,7 @@
                                 </gadget-caption>
                             </property>
                             <property name="content">
-                                <list-data-selector id="45">
+                                <list-data-selector id="242">
                                     <property name="linkedDataModel">NewDataMartDataSource2::Data Model</property>
                                     <property name="sortDirection">asc</property>
                                     <property name="operator">in</property>
@@ -1653,10 +1675,6 @@
                                             <property name="dirty">false</property>
                                         </event-object>
                                         <event-object>
-                                            <property name="gadget">Gadget_6ce545a7-b6fb-4b58-9b28-5c46da75f7e0</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                        <event-object>
                                             <property name="gadget">Gadget_5262619a-366c-48bf-a6ad-f96328e2eb88</property>
                                             <property name="dirty">false</property>
                                         </event-object>
@@ -1670,6 +1688,10 @@
                                         </event-object>
                                         <event-object>
                                             <property name="gadget">Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_6ce545a7-b6fb-4b58-9b28-5c46da75f7e0</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                     </property>
@@ -1695,7 +1717,7 @@
                                 </event-subscriber>
                             </property>
                         </gadget>
-                        <gadget name="Gadget_afb197ac-3666-40cc-bc6e-f40e3789beb5" id="46">
+                        <gadget name="Gadget_afb197ac-3666-40cc-bc6e-f40e3789beb5" id="244">
                             <property name="x">234px</property>
                             <property name="y">162px</property>
                             <property name="height">91px</property>
@@ -1725,8 +1747,8 @@
                                     <property name="sortDirection">asc</property>
                                     <property name="operator">in</property>
                                     <simple-property-list name="columnNames">
-                                        <value>Line</value>
-                                        <value>Line</value>
+                                        <value>ProductLine</value>
+                                        <value>ProductLine</value>
                                     </simple-property-list>
                                     <property name="allowMultiValue">true</property>
                                     <property name="enableSearch">false</property>
@@ -1754,10 +1776,6 @@
                                             <property name="dirty">false</property>
                                         </event-object>
                                         <event-object>
-                                            <property name="gadget">Gadget_6ce545a7-b6fb-4b58-9b28-5c46da75f7e0</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                        <event-object>
                                             <property name="gadget">Gadget_5262619a-366c-48bf-a6ad-f96328e2eb88</property>
                                             <property name="dirty">false</property>
                                         </event-object>
@@ -1767,6 +1785,10 @@
                                         </event-object>
                                         <event-object>
                                             <property name="gadget">Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_6ce545a7-b6fb-4b58-9b28-5c46da75f7e0</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                     </property>
@@ -1885,15 +1907,15 @@
                                             <property name="dirty">false</property>
                                         </event-object>
                                         <event-object>
+                                            <property name="gadget">Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
                                             <property name="gadget">Gadget_5342d1b2-9d1c-49a5-bff5-081808c4b5b0</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                         <event-object>
                                             <property name="gadget">Gadget_afb197ac-3666-40cc-bc6e-f40e3789beb5</property>
-                                            <property name="dirty">false</property>
-                                        </event-object>
-                                        <event-object>
-                                            <property name="gadget">Gadget_b1cdd506-46f1-4461-acfc-6792d1863b29</property>
                                             <property name="dirty">false</property>
                                         </event-object>
                                     </property>
