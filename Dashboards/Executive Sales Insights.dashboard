@@ -6169,7 +6169,7 @@ group by terr, yr, mnth]]></xml-property>
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">^/Report Designs/Top10Opportunities.rptdesign</property>
+                                            <property name="sourceFile">^/Report Designs/Top10Opportunities.rptdocument</property>
                                             <property name="targetBookmark">Top 10 Opportunities</property>
                                         </external-element-ref>
                                     </property>
