@@ -52,18 +52,6 @@
       <columns name="QUANTITYORDERED"/>
       <columns name="TOTALLINEITEM"/>
     </dataSets>
-    <dataSets name="Exec Sales Facts">
-      <columns name="Name"/>
-      <columns name="Level"/>
-      <columns name="Region"/>
-      <columns name="District"/>
-      <columns name="Pipeline"/>
-      <columns name="Goal"/>
-      <columns name="Forecast"/>
-      <columns name="Quota"/>
-      <columns name="PYTD Pipeline"/>
-      <columns name="PYTD Forecast"/>
-    </dataSets>
     <linkedToReportsMap key="79298560" value="//@files.19"/>
     <linkedToReportsMap key="79364096" value="//@files.20"/>
   </files>
