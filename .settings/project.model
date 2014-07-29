@@ -52,6 +52,18 @@
       <columns name="QUANTITYORDERED"/>
       <columns name="TOTALLINEITEM"/>
     </dataSets>
+    <dataSets name="Exec Sales Facts">
+      <columns name="Name"/>
+      <columns name="Level"/>
+      <columns name="Region"/>
+      <columns name="District"/>
+      <columns name="Pipeline"/>
+      <columns name="Goal"/>
+      <columns name="Forecast"/>
+      <columns name="Quota"/>
+      <columns name="PYTD Pipeline"/>
+      <columns name="PYTD Forecast"/>
+    </dataSets>
     <linkedToReportsMap key="79298560" value="//@files.19"/>
     <linkedToReportsMap key="79364096" value="//@files.20"/>
   </files>
@@ -72,8 +84,8 @@
   <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="ThemesReportItems3.rptlibrary" path="/SFAdventuresApp/ThemesReportItems3.rptlibrary" reports="//@files.14 //@files.15 //@files.16 //@files.17 //@files.18 //@files.19 //@files.20 //@files.21"/>
   <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="StaticData.datadesign" path="/SFAdventuresApp/Data Objects/StaticData.datadesign">
     <targetReportsMap key="//@files.21" value="1"/>
-    <targetDashboardsMap key="//@files.9" value="1"/>
     <targetDashboardsMap key="//@files.8" value="1"/>
+    <targetDashboardsMap key="//@files.9" value="1"/>
     <targetLibrariesMap key="//@files.10" value="1"/>
     <dataSets name="gauge" targetDataSets="//@files.21/@dataSets.0">
       <columns name="revtodate" targetColumns="//@files.21/@dataSets.0/@columns.0"/>
@@ -136,8 +148,8 @@
   </files>
   <files xsi:type="com.actuate.istudio.analysis.model:Data" name="SFA_current.data" path="/SFAdventuresApp/Data Objects/OLD/SFA_current.data"/>
   <files xsi:type="com.actuate.istudio.analysis.model:Data" name="FlatFileDO.data" path="/SFAdventuresApp/Data Objects/FlatFileDO.data">
-    <targetDashboardsMap key="//@files.9" value="1"/>
     <targetDashboardsMap key="//@files.8" value="4"/>
+    <targetDashboardsMap key="//@files.9" value="1"/>
   </files>
   <files xsi:type="com.actuate.istudio.analysis.model:Data" name="SalesAnalysis.data" path="/SFAdventuresApp/Data Objects/SalesAnalysis.data">
     <targetDashboardsMap key="//@files.7" value="1"/>

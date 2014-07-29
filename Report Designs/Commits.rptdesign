@@ -3,6 +3,7 @@
     <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
     <property name="bidiLayoutOrientation">ltr</property>
     <property name="imageDPI">96</property>
     <list-property name="libraries">
@@ -384,12 +385,78 @@ if (!this.getViewer().isInteractive())
     <page-setup>
         <simple-master-page name="Simple MasterPage" id="2">
             <page-header>
-                <image id="270">
-                    <property name="height">0.46875in</property>
-                    <property name="width">2.8125in</property>
-                    <property name="source">embed</property>
-                    <property name="imageName">logo.png</property>
-                </image>
+                <grid id="299">
+                    <property name="borderBottomStyle">none</property>
+                    <property name="borderLeftStyle">none</property>
+                    <property name="borderRightStyle">none</property>
+                    <property name="borderTopStyle">none</property>
+                    <column id="300"/>
+                    <row id="301">
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderTopStyle">none</property>
+                        <cell id="302">
+                            <image id="270">
+                                <property name="height">0.46875in</property>
+                                <property name="width">2.8125in</property>
+                                <property name="source">embed</property>
+                                <property name="imageName">logo.png</property>
+                            </image>
+                        </cell>
+                    </row>
+                    <row id="303">
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderTopStyle">none</property>
+                        <cell id="304">
+                            <label id="235">
+                                <property name="fontFamily">"Verdana"</property>
+                                <property name="fontSize">14pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="color">#666666</property>
+                                <property name="borderBottomStyle">none</property>
+                                <property name="borderLeftStyle">none</property>
+                                <property name="borderRightStyle">none</property>
+                                <property name="borderTopStyle">none</property>
+                                <property name="textAlign">center</property>
+                                <text-property name="text">Commits this Quarter</text-property>
+                            </label>
+                        </cell>
+                    </row>
+                    <row id="305">
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderTopStyle">none</property>
+                        <cell id="306">
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                            <data id="216">
+                                <property name="fontFamily">"Verdana"</property>
+                                <property name="fontSize">12pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="color">#666666</property>
+                                <property name="borderBottomStyle">none</property>
+                                <property name="borderLeftStyle">none</property>
+                                <property name="borderRightStyle">none</property>
+                                <property name="borderTopStyle">none</property>
+                                <property name="textAlign">center</property>
+                                <list-property name="boundDataColumns">
+                                    <structure>
+                                        <property name="name">pCustomer</property>
+                                        <expression name="expression" type="javascript">params["pCustomer"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                </list-property>
+                                <property name="resultSetColumn">pCustomer</property>
+                            </data>
+                        </cell>
+                    </row>
+                </grid>
             </page-header>
             <page-footer>
                 <text id="3">
@@ -403,49 +470,105 @@ if (!this.getViewer().isInteractive())
         </simple-master-page>
     </page-setup>
     <body>
-        <grid id="229">
-            <property name="height">2.7916666666666665in</property>
-            <column id="230"/>
-            <column id="274"/>
-            <row id="231">
-                <cell id="232">
-                    <property name="colSpan">2</property>
-                    <property name="rowSpan">1</property>
-                    <label id="235">
-                        <property name="fontFamily">"Verdana"</property>
-                        <property name="fontSize">12pt</property>
-                        <property name="fontWeight">bold</property>
-                        <property name="textAlign">center</property>
-                        <text-property name="text">Commits this Quarter</text-property>
-                    </label>
-                </cell>
-            </row>
-            <row id="233">
-                <cell id="234">
-                    <property name="colSpan">2</property>
-                    <property name="rowSpan">1</property>
-                    <data id="216">
-                        <property name="fontFamily">"Verdana"</property>
-                        <property name="fontWeight">bold</property>
-                        <property name="textAlign">center</property>
-                        <list-property name="boundDataColumns">
-                            <structure>
-                                <property name="name">pCustomer</property>
-                                <expression name="expression" type="javascript">params["pCustomer"]</expression>
-                                <property name="dataType">string</property>
-                            </structure>
-                        </list-property>
-                        <property name="resultSetColumn">pCustomer</property>
-                    </data>
-                </cell>
-            </row>
-            <row id="236">
-                <property name="height">2.2395833333333335in</property>
-                <cell id="237">
-                    <property name="colSpan">2</property>
-                    <property name="rowSpan">1</property>
-                    <extended-item extensionName="Chart" id="269">
-                        <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+        <table id="162">
+            <property name="borderBottomStyle">none</property>
+            <property name="borderLeftStyle">none</property>
+            <property name="borderRightStyle">none</property>
+            <property name="borderTopStyle">none</property>
+            <property name="dataSet">Commits</property>
+            <property name="theme">ThemesReportItems3.Modern Table</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">CUSTOMERNAME</property>
+                    <text-property name="displayName">CUSTOMERNAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CUSTOMERNUMBER</property>
+                    <text-property name="displayName">CUSTOMERNUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERNUMBER"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ORDERDATE</property>
+                    <text-property name="displayName">ORDERDATE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ORDERDATE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ORDERNUMBER</property>
+                    <text-property name="displayName">ORDERNUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ORDERNUMBER"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">PRICEEACH</property>
+                    <text-property name="displayName">PRICEEACH</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PRICEEACH"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">PRODUCTCODE</property>
+                    <text-property name="displayName">PRODUCTCODE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PRODUCTCODE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">QUANTITYORDERED</property>
+                    <text-property name="displayName">QUANTITYORDERED</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["QUANTITYORDERED"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">TOTALLINEITEM</property>
+                    <text-property name="displayName">TOTALLINEITEM</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TOTALLINEITEM"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">CustomerTotal</property>
+                    <property name="dataType">float</property>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["TOTALLINEITEM"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <list-property name="sort">
+                <structure>
+                    <expression name="key" type="javascript">row["ORDERNUMBER"]</expression>
+                    <property name="direction">asc</property>
+                    <property name="strength">-1</property>
+                </structure>
+            </list-property>
+            <column id="208"/>
+            <column id="211"/>
+            <column id="224"/>
+            <column id="220"/>
+            <column id="213"/>
+            <header>
+                <row id="275">
+                    <property name="backgroundColor">white</property>
+                    <property name="borderBottomStyle">none</property>
+                    <property name="borderLeftStyle">none</property>
+                    <property name="borderRightStyle">none</property>
+                    <property name="borderTopStyle">none</property>
+                    <property name="height">2.21875in</property>
+                    <cell id="276">
+                        <property name="colSpan">5</property>
+                        <property name="rowSpan">1</property>
+                        <property name="backgroundColor">white</property>
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderTopStyle">none</property>
+                        <extended-item extensionName="Chart" id="269">
+                            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
  <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side">
   <block>
    <children _type="TitleBlock">
@@ -634,137 +757,66 @@ if (!this.getViewer().isInteractive())
  </ChartWithAxes>
 </ActuateChart>
 ]]></xml-property>
-                        <property name="outputFormat">JS</property>
-                        <property name="inheritColumns">false</property>
-                        <property name="height">130pt</property>
-                        <property name="width">7.770833333333333in</property>
-                        <property name="dataSet">Commits</property>
-                        <list-property name="boundDataColumns">
-                            <structure>
-                                <property name="name">CUSTOMERNAME</property>
-                                <expression name="expression" type="javascript">dataSetRow["CUSTOMERNAME"]</expression>
-                                <property name="dataType">string</property>
-                            </structure>
-                            <structure>
-                                <property name="name">CUSTOMERNUMBER</property>
-                                <expression name="expression" type="javascript">dataSetRow["CUSTOMERNUMBER"]</expression>
-                                <property name="dataType">string</property>
-                            </structure>
-                            <structure>
-                                <property name="name">ORDERDATE</property>
-                                <expression name="expression" type="javascript">dataSetRow["ORDERDATE"]</expression>
-                                <property name="dataType">string</property>
-                            </structure>
-                            <structure>
-                                <property name="name">ORDERNUMBER</property>
-                                <expression name="expression" type="javascript">dataSetRow["ORDERNUMBER"]</expression>
-                                <property name="dataType">string</property>
-                            </structure>
-                            <structure>
-                                <property name="name">PRICEEACH</property>
-                                <expression name="expression" type="javascript">dataSetRow["PRICEEACH"]</expression>
-                                <property name="dataType">float</property>
-                            </structure>
-                            <structure>
-                                <property name="name">PRODUCTCODE</property>
-                                <expression name="expression" type="javascript">dataSetRow["PRODUCTCODE"]</expression>
-                                <property name="dataType">string</property>
-                            </structure>
-                            <structure>
-                                <property name="name">QUANTITYORDERED</property>
-                                <expression name="expression" type="javascript">dataSetRow["QUANTITYORDERED"]</expression>
-                                <property name="dataType">float</property>
-                            </structure>
-                            <structure>
-                                <property name="name">TOTALLINEITEM</property>
-                                <expression name="expression" type="javascript">dataSetRow["TOTALLINEITEM"]</expression>
-                                <property name="dataType">float</property>
-                            </structure>
-                        </list-property>
-                        <property name="theme">ThemesReportItems3.Modern</property>
-                    </extended-item>
-                </cell>
-            </row>
-        </grid>
-        <table id="162">
-            <property name="dataSet">Commits</property>
-            <property name="theme">ThemesReportItems3.Modern Table</property>
-            <list-property name="boundDataColumns">
-                <structure>
-                    <property name="name">CUSTOMERNAME</property>
-                    <text-property name="displayName">CUSTOMERNAME</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERNAME"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">CUSTOMERNUMBER</property>
-                    <text-property name="displayName">CUSTOMERNUMBER</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERNUMBER"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">ORDERDATE</property>
-                    <text-property name="displayName">ORDERDATE</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["ORDERDATE"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">ORDERNUMBER</property>
-                    <text-property name="displayName">ORDERNUMBER</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["ORDERNUMBER"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">PRICEEACH</property>
-                    <text-property name="displayName">PRICEEACH</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["PRICEEACH"]</expression>
-                    <property name="dataType">float</property>
-                </structure>
-                <structure>
-                    <property name="name">PRODUCTCODE</property>
-                    <text-property name="displayName">PRODUCTCODE</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["PRODUCTCODE"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">QUANTITYORDERED</property>
-                    <text-property name="displayName">QUANTITYORDERED</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["QUANTITYORDERED"]</expression>
-                    <property name="dataType">float</property>
-                </structure>
-                <structure>
-                    <property name="name">TOTALLINEITEM</property>
-                    <text-property name="displayName">TOTALLINEITEM</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["TOTALLINEITEM"]</expression>
-                    <property name="dataType">float</property>
-                </structure>
-                <structure>
-                    <property name="name">CustomerTotal</property>
-                    <property name="dataType">float</property>
-                    <property name="aggregateFunction">SUM</property>
-                    <list-property name="arguments">
-                        <structure>
-                            <property name="name">Expression</property>
-                            <expression name="value" type="javascript">row["TOTALLINEITEM"]</expression>
-                        </structure>
-                    </list-property>
-                    <property name="allowExport">true</property>
-                </structure>
-            </list-property>
-            <list-property name="sort">
-                <structure>
-                    <expression name="key" type="javascript">row["ORDERNUMBER"]</expression>
-                    <property name="direction">asc</property>
-                    <property name="strength">-1</property>
-                </structure>
-            </list-property>
-            <column id="208"/>
-            <column id="211"/>
-            <column id="224"/>
-            <column id="220"/>
-            <column id="213"/>
-            <header>
+                            <property name="outputFormat">JS</property>
+                            <property name="inheritColumns">false</property>
+                            <property name="borderTopStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="height">130pt</property>
+                            <property name="width">7.9in</property>
+                            <property name="dataSet">Commits</property>
+                            <list-property name="boundDataColumns">
+                                <structure>
+                                    <property name="name">CUSTOMERNAME</property>
+                                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERNAME"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">CUSTOMERNUMBER</property>
+                                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERNUMBER"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">ORDERDATE</property>
+                                    <expression name="expression" type="javascript">dataSetRow["ORDERDATE"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">ORDERNUMBER</property>
+                                    <expression name="expression" type="javascript">dataSetRow["ORDERNUMBER"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">PRICEEACH</property>
+                                    <expression name="expression" type="javascript">dataSetRow["PRICEEACH"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">PRODUCTCODE</property>
+                                    <expression name="expression" type="javascript">dataSetRow["PRODUCTCODE"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">QUANTITYORDERED</property>
+                                    <expression name="expression" type="javascript">dataSetRow["QUANTITYORDERED"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">TOTALLINEITEM</property>
+                                    <expression name="expression" type="javascript">dataSetRow["TOTALLINEITEM"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                            </list-property>
+                            <property name="theme">ThemesReportItems3.Modern</property>
+                        </extended-item>
+                    </cell>
+                </row>
                 <row id="163">
+                    <property name="borderBottomStyle">none</property>
+                    <property name="borderLeftStyle">none</property>
+                    <property name="borderRightStyle">none</property>
+                    <property name="borderTopStyle">none</property>
                     <cell id="168">
                         <label id="171">
                             <text-property name="text">Order Number</text-property>
@@ -792,16 +844,30 @@ if (!this.getViewer().isInteractive())
                     </cell>
                 </row>
                 <row id="246">
-                    <cell id="247"/>
-                    <cell id="249"/>
-                    <cell id="250"/>
+                    <property name="borderBottomStyle">none</property>
+                    <property name="borderLeftStyle">none</property>
+                    <property name="borderRightStyle">none</property>
+                    <property name="borderTopStyle">none</property>
+                    <cell id="247">
+                        <property name="backgroundColor">white</property>
+                    </cell>
+                    <cell id="249">
+                        <property name="backgroundColor">white</property>
+                    </cell>
+                    <cell id="250">
+                        <property name="backgroundColor">white</property>
+                    </cell>
                     <cell id="251">
+                        <property name="backgroundColor">white</property>
+                        <property name="color">black</property>
                         <label id="268">
                             <property name="textAlign">right</property>
                             <text-property name="text">Total:</text-property>
                         </label>
                     </cell>
                     <cell id="252">
+                        <property name="backgroundColor">white</property>
+                        <property name="color">black</property>
                         <data id="245">
                             <property name="paddingRight">10pt</property>
                             <structure name="numberFormat">
@@ -816,6 +882,10 @@ if (!this.getViewer().isInteractive())
             </header>
             <detail>
                 <row id="180">
+                    <property name="borderBottomStyle">none</property>
+                    <property name="borderLeftStyle">none</property>
+                    <property name="borderRightStyle">none</property>
+                    <property name="borderTopStyle">none</property>
                     <list-property name="highlightRules">
                         <structure>
                             <property name="operator">eq</property>
