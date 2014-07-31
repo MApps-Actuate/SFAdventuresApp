@@ -961,7 +961,7 @@
                                         <property name="targetWindow">_blank</property>
                                         <property name="linkType">drill-through</property>
                                         <property name="targetFileType">report-design</property>
-                                        <property name="reportName">../Report Designs/Pipeline.rptdesign</property>
+                                        <property name="reportName">^/Report Designs/Pipeline.rptdesign</property>
                                         <list-property name="paramBindings">
                                             <structure>
                                                 <property name="paramName">pCustomer</property>
@@ -1251,7 +1251,7 @@
                                         <property name="targetWindow">_blank</property>
                                         <property name="linkType">drill-through</property>
                                         <property name="targetFileType">report-design</property>
-                                        <property name="reportName">../Report Designs/Commits.rptdesign</property>
+                                        <property name="reportName">^/Report Designs/Commits.rptdesign</property>
                                         <list-property name="paramBindings">
                                             <structure>
                                                 <property name="paramName">pCustomer</property>
@@ -1972,7 +1972,7 @@
                     </property>
                 </datamart>
             </datamart-node>
-            <datamart-node location="file:/C:/Applications/SFAdventuresApp/Data%20Objects/StaticData.datadesign">
+            <datamart-node location="file:/C:/Users/ActuateUser/git/SFAdventuresApp/Data%20Objects/StaticData.datadesign">
                 <reference-elements>StaticData;</reference-elements>
                 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
                     <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
@@ -5433,6 +5433,7 @@ group by terr, yr, mnth]]></xml-property>
   <extendedProperties name="jschart.zoom" value="xy"/>
   <extendedProperties name="enable.drill.proc_" value="true"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="drilled.filters_" value="row[&quot;Region&quot;]eq&quot;Asia&quot;_@,__@,_"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="QWER"/>
    <orthogonalSampleData dataSetRepresentation="2.3 2.3" seriesDefinitionIndex="0"/>
@@ -5547,7 +5548,7 @@ group by terr, yr, mnth]]></xml-property>
        <color _nil="1"/>
       </outline>
      </label>
-     <dataDefinition definition="row[&quot;Region&quot;]"/>
+     <dataDefinition definition="row[&quot;District&quot;]"/>
      <curveFitting _nil="1"/>
     </series>
     <grouping enabled="true" groupingInterval="0.0"/>
@@ -5591,6 +5592,15 @@ group by terr, yr, mnth]]></xml-property>
 </ActuateChart>
 ]]></xml-property>
             <property name="outputFormat">JS</property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["Region"]</expression>
+                    <simple-property-list name="value1">
+                        <value>"Asia"</value>
+                    </simple-property-list>
+                </structure>
+            </list-property>
             <property name="height">179.25pt</property>
             <property name="width">288.75pt</property>
             <list-property name="boundDataColumns">
@@ -5608,6 +5618,11 @@ group by terr, yr, mnth]]></xml-property>
                     <property name="name">Goal</property>
                     <expression name="expression">dataSetRow["Goal"]</expression>
                     <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">District</property>
+                    <expression name="expression">dataSetRow["District"]</expression>
+                    <property name="dataType">string</property>
                 </structure>
             </list-property>
             <property name="theme">ThemesReportItems3.Modern</property>

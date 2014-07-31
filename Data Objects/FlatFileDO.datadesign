@@ -984,7 +984,7 @@
                         <property name="targetWindow">_blank</property>
                         <property name="linkType">drill-through</property>
                         <property name="targetFileType">report-design</property>
-                        <property name="reportName">../Report Designs/Pipeline.rptdesign</property>
+                        <property name="reportName">^/Report Designs/Pipeline.rptdesign</property>
                         <list-property name="paramBindings">
                             <structure>
                                 <property name="paramName">pCustomer</property>
@@ -1036,11 +1036,15 @@
                     <property name="columnName">QUANTITYORDERED</property>
                     <property name="analysis">measure</property>
                     <text-property name="heading">QUANTITYORDERED</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
                 </structure>
                 <structure>
                     <property name="columnName">TOTALLINEITEM</property>
                     <property name="analysis">measure</property>
                     <text-property name="heading">TOTALLINEITEM</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
                 </structure>
             </list-property>
             <list-property name="filter"/>
@@ -1268,7 +1272,7 @@
                         <property name="targetWindow">_blank</property>
                         <property name="linkType">drill-through</property>
                         <property name="targetFileType">report-design</property>
-                        <property name="reportName">../Report Designs/Commits.rptdesign</property>
+                        <property name="reportName">^/Report Designs/Commits.rptdesign</property>
                         <list-property name="paramBindings">
                             <structure>
                                 <property name="paramName">pCustomer</property>
@@ -1292,6 +1296,8 @@
                     <property name="columnName">ORDERDATE</property>
                     <property name="analysis">dimension</property>
                     <text-property name="heading">ORDERDATE</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
                 </structure>
                 <structure>
                     <property name="columnName">ORDERNUMBER</property>
@@ -1318,11 +1324,15 @@
                     <property name="columnName">QUANTITYORDERED</property>
                     <property name="analysis">measure</property>
                     <text-property name="heading">QUANTITYORDERED</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
                 </structure>
                 <structure>
                     <property name="columnName">TOTALLINEITEM</property>
                     <property name="analysis">measure</property>
                     <text-property name="heading">TOTALLINEITEM</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
                 </structure>
             </list-property>
             <list-property name="filter"/>

@@ -1,202 +1,541 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
     <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
-    <property name="units">in</property>
-    <property name="iconFile">/templates/blank_report.gif</property>
-    <property name="layoutPreference">fixed layout</property>
-    <property name="bidiLayoutOrientation">ltr</property>
-    <property name="imageDPI">96</property>
-    <list-property name="libraries">
-        <structure>
-            <property name="fileName">ThemesReportItems3.rptlibrary</property>
-            <property name="namespace">ThemesReportItems3</property>
-        </structure>
-    </list-property>
-    <data-sources>
-        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="Flat File" id="1185">
-            <property name="HOME">Flatfiles/</property>
-            <property name="DELIMTYPE">COMMA</property>
-            <property name="CHARSET">UTF-8</property>
-            <property name="INCLCOLUMNNAME">YES</property>
-            <property name="INCLTYPELINE">NO</property>
-            <property name="TRAILNULLCOLS">NO</property>
-        </oda-data-source>
-    </data-sources>
-    <data-sets>
-        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Sales Reps" id="1186">
-            <list-property name="computedColumns">
-                <structure>
-                    <property name="name">PctQuota</property>
-                    <expression name="expression" type="javascript">Math.abs(((row["Goal"]-row["Closed"])/row["Goal"])-1) * 100</expression>
-                    <property name="dataType">decimal</property>
-                </structure>
-            </list-property>
-            <list-property name="columnHints">
-                <structure>
-                    <property name="columnName">Close Date</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="heading">Close Date</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">Closed</property>
-                    <property name="analysis">measure</property>
-                    <text-property name="heading">Closed</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">Forecast</property>
-                    <property name="analysis">measure</property>
-                    <text-property name="heading">Forecast</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">Goal</property>
-                    <property name="analysis">measure</property>
-                    <text-property name="heading">Goal</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">Opportunity</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="heading">Opportunity</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">progress</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="heading">progress</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">Region</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="heading">Region</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">Sales Rep</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="heading">Sales Rep</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">PctQuota</property>
-                    <property name="analysis">measure</property>
-                </structure>
-            </list-property>
-            <list-property name="filter">
-                <structure>
-                    <property name="operator">top-n</property>
-                    <expression name="expr" type="javascript">row["Forecast"]</expression>
-                    <simple-property-list name="value1">
-                        <value type="javascript">10</value>
-                    </simple-property-list>
-                </structure>
-            </list-property>
-            <list-property name="parameters"/>
-            <structure name="cachedMetaData">
-                <list-property name="resultSet">
-                    <structure>
-                        <property name="position">1</property>
-                        <property name="name">Close Date</property>
-                        <property name="dataType">date</property>
-                    </structure>
-                    <structure>
-                        <property name="position">2</property>
-                        <property name="name">Closed</property>
-                        <property name="dataType">integer</property>
-                    </structure>
-                    <structure>
-                        <property name="position">3</property>
-                        <property name="name">Forecast</property>
-                        <property name="dataType">integer</property>
-                    </structure>
-                    <structure>
-                        <property name="position">4</property>
-                        <property name="name">Goal</property>
-                        <property name="dataType">integer</property>
-                    </structure>
-                    <structure>
-                        <property name="position">5</property>
-                        <property name="name">Opportunity</property>
-                        <property name="dataType">string</property>
-                    </structure>
-                    <structure>
-                        <property name="position">6</property>
-                        <property name="name">progress</property>
-                        <property name="dataType">string</property>
-                    </structure>
-                    <structure>
-                        <property name="position">7</property>
-                        <property name="name">Region</property>
-                        <property name="dataType">string</property>
-                    </structure>
-                    <structure>
-                        <property name="position">8</property>
-                        <property name="name">Sales Rep</property>
-                        <property name="dataType">string</property>
-                    </structure>
-                    <structure>
-                        <property name="position">9</property>
-                        <property name="name">PctQuota</property>
-                        <property name="dataType">decimal</property>
-                    </structure>
-                </list-property>
-            </structure>
-            <property name="dataSource">Flat File</property>
-            <list-property name="resultSet">
-                <structure>
-                    <property name="position">1</property>
-                    <property name="name">Close Date</property>
-                    <property name="nativeName">Close Date</property>
-                    <property name="dataType">date</property>
-                    <property name="nativeDataType">91</property>
-                </structure>
-                <structure>
-                    <property name="position">2</property>
-                    <property name="name">Closed</property>
-                    <property name="nativeName">Closed</property>
-                    <property name="dataType">integer</property>
-                    <property name="nativeDataType">4</property>
-                </structure>
-                <structure>
-                    <property name="position">3</property>
-                    <property name="name">Forecast</property>
-                    <property name="nativeName">Forecast</property>
-                    <property name="dataType">integer</property>
-                    <property name="nativeDataType">4</property>
-                </structure>
-                <structure>
-                    <property name="position">4</property>
-                    <property name="name">Goal</property>
-                    <property name="nativeName">Goal</property>
-                    <property name="dataType">integer</property>
-                    <property name="nativeDataType">4</property>
-                </structure>
-                <structure>
-                    <property name="position">5</property>
-                    <property name="name">Opportunity</property>
-                    <property name="nativeName">Opportunity</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                </structure>
-                <structure>
-                    <property name="position">6</property>
-                    <property name="name">progress</property>
-                    <property name="nativeName">progress</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                </structure>
-                <structure>
-                    <property name="position">7</property>
-                    <property name="name">Region</property>
-                    <property name="nativeName">Region</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                </structure>
-                <structure>
-                    <property name="position">8</property>
-                    <property name="name">Sales Rep</property>
-                    <property name="nativeName">Sales Rep</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                </structure>
-            </list-property>
-            <xml-property name="queryText"><![CDATA[select "Close Date", "Closed", "Forecast", "Goal", "Opportunity", "progress", "Region", "Sales Rep" from "execsalesmetrics.csv" : {"Close Date","Close Date",DATE;"Closed","Closed",INT;"Forecast","Forecast",INT;"Goal","Goal",INT;"Opportunity","Opportunity",STRING;"progress","progress",STRING;"Region","Region",STRING;"Sales Rep","Sales Rep",STRING}]]></xml-property>
-            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+    <xml-property name="externalMetadata">
+        <external-datamarts>
+            <datamart-node location="file:/C:/Users/ActuateUser/git/SFAdventuresApp/Data%20Objects/FlatFileDO.data">
+                <reference-elements>ExecSales;</reference-elements>
+                <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+                    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">1213.Exec Sales Facts.x</property>
+                            <property name="type">integer</property>
+                            <property name="isVisible">false</property>
+                        </structure>
+                        <structure>
+                            <property name="name">1213.Exec Sales Facts.y</property>
+                            <property name="type">integer</property>
+                            <property name="isVisible">false</property>
+                        </structure>
+                        <structure>
+                            <property name="name">1213.Exec Sales Facts.width</property>
+                            <property name="type">integer</property>
+                            <property name="isVisible">false</property>
+                        </structure>
+                        <structure>
+                            <property name="name">1213.Exec Sales Facts.height</property>
+                            <property name="type">integer</property>
+                            <property name="isVisible">false</property>
+                        </structure>
+                    </list-property>
+                    <property name="1213.Exec Sales Facts.x">50</property>
+                    <property name="1213.Exec Sales Facts.y">32</property>
+                    <property name="1213.Exec Sales Facts.width">150</property>
+                    <property name="1213.Exec Sales Facts.height">200</property>
+                    <list-property name="propertyBindings">
+                        <structure>
+                            <property name="name">queryText</property>
+                            <property name="id">3</property>
+                        </structure>
+                    </list-property>
+                    <data-sources>
+                        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="FlatFileDataSource" id="2">
+                            <property name="HOME">Flatfiles/</property>
+                            <property name="DELIMTYPE">COMMA</property>
+                            <property name="CHARSET">UTF-8</property>
+                            <property name="INCLCOLUMNNAME">YES</property>
+                            <property name="INCLTYPELINE">NO</property>
+                            <property name="TRAILNULLCOLS">NO</property>
+                        </oda-data-source>
+                    </data-sources>
+                    <data-sets>
+                        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Customer Orders" id="3">
+                            <property name="isVisible">true</property>
+                            <property name="nullsOrdering">nulls lowest</property>
+                            <list-property name="columnHints">
+                                <structure>
+                                    <property name="columnName">CUSTOMERNAME</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">CUSTOMERNAME</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">CUSTOMERNUMBER</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">CUSTOMERNUMBER</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">ORDERDATE</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">ORDERDATE</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">ORDERNUMBER</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">ORDERNUMBER</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">PRICEEACH</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">PRICEEACH</text-property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">PRODUCTCODE</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">PRODUCTCODE</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">QUANTITYORDERED</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">QUANTITYORDERED</text-property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">TOTALLINEITEM</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">TOTALLINEITEM</text-property>
+                                </structure>
+                            </list-property>
+                            <list-property name="parameters"/>
+                            <structure name="cachedMetaData">
+                                <list-property name="resultSet">
+                                    <structure>
+                                        <property name="position">1</property>
+                                        <property name="name">CUSTOMERNAME</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">2</property>
+                                        <property name="name">CUSTOMERNUMBER</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">3</property>
+                                        <property name="name">ORDERDATE</property>
+                                        <property name="dataType">date</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">4</property>
+                                        <property name="name">ORDERNUMBER</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">5</property>
+                                        <property name="name">PRICEEACH</property>
+                                        <property name="dataType">float</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">6</property>
+                                        <property name="name">PRODUCTCODE</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">7</property>
+                                        <property name="name">QUANTITYORDERED</property>
+                                        <property name="dataType">decimal</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">8</property>
+                                        <property name="name">TOTALLINEITEM</property>
+                                        <property name="dataType">float</property>
+                                    </structure>
+                                </list-property>
+                            </structure>
+                            <property name="dataSource">FlatFileDataSource</property>
+                            <list-property name="resultSet">
+                                <structure>
+                                    <property name="position">1</property>
+                                    <property name="name">CUSTOMERNAME</property>
+                                    <property name="nativeName">CUSTOMERNAME</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">2</property>
+                                    <property name="name">CUSTOMERNUMBER</property>
+                                    <property name="nativeName">CUSTOMERNUMBER</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">3</property>
+                                    <property name="name">ORDERDATE</property>
+                                    <property name="nativeName">ORDERDATE</property>
+                                    <property name="dataType">date</property>
+                                    <property name="nativeDataType">91</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">4</property>
+                                    <property name="name">ORDERNUMBER</property>
+                                    <property name="nativeName">ORDERNUMBER</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">5</property>
+                                    <property name="name">PRICEEACH</property>
+                                    <property name="nativeName">PRICEEACH</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">8</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">6</property>
+                                    <property name="name">PRODUCTCODE</property>
+                                    <property name="nativeName">PRODUCTCODE</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">7</property>
+                                    <property name="name">QUANTITYORDERED</property>
+                                    <property name="nativeName">QUANTITYORDERED</property>
+                                    <property name="dataType">decimal</property>
+                                    <property name="nativeDataType">2</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">8</property>
+                                    <property name="name">TOTALLINEITEM</property>
+                                    <property name="nativeName">TOTALLINEITEM</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">8</property>
+                                </structure>
+                            </list-property>
+                            <xml-property name="queryText"><![CDATA[select "CUSTOMERNAME", "CUSTOMERNUMBER", "ORDERDATE", "ORDERNUMBER", "PRICEEACH", "PRODUCTCODE", "QUANTITYORDERED", "TOTALLINEITEM" from "Customer_Orders.csv" : {"CUSTOMERNAME","CUSTOMERNAME",STRING;"CUSTOMERNUMBER","CUSTOMERNUMBER",STRING;"ORDERDATE","ORDERDATE",DATE;"ORDERNUMBER","ORDERNUMBER",STRING;"PRICEEACH","PRICEEACH",DOUBLE;"PRODUCTCODE","PRODUCTCODE",STRING;"QUANTITYORDERED","QUANTITYORDERED",BIGDECIMAL;"TOTALLINEITEM","TOTALLINEITEM",DOUBLE}]]></xml-property>
+                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CUSTOMERNAME</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CUSTOMERNAME</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CUSTOMERNUMBER</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CUSTOMERNUMBER</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ORDERDATE</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ORDERDATE</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ORDERNUMBER</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ORDERNUMBER</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PRICEEACH</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PRICEEACH</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PRODUCTCODE</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PRODUCTCODE</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>QUANTITYORDERED</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>QUANTITYORDERED</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TOTALLINEITEM</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TOTALLINEITEM</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+                        </oda-data-set>
+                        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Exec Sales Metrics" id="4">
+                            <list-property name="computedColumns">
+                                <structure>
+                                    <property name="name">PctQuota</property>
+                                    <expression name="expression" type="javascript">Math.abs(((row["Goal"]-row["Closed"])/row["Goal"])-1) * 100</expression>
+                                    <property name="dataType">decimal</property>
+                                </structure>
+                            </list-property>
+                            <list-property name="columnHints">
+                                <structure>
+                                    <property name="columnName">Close Date</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Close Date</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Closed</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Closed</text-property>
+                                    <property name="horizontalAlign">left</property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Forecast</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Forecast</text-property>
+                                    <property name="horizontalAlign">left</property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Goal</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Goal</text-property>
+                                    <property name="horizontalAlign">left</property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Opportunity</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Opportunity</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">progress</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">progress</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Region</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Region</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Sales Rep</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Sales Rep</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">PctQuota</property>
+                                    <property name="analysis">measure</property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                            </list-property>
+                            <list-property name="parameters"/>
+                            <structure name="cachedMetaData">
+                                <list-property name="resultSet">
+                                    <structure>
+                                        <property name="position">1</property>
+                                        <property name="name">Close Date</property>
+                                        <property name="dataType">date</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">2</property>
+                                        <property name="name">Closed</property>
+                                        <property name="dataType">decimal</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">3</property>
+                                        <property name="name">Forecast</property>
+                                        <property name="dataType">decimal</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">4</property>
+                                        <property name="name">Goal</property>
+                                        <property name="dataType">decimal</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">5</property>
+                                        <property name="name">Opportunity</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">6</property>
+                                        <property name="name">progress</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">7</property>
+                                        <property name="name">Region</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">8</property>
+                                        <property name="name">Sales Rep</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">9</property>
+                                        <property name="name">PctQuota</property>
+                                        <property name="dataType">decimal</property>
+                                    </structure>
+                                </list-property>
+                            </structure>
+                            <property name="dataSource">FlatFileDataSource</property>
+                            <list-property name="resultSet">
+                                <structure>
+                                    <property name="position">1</property>
+                                    <property name="name">Close Date</property>
+                                    <property name="nativeName">Close Date</property>
+                                    <property name="dataType">date</property>
+                                    <property name="nativeDataType">91</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">2</property>
+                                    <property name="name">Closed</property>
+                                    <property name="nativeName">Closed</property>
+                                    <property name="dataType">decimal</property>
+                                    <property name="nativeDataType">4</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">3</property>
+                                    <property name="name">Forecast</property>
+                                    <property name="nativeName">Forecast</property>
+                                    <property name="dataType">decimal</property>
+                                    <property name="nativeDataType">4</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">4</property>
+                                    <property name="name">Goal</property>
+                                    <property name="nativeName">Goal</property>
+                                    <property name="dataType">decimal</property>
+                                    <property name="nativeDataType">4</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">5</property>
+                                    <property name="name">Opportunity</property>
+                                    <property name="nativeName">Opportunity</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">6</property>
+                                    <property name="name">progress</property>
+                                    <property name="nativeName">progress</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">7</property>
+                                    <property name="name">Region</property>
+                                    <property name="nativeName">Region</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">8</property>
+                                    <property name="name">Sales Rep</property>
+                                    <property name="nativeName">Sales Rep</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                            </list-property>
+                            <xml-property name="queryText"><![CDATA[select "Close Date", "Closed", "Forecast", "Goal", "Opportunity", "progress", "Region", "Sales Rep" from "execsalesmetrics.csv" : {"Close Date","Close Date",DATE;"Closed","Closed",INT;"Forecast","Forecast",INT;"Goal","Goal",INT;"Opportunity","Opportunity",STRING;"progress","progress",STRING;"Region","Region",STRING;"Sales Rep","Sales Rep",STRING}]]></xml-property>
+                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
   <design:ResultSets derivedMetaData="true">
@@ -208,7 +547,7 @@
               <design:name>Close Date</design:name>
               <design:position>1</design:position>
             </design:identifier>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
             <design:precision>-1</design:precision>
             <design:scale>-1</design:scale>
             <design:nullability>Unknown</design:nullability>
@@ -253,8 +592,24 @@
         <design:resultColumnDefinitions>
           <design:attributes>
             <design:identifier>
-              <design:name>Opportunity</design:name>
+              <design:name>Goal</design:name>
               <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Goal</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Opportunity</design:name>
+              <design:position>5</design:position>
             </design:identifier>
             <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
             <design:precision>-1</design:precision>
@@ -270,7 +625,7 @@
           <design:attributes>
             <design:identifier>
               <design:name>progress</design:name>
-              <design:position>5</design:position>
+              <design:position>6</design:position>
             </design:identifier>
             <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
             <design:precision>-1</design:precision>
@@ -286,7 +641,7 @@
           <design:attributes>
             <design:identifier>
               <design:name>Region</design:name>
-              <design:position>6</design:position>
+              <design:position>7</design:position>
             </design:identifier>
             <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
             <design:precision>-1</design:precision>
@@ -302,7 +657,7 @@
           <design:attributes>
             <design:identifier>
               <design:name>Sales Rep</design:name>
-              <design:position>7</design:position>
+              <design:position>8</design:position>
             </design:identifier>
             <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
             <design:precision>-1</design:precision>
@@ -319,7 +674,1506 @@
     </design:resultSetDefinitions>
   </design:ResultSets>
 </model:DesignValues>]]></xml-property>
-        </oda-data-set>
+                        </oda-data-set>
+                        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Sales Reps Metrics" id="5">
+                            <list-property name="columnHints">
+                                <structure>
+                                    <property name="columnName">Close Date</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Close Date</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Closed</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">Closed</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Forecast</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">Forecast</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Goal</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">Goal</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Opportunity</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Opportunity</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">progress</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">progress</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Region</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Region</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Sales Rep</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Sales Rep</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                            </list-property>
+                            <list-property name="parameters"/>
+                            <structure name="cachedMetaData">
+                                <list-property name="resultSet">
+                                    <structure>
+                                        <property name="position">1</property>
+                                        <property name="name">Close Date</property>
+                                        <property name="dataType">date</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">2</property>
+                                        <property name="name">Closed</property>
+                                        <property name="dataType">decimal</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">3</property>
+                                        <property name="name">Forecast</property>
+                                        <property name="dataType">decimal</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">4</property>
+                                        <property name="name">Goal</property>
+                                        <property name="dataType">decimal</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">5</property>
+                                        <property name="name">Opportunity</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">6</property>
+                                        <property name="name">progress</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">7</property>
+                                        <property name="name">Region</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">8</property>
+                                        <property name="name">Sales Rep</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                </list-property>
+                            </structure>
+                            <property name="dataSource">FlatFileDataSource</property>
+                            <list-property name="resultSet">
+                                <structure>
+                                    <property name="position">1</property>
+                                    <property name="name">Close Date</property>
+                                    <property name="nativeName">Close Date</property>
+                                    <property name="dataType">date</property>
+                                    <property name="nativeDataType">91</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">2</property>
+                                    <property name="name">Closed</property>
+                                    <property name="nativeName">Closed</property>
+                                    <property name="dataType">decimal</property>
+                                    <property name="nativeDataType">2</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">3</property>
+                                    <property name="name">Forecast</property>
+                                    <property name="nativeName">Forecast</property>
+                                    <property name="dataType">decimal</property>
+                                    <property name="nativeDataType">2</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">4</property>
+                                    <property name="name">Goal</property>
+                                    <property name="nativeName">Goal</property>
+                                    <property name="dataType">decimal</property>
+                                    <property name="nativeDataType">2</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">5</property>
+                                    <property name="name">Opportunity</property>
+                                    <property name="nativeName">Opportunity</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">6</property>
+                                    <property name="name">progress</property>
+                                    <property name="nativeName">progress</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">7</property>
+                                    <property name="name">Region</property>
+                                    <property name="nativeName">Region</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">8</property>
+                                    <property name="name">Sales Rep</property>
+                                    <property name="nativeName">Sales Rep</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                            </list-property>
+                            <xml-property name="queryText"><![CDATA[select "Close Date", "Closed", "Forecast", "Goal", "Opportunity", "progress", "Region", "Sales Rep" from "salesrepsmetrics.csv" : {"Close Date","Close Date",DATE;"Closed","Closed",BIGDECIMAL;"Forecast","Forecast",BIGDECIMAL;"Goal","Goal",BIGDECIMAL;"Opportunity","Opportunity",STRING;"progress","progress",STRING;"Region","Region",STRING;"Sales Rep","Sales Rep",STRING}]]></xml-property>
+                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Close Date</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Close Date</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Closed</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Closed</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Forecast</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Forecast</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Goal</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Goal</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Opportunity</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Opportunity</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>progress</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>progress</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Region</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Region</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Sales Rep</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Sales Rep</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+                        </oda-data-set>
+                        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Pipelline" id="1210">
+                            <list-property name="columnHints">
+                                <structure>
+                                    <property name="columnName">CUSTOMERNAME</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">CUSTOMERNAME</text-property>
+                                    <property name="horizontalAlign">left</property>
+                                    <structure name="action">
+                                        <property name="targetWindow">_blank</property>
+                                        <property name="linkType">drill-through</property>
+                                        <property name="targetFileType">report-design</property>
+                                        <property name="reportName">../Report Designs/Pipeline.rptdesign</property>
+                                        <list-property name="paramBindings">
+                                            <structure>
+                                                <property name="paramName">pCustomer</property>
+                                                <simple-property-list name="expression">
+                                                    <value type="javascript">row["CUSTOMERNAME"]</value>
+                                                </simple-property-list>
+                                            </structure>
+                                        </list-property>
+                                    </structure>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">CUSTOMERNUMBER</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">CUSTOMERNUMBER</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">ORDERDATE</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">ORDERDATE</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">ORDERNUMBER</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">ORDERNUMBER</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">PRICEEACH</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">PRICEEACH</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">PRODUCTCODE</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">PRODUCTCODE</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">QUANTITYORDERED</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">QUANTITYORDERED</text-property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">TOTALLINEITEM</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">TOTALLINEITEM</text-property>
+                                </structure>
+                            </list-property>
+                            <list-property name="filter"/>
+                            <list-property name="parameters"/>
+                            <structure name="cachedMetaData">
+                                <list-property name="resultSet">
+                                    <structure>
+                                        <property name="position">1</property>
+                                        <property name="name">CUSTOMERNAME</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">2</property>
+                                        <property name="name">CUSTOMERNUMBER</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">3</property>
+                                        <property name="name">ORDERDATE</property>
+                                        <property name="dataType">date</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">4</property>
+                                        <property name="name">ORDERNUMBER</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">5</property>
+                                        <property name="name">PRICEEACH</property>
+                                        <property name="dataType">float</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">6</property>
+                                        <property name="name">PRODUCTCODE</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">7</property>
+                                        <property name="name">QUANTITYORDERED</property>
+                                        <property name="dataType">integer</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">8</property>
+                                        <property name="name">TOTALLINEITEM</property>
+                                        <property name="dataType">float</property>
+                                    </structure>
+                                </list-property>
+                            </structure>
+                            <property name="dataSource">FlatFileDataSource</property>
+                            <list-property name="resultSet">
+                                <structure>
+                                    <property name="position">1</property>
+                                    <property name="name">CUSTOMERNAME</property>
+                                    <property name="nativeName">CUSTOMERNAME</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">2</property>
+                                    <property name="name">CUSTOMERNUMBER</property>
+                                    <property name="nativeName">CUSTOMERNUMBER</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">3</property>
+                                    <property name="name">ORDERDATE</property>
+                                    <property name="nativeName">ORDERDATE</property>
+                                    <property name="dataType">date</property>
+                                    <property name="nativeDataType">91</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">4</property>
+                                    <property name="name">ORDERNUMBER</property>
+                                    <property name="nativeName">ORDERNUMBER</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">5</property>
+                                    <property name="name">PRICEEACH</property>
+                                    <property name="nativeName">PRICEEACH</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">8</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">6</property>
+                                    <property name="name">PRODUCTCODE</property>
+                                    <property name="nativeName">PRODUCTCODE</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">7</property>
+                                    <property name="name">QUANTITYORDERED</property>
+                                    <property name="nativeName">QUANTITYORDERED</property>
+                                    <property name="dataType">integer</property>
+                                    <property name="nativeDataType">4</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">8</property>
+                                    <property name="name">TOTALLINEITEM</property>
+                                    <property name="nativeName">TOTALLINEITEM</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">8</property>
+                                </structure>
+                            </list-property>
+                            <xml-property name="queryText"><![CDATA[select "CUSTOMERNAME", "CUSTOMERNUMBER", "ORDERDATE", "ORDERNUMBER", "PRICEEACH", "PRODUCTCODE", "QUANTITYORDERED", "TOTALLINEITEM" from "Customer_Orders.csv" : {"CUSTOMERNAME","CUSTOMERNAME",STRING;"CUSTOMERNUMBER","CUSTOMERNUMBER",STRING;"ORDERDATE","ORDERDATE",DATE;"ORDERNUMBER","ORDERNUMBER",STRING;"PRICEEACH","PRICEEACH",DOUBLE;"PRODUCTCODE","PRODUCTCODE",STRING;"QUANTITYORDERED","QUANTITYORDERED",INT;"TOTALLINEITEM","TOTALLINEITEM",DOUBLE}]]></xml-property>
+                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CUSTOMERNAME</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CUSTOMERNAME</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ORDERDATE</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ORDERDATE</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PRICEEACH</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PRICEEACH</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PRODUCTCODE</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PRODUCTCODE</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>QUANTITYORDERED</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>QUANTITYORDERED</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TOTALLINEITEM</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TOTALLINEITEM</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+                        </oda-data-set>
+                        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Commits" id="1211">
+                            <list-property name="columnHints">
+                                <structure>
+                                    <property name="columnName">CUSTOMERNAME</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">CUSTOMERNAME</text-property>
+                                    <property name="horizontalAlign">left</property>
+                                    <structure name="action">
+                                        <property name="targetWindow">_blank</property>
+                                        <property name="linkType">drill-through</property>
+                                        <property name="targetFileType">report-design</property>
+                                        <property name="reportName">../Report Designs/Commits.rptdesign</property>
+                                        <list-property name="paramBindings">
+                                            <structure>
+                                                <property name="paramName">pCustomer</property>
+                                                <simple-property-list name="expression">
+                                                    <value type="javascript">row["CUSTOMERNAME"]</value>
+                                                </simple-property-list>
+                                            </structure>
+                                        </list-property>
+                                    </structure>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">CUSTOMERNUMBER</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">CUSTOMERNUMBER</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">ORDERDATE</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">ORDERDATE</text-property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">ORDERNUMBER</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">ORDERNUMBER</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">PRICEEACH</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">PRICEEACH</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">PRODUCTCODE</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">PRODUCTCODE</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">QUANTITYORDERED</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">QUANTITYORDERED</text-property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">TOTALLINEITEM</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">TOTALLINEITEM</text-property>
+                                </structure>
+                            </list-property>
+                            <list-property name="filter"/>
+                            <list-property name="parameters"/>
+                            <structure name="cachedMetaData">
+                                <list-property name="resultSet">
+                                    <structure>
+                                        <property name="position">1</property>
+                                        <property name="name">CUSTOMERNAME</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">2</property>
+                                        <property name="name">CUSTOMERNUMBER</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">3</property>
+                                        <property name="name">ORDERDATE</property>
+                                        <property name="dataType">date</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">4</property>
+                                        <property name="name">ORDERNUMBER</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">5</property>
+                                        <property name="name">PRICEEACH</property>
+                                        <property name="dataType">float</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">6</property>
+                                        <property name="name">PRODUCTCODE</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">7</property>
+                                        <property name="name">QUANTITYORDERED</property>
+                                        <property name="dataType">decimal</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">8</property>
+                                        <property name="name">TOTALLINEITEM</property>
+                                        <property name="dataType">float</property>
+                                    </structure>
+                                </list-property>
+                            </structure>
+                            <property name="dataSource">FlatFileDataSource</property>
+                            <list-property name="resultSet">
+                                <structure>
+                                    <property name="position">1</property>
+                                    <property name="name">CUSTOMERNAME</property>
+                                    <property name="nativeName">CUSTOMERNAME</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">2</property>
+                                    <property name="name">CUSTOMERNUMBER</property>
+                                    <property name="nativeName">CUSTOMERNUMBER</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">3</property>
+                                    <property name="name">ORDERDATE</property>
+                                    <property name="nativeName">ORDERDATE</property>
+                                    <property name="dataType">date</property>
+                                    <property name="nativeDataType">91</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">4</property>
+                                    <property name="name">ORDERNUMBER</property>
+                                    <property name="nativeName">ORDERNUMBER</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">5</property>
+                                    <property name="name">PRICEEACH</property>
+                                    <property name="nativeName">PRICEEACH</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">8</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">6</property>
+                                    <property name="name">PRODUCTCODE</property>
+                                    <property name="nativeName">PRODUCTCODE</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">7</property>
+                                    <property name="name">QUANTITYORDERED</property>
+                                    <property name="nativeName">QUANTITYORDERED</property>
+                                    <property name="dataType">decimal</property>
+                                    <property name="nativeDataType">2</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">8</property>
+                                    <property name="name">TOTALLINEITEM</property>
+                                    <property name="nativeName">TOTALLINEITEM</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">8</property>
+                                </structure>
+                            </list-property>
+                            <xml-property name="queryText"><![CDATA[select "CUSTOMERNAME", "CUSTOMERNUMBER", "ORDERDATE", "ORDERNUMBER", "PRICEEACH", "PRODUCTCODE", "QUANTITYORDERED", "TOTALLINEITEM" from "Customer_Orders.csv" : {"CUSTOMERNAME","CUSTOMERNAME",STRING;"CUSTOMERNUMBER","CUSTOMERNUMBER",STRING;"ORDERDATE","ORDERDATE",DATE;"ORDERNUMBER","ORDERNUMBER",STRING;"PRICEEACH","PRICEEACH",DOUBLE;"PRODUCTCODE","PRODUCTCODE",STRING;"QUANTITYORDERED","QUANTITYORDERED",BIGDECIMAL;"TOTALLINEITEM","TOTALLINEITEM",DOUBLE}]]></xml-property>
+                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CUSTOMERNAME</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CUSTOMERNAME</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ORDERDATE</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ORDERDATE</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PRICEEACH</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PRICEEACH</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PRODUCTCODE</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PRODUCTCODE</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>QUANTITYORDERED</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>QUANTITYORDERED</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TOTALLINEITEM</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TOTALLINEITEM</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+                        </oda-data-set>
+                        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Exec Sales Facts" id="1212">
+                            <list-property name="columnHints">
+                                <structure>
+                                    <property name="columnName">Name</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Name</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Level</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Level</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Region</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Region</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">District</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">District</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Pipeline</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">Pipeline</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Goal</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">Goal</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Forecast</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">Forecast</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Quota</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">Quota</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">PYTD Pipeline</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">PYTD Pipeline</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">PYTD Forecast</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">PYTD Forecast</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                            </list-property>
+                            <structure name="cachedMetaData">
+                                <list-property name="resultSet">
+                                    <structure>
+                                        <property name="position">1</property>
+                                        <property name="name">Name</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">2</property>
+                                        <property name="name">Level</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">3</property>
+                                        <property name="name">Region</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">4</property>
+                                        <property name="name">District</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">5</property>
+                                        <property name="name">Pipeline</property>
+                                        <property name="dataType">float</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">6</property>
+                                        <property name="name">Goal</property>
+                                        <property name="dataType">float</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">7</property>
+                                        <property name="name">Forecast</property>
+                                        <property name="dataType">float</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">8</property>
+                                        <property name="name">Quota</property>
+                                        <property name="dataType">float</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">9</property>
+                                        <property name="name">PYTD Pipeline</property>
+                                        <property name="dataType">float</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">10</property>
+                                        <property name="name">PYTD Forecast</property>
+                                        <property name="dataType">float</property>
+                                    </structure>
+                                </list-property>
+                            </structure>
+                            <property name="dataSource">FlatFileDataSource</property>
+                            <list-property name="resultSet">
+                                <structure>
+                                    <property name="position">1</property>
+                                    <property name="name">Name</property>
+                                    <property name="nativeName">Name</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">2</property>
+                                    <property name="name">Level</property>
+                                    <property name="nativeName">Level</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">3</property>
+                                    <property name="name">Region</property>
+                                    <property name="nativeName">Region</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">4</property>
+                                    <property name="name">District</property>
+                                    <property name="nativeName">District</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">5</property>
+                                    <property name="name">Pipeline</property>
+                                    <property name="nativeName">Pipeline</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">8</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">6</property>
+                                    <property name="name">Goal</property>
+                                    <property name="nativeName">Goal</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">8</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">7</property>
+                                    <property name="name">Forecast</property>
+                                    <property name="nativeName">Forecast</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">8</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">8</property>
+                                    <property name="name">Quota</property>
+                                    <property name="nativeName">Quota</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">8</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">9</property>
+                                    <property name="name">PYTD Pipeline</property>
+                                    <property name="nativeName">PYTD Pipeline</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">8</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">10</property>
+                                    <property name="name">PYTD Forecast</property>
+                                    <property name="nativeName">PYTD Forecast</property>
+                                    <property name="dataType">float</property>
+                                    <property name="nativeDataType">8</property>
+                                </structure>
+                            </list-property>
+                            <xml-property name="queryText"><![CDATA[select "Name", "Level", "Region", "District", "Pipeline", "Goal", "Forecast", "Quota", "PYTD Pipeline", "PYTD Forecast" from "Executive Sales Facts.csv" : {"Name","Name",STRING;"Level","Level",STRING;"Region","Region",STRING;"District","District",STRING;"Pipeline","Pipeline",DOUBLE;"Goal","Goal",DOUBLE;"Forecast","Forecast",DOUBLE;"Quota","Quota",DOUBLE;"PYTD Pipeline","PYTD Pipeline",DOUBLE;"PYTD Forecast","PYTD Forecast",DOUBLE}]]></xml-property>
+                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Name</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Name</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Level</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Level</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Region</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Region</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>District</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>District</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Pipeline</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Pipeline</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Goal</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Goal</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Forecast</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Forecast</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Quota</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Quota</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PYTD Pipeline</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PYTD Pipeline</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PYTD Forecast</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PYTD Forecast</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+                        </oda-data-set>
+                    </data-sets>
+                    <property name="linkedDataModels">
+                        <linked-data-model name="Sales Data" id="1213">
+                            <property name="aliasDataSets">
+                                <alias-data-set name="Exec Sales Facts" id="1272">
+                                    <property name="originDataSet">Exec Sales Facts</property>
+                                </alias-data-set>
+                            </property>
+                            <property name="drillPaths">
+                                <drill-path id="1273">
+                                    <text-property name="displayName">Sales Organization</text-property>
+                                    <simple-property-list name="drillPathColumns">
+                                        <value>dataSetRow["Region"]</value>
+                                        <value>dataSetRow["District"]</value>
+                                        <value>dataSetRow["Sales Rep"]</value>
+                                    </simple-property-list>
+                                </drill-path>
+                            </property>
+                            <property name="categories">
+                                <category name="Exec Sales Facts" id="1256">
+                                    <property name="categoryColumns">
+                                        <category-column name="Sales Rep" id="1257">
+                                            <property name="aliasDataSet">Sales Data/Exec Sales Facts</property>
+                                            <property name="resultSetColumnName">Name</property>
+                                        </category-column>
+                                        <category-column name="Level" id="1258">
+                                            <property name="aliasDataSet">Sales Data/Exec Sales Facts</property>
+                                            <property name="resultSetColumnName">Level</property>
+                                        </category-column>
+                                        <category-column name="Region" id="1259">
+                                            <property name="aliasDataSet">Sales Data/Exec Sales Facts</property>
+                                            <property name="resultSetColumnName">Region</property>
+                                        </category-column>
+                                        <category-column name="District" id="1260">
+                                            <property name="aliasDataSet">Sales Data/Exec Sales Facts</property>
+                                            <property name="resultSetColumnName">District</property>
+                                        </category-column>
+                                        <category-column name="Pipeline" id="1261">
+                                            <property name="aliasDataSet">Sales Data/Exec Sales Facts</property>
+                                            <property name="resultSetColumnName">Pipeline</property>
+                                        </category-column>
+                                        <category-column name="Goal" id="1262">
+                                            <property name="aliasDataSet">Sales Data/Exec Sales Facts</property>
+                                            <property name="resultSetColumnName">Goal</property>
+                                        </category-column>
+                                        <category-column name="Forecast" id="1263">
+                                            <property name="aliasDataSet">Sales Data/Exec Sales Facts</property>
+                                            <property name="resultSetColumnName">Forecast</property>
+                                        </category-column>
+                                        <category-column name="Quota" id="1264">
+                                            <property name="aliasDataSet">Sales Data/Exec Sales Facts</property>
+                                            <property name="resultSetColumnName">Quota</property>
+                                        </category-column>
+                                        <category-column name="PYTD Pipeline" id="1265">
+                                            <property name="aliasDataSet">Sales Data/Exec Sales Facts</property>
+                                            <property name="resultSetColumnName">PYTD Pipeline</property>
+                                        </category-column>
+                                        <category-column name="PYTD Forecast" id="1266">
+                                            <property name="aliasDataSet">Sales Data/Exec Sales Facts</property>
+                                            <property name="resultSetColumnName">PYTD Forecast</property>
+                                        </category-column>
+                                    </property>
+                                </category>
+                            </property>
+                            <property name="pushDown">true</property>
+                        </linked-data-model>
+                    </property>
+                </datamart>
+            </datamart-node>
+        </external-datamarts>
+    </xml-property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">fixed layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <data-mart-data-source name="ExecSales" id="1189">
+            <property name="datamartURL">Data Objects/FlatFileDO</property>
+            <property name="accessType">latest</property>
+        </data-mart-data-source>
+    </data-sources>
+    <data-sets>
+        <data-mart-data-set name="ExecSales" id="1190">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Close Date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Close Date</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Closed</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Closed</text-property>
+                    <property name="horizontalAlign">left</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Forecast</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Forecast</text-property>
+                    <property name="horizontalAlign">left</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Goal</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Goal</text-property>
+                    <property name="horizontalAlign">left</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Opportunity</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Opportunity</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">progress</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">progress</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Region</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Region</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Sales Rep</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Sales Rep</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">PctQuota</property>
+                    <property name="analysis">measure</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Close Date</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Closed</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Forecast</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Goal</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Opportunity</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">progress</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Region</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Sales Rep</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">PctQuota</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">ExecSales</property>
+            <property name="dataObject">Exec Sales Metrics</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Close Date</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Closed</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Forecast</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Goal</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Opportunity</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">progress</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Region</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Sales Rep</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">PctQuota</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
     </data-sets>
     <styles>
         <style name="report" id="4">
@@ -649,7 +2503,7 @@
             <property name="height">3.5520833333333335in</property>
             <property name="width">6.385416666666665in</property>
             <expression name="bookmark" type="javascript">"SalesRepTable"</expression>
-            <property name="dataSet">Sales Reps</property>
+            <property name="dataSet">ExecSales</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Close Date</property>
@@ -661,13 +2515,19 @@
                     <property name="name">Closed</property>
                     <text-property name="displayName">Closed</text-property>
                     <expression name="expression" type="javascript">dataSetRow["Closed"]</expression>
-                    <property name="dataType">integer</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Forecast</property>
+                    <text-property name="displayName">Forecast</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Forecast"]</expression>
+                    <property name="dataType">decimal</property>
                 </structure>
                 <structure>
                     <property name="name">Goal</property>
                     <text-property name="displayName">Goal</text-property>
                     <expression name="expression" type="javascript">dataSetRow["Goal"]</expression>
-                    <property name="dataType">integer</property>
+                    <property name="dataType">decimal</property>
                 </structure>
                 <structure>
                     <property name="name">Opportunity</property>
