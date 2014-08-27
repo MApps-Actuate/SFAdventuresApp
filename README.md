@@ -1,7 +1,9 @@
 SFAdventuresApp
 ===============
 
-This is Actuate's SFAdventures Demo App.
+The SFAdventures demo is an application that shows how Actuate products can enhance the sales operations experience. It can be used to show ANY company that has a sales force, regardless of the product they sell. It has a fully baked story that highlights functionaliy in crosstabs, third-party gadgets, data selectors with integration to Gmail and Twitter. This is a great overview demo to show product capabilities in a story that most audiences understand, even if they are not in sales.
+
+Sales Operations, Can also be used as a good general demo showing product capabilities.
 
 This demo should be run at 1440x900 resolution for the optimal gadget layout.
 
