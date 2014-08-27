@@ -24,4 +24,8 @@ The file SalesAnalysis.xls in Flatfiles is used to calculate the Total Cost need
 Create the following bookmark to invoke in read-only mode:
     actuateone.localdomain:8700/iportal/dashboard?conf=%2fApplications%2fSFAdventuresApp%2fDashboards%2fExecutive Sales Insights%2edashboard%3b1&filetype=DASHBOARD&__vp=Default Volume&volume=Default Volume&showBanner=false&showBreadCrumb=false&locale=en_US
 
- 
+To learn how to use GitHub in Eclipse with this repository, check out the following link:
+http://saleswiki.actuate.com/MApps%20Demo%20Deployment.ashx
+
+To see more BIRT examples and get support from the BIRT community, go to:
+http://developer.actuate.com 
