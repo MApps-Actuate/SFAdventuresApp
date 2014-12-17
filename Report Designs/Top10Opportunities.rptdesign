@@ -505,6 +505,9 @@ else&#13;
                                     <data id="1221">
                                         <property name="fontSize">8pt</property>
                                         <property name="paddingRight">3pt</property>
+                                        <structure name="dateTimeFormat">
+                                            <property name="category">Custom</property>
+                                        </structure>
                                         <property name="textAlign">right</property>
                                         <property name="resultSetColumn">Close Date</property>
                                     </data>
