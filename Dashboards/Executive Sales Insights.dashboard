@@ -6266,7 +6266,7 @@ group by terr, yr, mnth]]></xml-property>
                                             <property name="type">string</property>
                                         </structure>
                                     </list-property>
-                                    <property name="reportlibrary">{"reportLibrary":"/Applications/SFAdventuresApp/SFAdventures.rptlibrary","reportItem":"Sales Goal vs Forecast"}</property>
+                                    <property name="reportlibrary">{"reportLibrary":"^/SFAdventures.rptlibrary","reportItem":"Sales Goal vs Forecast"}</property>
                                     <property name="gadgetType">viewer</property>
                                     <property name="internalReportLetRef">Sales Goal vs Forecast</property>
                                 </data-view>
